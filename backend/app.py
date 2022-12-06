@@ -21,4 +21,4 @@ add_blueprints(app)
 # //////////// create app end //////////// #
 
 if __name__ == 'main':
-    app.run(debu=True, port=8000)
+    app.run(debug=True, port=8000)

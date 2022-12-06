@@ -8,22 +8,23 @@
                         <h1 class="font-banner">Canary</h1>
                     </div>
                     <div class="card shadow-lg">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <h1 class="fs-5 card-title fw-bold mb-5 font-setter">Login</h1>
                             <ElContainer>
                                 <el-form :label-position="labelPosition" label-width="100px" :model="loginData"
                                     style="max-width: 360px">
                                     <el-form-item label="username">
-                                        <el-input v-model="loginData.username" />
+                                        <el-input placeholder="Enter your username" v-model="loginData.username" />
                                     </el-form-item>
                                     <el-form-item label="password">
-                                        <el-input v-model="loginData.password" />
+                                        <el-input show-password type="password" placeholder="Enter your password" v-model="loginData.password" />
                                     </el-form-item>
                                     <el-form-item style="display:inline-block">
-                                        <el-radio label="Remeber me" size="default"></el-radio>
+                                    
+                                        <el-checkbox v-model="remeber" label="remeber me" size="default"  />
                                     </el-form-item>
                                     <el-form-item style="display:inline-block">
-                                        <el-button type="primary" @click="submitForm()">Submit</el-button>
+                                        <el-button type="primary" @click="submitForm">Submit</el-button>
                                     </el-form-item>
                                 </el-form>
                             </ElContainer>
@@ -60,6 +61,7 @@ const loginData = reactive({
     username: '',
     password: '',
 })
+const remeber = ref(false)
 ////////////////////////////////// 
 store.loggedError= false
 const submitForm = () => {
@@ -78,16 +80,17 @@ const submitForm = () => {
     }
     login(loginData).
     then(res => {
-        if(res.data.success == true){
+        console.log(res)
+        if(res.data.success == "true"){
             ElMessage.success("Login success")
-            // store user data into sessionStorage
-            store.setToken(res.data.token)            
-            store.setLogged(true)
+            // store user data into sessionStorag         
             // redirect to home page
-            router.push('/')
-        }else{
-            ElMessage.error(res.data.msg)
+            sessionStorage.setItem('user_name', res.data.session)
+            console.log("redirect to home page")
+            router.push({path: "/"})
         }
+    }).catch(err => {
+        ElMessage.error(err.response.data.message)
     })
 
 }

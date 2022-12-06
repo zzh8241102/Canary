@@ -8,19 +8,19 @@
                         <h1 class="font-banner">Canary</h1>
                     </div>
                     <div class="card shadow-lg">
-                        <div class="card-body p-5">
+                        <div class="card-body p-4">
                             <h1 class="fs-5 card-title fw-bold mb-5 font-banner">Sign Up</h1>
                             <ElContainer>
-                                <el-form :label-position="labelPosition" label-width="100px" :model="RegData"
+                                <el-form :label-position="labelPosition" label-width="100px" :model="regData"
                                     style="max-width: 360px">
                                     <el-form-item label="username" >
-                                        <el-input placeholder="Please input your username" v-model="RegData.username" />
+                                        <el-input placeholder="Please input your username" v-model="regData.username" />
                                     </el-form-item>
                                     <el-form-item label="password">
-                                        <el-input show-password type="password" placeholder="Please input password" v-model="RegData.password" />
+                                        <el-input show-password type="password" placeholder="Please input password" v-model="regData.password" />
                                     </el-form-item>
                                     <el-form-item label="email">
-                                        <el-input v-model="RegData.email" placeholder="Please input your email" />
+                                        <el-input v-model="regData.email" placeholder="Please input your email" />
                                     </el-form-item>
                                     <el-form-item >
                                         <el-button type="primary" @click="submitForm()" class="inline-block">Register</el-button>
@@ -55,38 +55,39 @@ const store = useStore()
 
 const labelPosition = ref('right')
 
-const RegData = reactive({
+const regData = reactive({
     username: '',
     password: '',
     email: '',
 })
 const submitForm = () => {
-    if(!RegData.username || !RegData.password || !RegData.email){
+    if(!regData.username || !regData.password || !regData.email){
         ElMessage.error("Please fill in all the fields")
         return
     }
     // ensure the username and password is valid string length less than 20
-    if(RegData.username.length > 20 || RegData.password.length > 20 || RegData.username.length < 2 || RegData.password.length < 2){
+    if(regData.username.length > 20 || regData.password.length > 20 || regData.username.length < 2 || regData.password.length < 2){
         // reset the loginData
-        RegData.username = ''
-        RegData.password = ''
-        RegData.email = ''
+        regData.username = ''
+        regData.password = ''
+        regData.email = ''
         ElMessage.error("The length of Username or password is invaild")
         ElMessage.info("The filed are reset for you")
         return
     }
-    register(RegData)
+    register(regData)
     .then(res => { 
         if(res.data.success == "true"){
             ElMessage.success("Register successfully")
-            sessionStorage.setItem('user_name', res.data.data)
-            router.push('/')
+            console.log(res.data)
+            sessionStorage.setItem('user_name', res.data.session)
+            router.push({path: '/'})
         }
     })
     .catch(err => {
-            RegData.username = ''
-            RegData.password = ''
-            RegData.email = ''
+            regData.username = ''
+            regData.password = ''
+            regData.email = ''
             ElMessage.error(err.response.data.message)
     })
   

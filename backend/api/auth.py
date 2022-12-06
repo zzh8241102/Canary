@@ -9,7 +9,7 @@ from flask import request,make_response
 from flask import jsonify
 from importlib_metadata import pass_none
 from models import User
-from forms import RegisterForm
+from forms import RegisterForm,LoginForm
 # from controller.auth_controller import auth_controller
 from werkzeug.datastructures import ImmutableMultiDict
 # hash 密码加密
@@ -32,7 +32,8 @@ class UserRegistrationApi(Resource):
                             'success': "false",
                             'message':{},
                             'code':0,
-                            'data':{}
+                            'data':{},
+                            'session':''
                             }
     def post(self):
         # get the post data
@@ -55,6 +56,8 @@ class UserRegistrationApi(Resource):
             self.response_obj['message'] = 'User created successfully.'
             self.response_obj['success'] = "true"
             self.response_obj['data'] = data['username']
+            # get user id by username
+            self.response_obj['session'] = data['username']
             return make_response(jsonify(self.response_obj), 201)
         except:
             self.response_obj['message'] = 'Cannot Create User. Please try again later.'
@@ -78,8 +81,35 @@ class UserSignInApi(Resource):
                             'message': "",
                             'code': 0, 
                             'data': {}, 
-                            'token':{}
+                            'token':{},
+                            'session':''
                             }
     def post(self):
         # get the post data
         data = login_parser.parse_args()
+        print(data)
+        form = LoginForm(ImmutableMultiDict(data))
+        print(form.data)
+        print(form.validate())
+        if(form.validate()==False):
+            self.response_obj['message'] = 'Invalid form data.'
+            self.response_obj['success'] = "false"
+            return make_response(jsonify(self.response_obj), 401)
+        if not User.find_by_username(data['username']):
+            self.response_obj['message'] = 'User does not exist.'
+            self.response_obj['success'] = "false"
+            return make_response(jsonify(self.response_obj), 400)
+        user = User.find_by_username(data['username'])
+        if check_password_hash(user.user_password,data['password']):
+            # generate the auth token
+            # auth_token = user.encode_auth_token(user.user_id)
+            # if auth_token:
+            self.response_obj['message'] = 'User signed'
+            self.response_obj['success'] = "true"
+            self.response_obj['data'] = data['username']
+            self.response_obj['session'] = data['username']
+            return make_response(jsonify(self.response_obj), 200)
+        else:
+            self.response_obj['message'] = 'Password is wrong.'
+            self.response_obj['success'] = "false"
+            return make_response(jsonify(self.response_obj), 400)

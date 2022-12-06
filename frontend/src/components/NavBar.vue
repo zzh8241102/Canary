@@ -4,22 +4,24 @@
     <!-- Class `area` is a container -->
     <div class="navbar area">
       <!-- Logo -->
-      <a href="#" class="brand">        <span class="more">
-                          <svg t="1670012908025" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                              xmlns="http://www.w3.org/2000/svg" p-id="2300" width="20" height="20"
-                              xmlns:xlink="http://www.w3.org/1999/xlink">
-                              <path
-                                  d="M896 170.666667v85.333333H128V170.666667h768z m0 298.666666v85.333334H128v-85.333334h768z m0 298.666667v85.333333H128v-85.333333h768z"
-                                  p-id="2301" fill="#bfbfbf"></path>
-                          </svg></span></a>
+      <router-link to="/"><img class="small-img" src="../assets/canary_banner.jpg"></router-link>
       <!-- List of links -->
       <nav role="navigation" id="navigation" class="list">
-        <a href="#" class="item -link">Home</a>
-        <a href="#" class="item -link">Tags</a>
-        <a href="#" class="item -link">Posts</a>
-        <a href="#" class="item -link">Query</a>
-        <a href="#" class="item -link">About me</a>
-        <span class="item"><i class="fa fa-search"></i></span>
+        <!-- <span class="item"><i class="fa fa-search"></i></span> -->
+        <button class='search-button-container'>
+          <span class="search-icon-container inline">
+            <SearchIcon></SearchIcon>
+            <h5 class="inline font-setter margin-search">Search</h5>
+          </span>
+          <span class="little-box">
+            <kdb class="kb">⌘</kdb>
+            <kdb class="kb">J</kdb>
+          </span>
+        </button>
+        <router-link to="/" class="item -link margin-bottom">Home</router-link>
+        <router-link to="/tags" class="item -link margin-bottom">tags</router-link>
+        <a href="#" class="item -link" ><el-button color="#626aef" style="margin-bottom:5px" :dark="isDark">Post</el-button></a>
+        <router-link to="/user/:id" class="margin-left"><GithubIcon></GithubIcon></router-link>
       </nav>
       <!-- Button to toggle the display menu  -->
       <button data-collapse data-target="#navigation" class="toggle">
@@ -29,7 +31,12 @@
     </div>
   </div>
 </template>
-<script>
+<script setup>
+import MoreButton from './icons/MoreInfoIcon.vue'
+import HomeButton from './icons/HomeButtonIcon.vue'
+import GithubIcon from './icons/GithubIcon.vue'
+import SearchIcon from './icons/SearchIcon.vue'
+
 (function() {
 
 // Definition of caller element
@@ -38,8 +45,8 @@ var isCollapse = el.getAttribute('data-collapse');
 if (isCollapse !== null) {
   return el;
 } else {
-  var isParentCollapse = el.parentNode.getAttribute('data-collapse');
-  return (isParentCollapse !== null) ? el.parentNode : undefined;
+  var isParentCollapse = el.parentElement.getAttribute('data-collapse');
+  return (isParentCollapse !== null) ? el.parentElement : undefined;
 }
 };
 
@@ -69,11 +76,12 @@ document.addEventListener('click', collapseClickHandler, false);
 <style lang="less">
   // Scaffolding
 *, *:before, *:after { box-sizing: border-box; }
-body { background-color: #f5f5f5; color: #333; font-size: 14px; font-family: Verdana, Arial, sans-serif; line-height: 20px; }
+body { background-color: #f5f5f5; color: #333; font-size: 14px; line-height: 20px; }
 a { text-decoration: none; transition: all 0.3s linear 0s; }
 
 .area {
 display: flex; flex-flow: row wrap; align-items: stretch; margin-left: auto; margin-right: auto;
+
 @media (min-width: 768px) { width: 750px; }
 @media (min-width: 992px) { width: 970px; }
 @media (min-width: 1200px) { width: 1140px; }
@@ -96,10 +104,73 @@ display: flex; flex-flow: row wrap; align-items: stretch; margin-left: auto; mar
 @navbar-item-border:         transparent;
 @navbar-item-active-border:  #673ab7;
 
+.margin-left{
+  margin-left: 10px;
+  margin-right: 10px;
+ 
+}
+
+.search-button-container{
+   align-items: center;
+    background: #fff;
+    border: 0;
+    border-radius: 40px;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    height: 36px;
+    justify-content: space-between;
+    margin: 0 0 0 16px;
+    padding: 0 8px;
+    user-select: none;
+    margin-right:20px; ;
+    margin-top: 6px;
+}
+
+.search-button-container:hover{
+  background-color: #f5f5f5;
+  border: 2px solid #673ab7;
+}
+.kb{
+  align-items: center;
+    background: #f5f5f5;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    // color:var(--docsearch-muted-color);
+    margin: 2px;
+    color:#555; 
+    display: flex;
+    height: 18px;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    top: -1px;
+    width: 20px;
+    font-family: monospace,monospace;
+    font-size: 1em;
+    border:10px;
+    display: inline-block;
+}
+.font-setter{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
+  color: #626262;
+}
+.margin-search{
+  margin: 5px;
+}
+.inline{
+  display: inline-block;
+}
 // Component skeleton
 .navbar-component {
 background-color: @navbar-background;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+// 高斯模糊
+backdrop-filter: blur(10px);
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 
 & > .navbar {
   justify-content: space-between;
@@ -107,6 +178,18 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
   // the box bottom a shadow
   box-shadow: none;    
 }
+}
+
+.navigation{
+  
+  backdrop-filter: blur(10px);
+  // bottom shadow
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.small-img{
+    width: 131px;
+    height: 44px;
 }
 
 // Component
@@ -171,7 +254,7 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 
 // List of items
 & > .list {
-  font-family: Cairo;
+  
   display: none;
   flex-flow: row nowrap;
   align-items: center;
@@ -183,13 +266,17 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
   
   @media (max-width: @navbar-collapse-breakpoint) {
     position: fixed;
-    top: @navbar-height;
-    left: 0;
-    width: 100%;
+    top: @navbar-height+30px;
+    left: 1vw;
+    width: 98%;
+    //顶部无阴影，底部有阴影
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+
     overflow-y: hidden;
     overflow-x: auto;
     border-top: 1px solid @navbar-border;
     background-color: @navbar-background;
+    backdrop-filter: blur(10px);
     flex-direction: column;
   }
   
@@ -205,9 +292,8 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
   line-height: @navbar-height;
   padding-left: round(((@navbar-height - 20)/2),2);
   padding-right: round(((@navbar-height - 20)/2),2);
-  text-transform: uppercase;
   color: @navbar-item-color;
-  font-size: @navbar-item-font-size;
+  font-size: 16px;
 }
   
 & > .list > .item.-link {
@@ -223,4 +309,6 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
   }
 }
 }
+
+
 </style>

@@ -9,8 +9,8 @@ class RegisterForm(wtforms.Form):
 
 
 class LoginForm(wtforms.Form):
-    user_name = wtforms.StringField(validators=[length(min=4, max=20, message='the length of the user name should be between 4 and 20')])
-    user_password = wtforms.StringField(validators=[length(min=6, max=20, message='the length of the password should be between 6 and 20')])
+    username = wtforms.StringField(validators=[length(min=4, max=20, message='the length of the user name should be between 4 and 20')])
+    password = wtforms.StringField(validators=[length(min=4, max=20, message='the length of the password should be between 6 and 20')])
 
 class ChangePasswordForm(wtforms.Form):
     old_password = wtforms.StringField(validators=[length(min=6, max=20, message='the length of the password should be between 6 and 20')])
