@@ -3,7 +3,7 @@ from sqlalchemy import Column
 from extension import db
 from datetime import datetime
 from passlib.apps import custom_app_context 
-from app import app
+
 
 # ////// why bind the auth to Users model? ///////
 
@@ -29,6 +29,12 @@ class User(db.Model):
         self.user_password = custom_app_context.encrypt(password)
     def password_verfication(self, password):
         return custom_app_context.verify(password, self.user_password)
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+    @classmethod
+    def find_by_username(cls, username):
+        return cls.query.filter_by(user_name = username).first()
 
    
 
@@ -119,6 +125,7 @@ class Likes(db.Model):
 # notice the tags must be firtly added or exist in the tags table
 class UserTags(db.Model):
     # user tag id as primary key
+    __tablename__ = 'UserTags'
     user_tag_id = db.Column(db.Integer, primary_key=True)
     # user tag name
     user_tag_name = db.Column(db.String(20),nullable=False)

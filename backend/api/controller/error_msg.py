@@ -1,4 +1,3 @@
-from . import api_bp
 from flask import jsonify
 
 

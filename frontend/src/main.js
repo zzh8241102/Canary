@@ -23,12 +23,11 @@ router.beforeEach((to, from, next) => {
     if(to.path === "/login" || to.path === "/register"){
         next()
     }else{
-        if (sessionStorage.getItem('accessToken')){
+        if (sessionStorage.getItem('user_name')!=null){
             next()
         } else {
             next("/login")
             store.loggedError= true
-            console.log(store.loggedError)
         }
     }
 })
