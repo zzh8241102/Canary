@@ -14,14 +14,11 @@ const user = ref("")
 const store = useStore()
 ///////////////////////////////////////////////
 onMounted(() => {
-    document.body.style.setProperty('--el-color-primary', '#261048');
-    document.body.style.setProperty('--el-color-primary-light-9', '#F5FBF0');
-    document.body.style.setProperty('--el-color-primary-light-3', '#BEBDEB');
-
-    helloWorld.then((res) => {
-        store.hello = res.data
-    })
-})
+    // set customized element ui style sheets
+    document.body.style.setProperty('--el-color-primary', '#735CFF');
+    document.body.style.setProperty('--el-color-primary-light-9', '##EDEDFC');
+    document.body.style.setProperty('--el-color-primary-light-3', '#9E8ACF');
+ })
 ///////////////////////////////////////////////
 </script>
 

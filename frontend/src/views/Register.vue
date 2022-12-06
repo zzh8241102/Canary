@@ -16,13 +16,13 @@
                                         <el-input v-model="formLabelAlign.name" />
                                     </el-form-item>
                                     <el-form-item label="password">
-                                        <el-input v-model="formLabelAlign.region" />
+                                        <el-input v-model="formLabelAlign.password" />
+                                    </el-form-item>
+                                    <el-form-item label="email">
+                                        <el-input v-model="formLabelAlign.password" />
                                     </el-form-item>
                                     <el-form-item style="display:inline-block">
-                                        <el-radio label="Remeber me" size="default"></el-radio>
-                                    </el-form-item>
-                                    <el-form-item style="display:inline-block">
-                                        <el-button type="primary" @click="submitForm(ruleFormRef)">Submit</el-button>
+                                        <el-button type="primary" @click="submitForm(ruleFormRef)">Register</el-button>
                                     </el-form-item>
                                 </el-form>
                             </ElContainer>
@@ -31,7 +31,7 @@
                         <hr>
                         <div class="card-footer py-1 border-0 filter">
                             <div class="text-center">
-                                Don't have an account?
+                                Already have a account?
                                 <RouterLink to="/register">Register one!</RouterLink>
                             </div>
                         </div>
@@ -43,22 +43,17 @@
     </section>
 </template>
 <script setup>
-////////////  resolve imports //////////// 
-import { ElContainer, ElMessage } from 'element-plus';
-import { reactive, ref,onMounted } from 'vue'
+import { ElContainer } from 'element-plus';
+import { reactive, ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
-import useStore from '../stores/store.js'
-////////////  resolve imports //////////// 
 
-////////////////////////////////// 
-const store = useStore()
 const labelPosition = ref('right')
+
 const formLabelAlign = reactive({
     name: '',
-    region: '',
-    type: '',
+    password: '',
+    email: '',
 })
-////////////////////////////////// 
 const submitForm = (formEl) => {
     if (!formEl) return
     formEl.validate((valid) => {
@@ -70,14 +65,6 @@ const submitForm = (formEl) => {
         }
     })
 }
-
-onMounted(() => {
-    if(store.loggedError){
-        ElMessage.error("You must sign in first to experience canary")
-    }
-})
-
-
 
 </script>
 <style scoped>

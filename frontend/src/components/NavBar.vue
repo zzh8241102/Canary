@@ -1,63 +1,63 @@
 <template lang="">
-    <!-- Component -->
-    <div class="navbar-component">
-      <!-- Class `area` is a container -->
-      <div class="navbar area">
-        <!-- Logo -->
-        <a href="#" class="brand">        <span class="more">
-                            <svg t="1670012908025" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                                xmlns="http://www.w3.org/2000/svg" p-id="2300" width="20" height="20"
-                                xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path
-                                    d="M896 170.666667v85.333333H128V170.666667h768z m0 298.666666v85.333334H128v-85.333334h768z m0 298.666667v85.333333H128v-85.333333h768z"
-                                    p-id="2301" fill="#bfbfbf"></path>
-                            </svg></span></a>
-        <!-- List of links -->
-        <nav role="navigation" id="navigation" class="list">
-          <a href="#" class="item -link">Home</a>
-          <a href="#" class="item -link">Articles</a>
-          <a href="#" class="item -link">Projects</a>
-          <a href="#" class="item -link">Resources</a>
-          <a href="#" class="item -link">About me</a>
-          <span class="item"><i class="fa fa-search"></i></span>
-        </nav>
-        <!-- Button to toggle the display menu  -->
-        <button data-collapse data-target="#navigation" class="toggle">
-          <!-- Hamburger icon -->
-          <span class="icon"></span>
-        </button>
-      </div>
+  <!-- Component -->
+  <div class="navbar-component">
+    <!-- Class `area` is a container -->
+    <div class="navbar area">
+      <!-- Logo -->
+      <a href="#" class="brand">        <span class="more">
+                          <svg t="1670012908025" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" p-id="2300" width="20" height="20"
+                              xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <path
+                                  d="M896 170.666667v85.333333H128V170.666667h768z m0 298.666666v85.333334H128v-85.333334h768z m0 298.666667v85.333333H128v-85.333333h768z"
+                                  p-id="2301" fill="#bfbfbf"></path>
+                          </svg></span></a>
+      <!-- List of links -->
+      <nav role="navigation" id="navigation" class="list">
+        <a href="#" class="item -link">Home</a>
+        <a href="#" class="item -link">Tags</a>
+        <a href="#" class="item -link">Posts</a>
+        <a href="#" class="item -link">Query</a>
+        <a href="#" class="item -link">About me</a>
+        <span class="item"><i class="fa fa-search"></i></span>
+      </nav>
+      <!-- Button to toggle the display menu  -->
+      <button data-collapse data-target="#navigation" class="toggle">
+        <!-- Hamburger icon -->
+        <span class="icon"></span>
+      </button>
     </div>
+  </div>
 </template>
 <script>
 (function() {
 
 // Definition of caller element
 var getTriggerElement = function(el) {
-  var isCollapse = el.getAttribute('data-collapse');
-  if (isCollapse !== null) {
-    return el;
-  } else {
-    var isParentCollapse = el.parentNode.getAttribute('data-collapse');
-    return (isParentCollapse !== null) ? el.parentNode : undefined;
-  }
+var isCollapse = el.getAttribute('data-collapse');
+if (isCollapse !== null) {
+  return el;
+} else {
+  var isParentCollapse = el.parentNode.getAttribute('data-collapse');
+  return (isParentCollapse !== null) ? el.parentNode : undefined;
+}
 };
 
 // A handler for click on toggle button
 var collapseClickHandler = function(event) {
-  var triggerEl = getTriggerElement(event.target);
-  // If trigger element does not exist
-  if (triggerEl === undefined) {
-    event.preventDefault();
-    return false;
-  }
+var triggerEl = getTriggerElement(event.target);
+// If trigger element does not exist
+if (triggerEl === undefined) {
+  event.preventDefault();
+  return false;
+}
 
-  // If the target element exists
-  var targetEl = document.querySelector(triggerEl.getAttribute('data-target'));
-  if (targetEl) {
-    triggerEl.classList.toggle('-active');
-    targetEl.classList.toggle('-on');
-  }
+// If the target element exists
+var targetEl = document.querySelector(triggerEl.getAttribute('data-target'));
+if (targetEl) {
+  triggerEl.classList.toggle('-active');
+  targetEl.classList.toggle('-on');
+}
 };
 
 // Delegated event
@@ -67,16 +67,16 @@ document.addEventListener('click', collapseClickHandler, false);
 
 </script>
 <style lang="less">
-    // Scaffolding
+  // Scaffolding
 *, *:before, *:after { box-sizing: border-box; }
 body { background-color: #f5f5f5; color: #333; font-size: 14px; font-family: Verdana, Arial, sans-serif; line-height: 20px; }
 a { text-decoration: none; transition: all 0.3s linear 0s; }
 
 .area {
-  display: flex; flex-flow: row wrap; align-items: stretch; margin-left: auto; margin-right: auto;
-  @media (min-width: 768px) { width: 750px; }
-  @media (min-width: 992px) { width: 970px; }
-  @media (min-width: 1200px) { width: 1140px; }
+display: flex; flex-flow: row wrap; align-items: stretch; margin-left: auto; margin-right: auto;
+@media (min-width: 768px) { width: 750px; }
+@media (min-width: 992px) { width: 970px; }
+@media (min-width: 1200px) { width: 1140px; }
 }
 
 // Navigation component
@@ -98,129 +98,129 @@ a { text-decoration: none; transition: all 0.3s linear 0s; }
 
 // Component skeleton
 .navbar-component {
-  background-color: @navbar-background;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+background-color: @navbar-background;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+
+& > .navbar {
+  justify-content: space-between;
   
-  & > .navbar {
-    justify-content: space-between;
-    
-    // the box bottom a shadow
-    box-shadow: none;    
-  }
+  // the box bottom a shadow
+  box-shadow: none;    
+}
 }
 
 // Component
 .navbar {
-  // Brand
-  & > .brand {
+// Brand
+& > .brand {
+  display: block;
+  font-size: 16px;
+  color: #777;
+  margin: round(((@navbar-height - 20)/2),2);//左右没 
+}
+
+// Toggle button
+& > .toggle {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  display: inline-block;
+  background-color: transparent;
+  background-image: none;
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  padding: round(((@navbar-height - 20/2)/2),2);
+  
+   @media (min-width: @navbar-collapse-breakpoint) {
+     display: none;
+   }
+  
+}
+
+& > .toggle > .icon {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  
+  &,
+  &:before,
+  &:after {
     display: block;
-    font-size: 16px;
-    color: #777;
-    margin: round(((@navbar-height - 20)/2),2);//左右没 
+    width: 24px;
+    height: 3px;
+    transition: background-color 0.3s linear, transform 0.3s linear;
+    background-color: #555555;
   }
   
-  // Toggle button
-  & > .toggle {
-    border: 0;
-    background-color: transparent;
-    outline: none;
-    border: 0;
-    display: inline-block;
-    background-color: transparent;
-    background-image: none;
-    vertical-align: middle;
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    touch-action: manipulation;
-    user-select: none;
-    padding: round(((@navbar-height - 20/2)/2),2);
-    
-     @media (min-width: @navbar-collapse-breakpoint) {
-       display: none;
-     }
-    
+  &:before, &:after { position: absolute; content: ""; }
+  &:before { top: -8px; }
+  &:after { top: 8px; }
+}
+
+& > .toggle.-active > .icon {
+  background-color: transparent;
+  
+  &:before { transform: translateY(8px) rotate(45deg); }
+  &:after { transform: translateY(-8px) rotate(-45deg); }
+}
+
+// List of items
+& > .list {
+  font-family: Cairo;
+  display: none;
+  flex-flow: row nowrap;
+  align-items: center;
+  white-space: nowrap;
+  
+  @media (min-width: @navbar-collapse-breakpoint) {
+    display: flex;
   }
   
-  & > .toggle > .icon {
-    position: relative;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    
-    &,
-    &:before,
-    &:after {
-      display: block;
-      width: 24px;
-      height: 3px;
-      transition: background-color 0.3s linear, transform 0.3s linear;
-      background-color: #555555;
-    }
-    
-    &:before, &:after { position: absolute; content: ""; }
-    &:before { top: -8px; }
-    &:after { top: 8px; }
+  @media (max-width: @navbar-collapse-breakpoint) {
+    position: fixed;
+    top: @navbar-height;
+    left: 0;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+    border-top: 1px solid @navbar-border;
+    background-color: @navbar-background;
+    flex-direction: column;
   }
   
-  & > .toggle.-active > .icon {
-    background-color: transparent;
-    
-    &:before { transform: translateY(8px) rotate(45deg); }
-    &:after { transform: translateY(-8px) rotate(-45deg); }
+  &.-on {
+    display: flex;
   }
+}
+
+& > .list > .item {
+  display: block;
+  flex-shrink: 0;
+  height: @navbar-height;
+  line-height: @navbar-height;
+  padding-left: round(((@navbar-height - 20)/2),2);
+  padding-right: round(((@navbar-height - 20)/2),2);
+  text-transform: uppercase;
+  color: @navbar-item-color;
+  font-size: @navbar-item-font-size;
+}
   
-  // List of items
-  & > .list {
-    font-family: Cairo;
-    display: none;
-    flex-flow: row nowrap;
-    align-items: center;
-    white-space: nowrap;
-    
-    @media (min-width: @navbar-collapse-breakpoint) {
-      display: flex;
-    }
-    
-    @media (max-width: @navbar-collapse-breakpoint) {
-      position: fixed;
-      top: @navbar-height;
-      left: 0;
-      width: 100%;
-      overflow-y: hidden;
-      overflow-x: auto;
-      border-top: 1px solid @navbar-border;
-      background-color: @navbar-background;
-      flex-direction: column;
-    }
-    
-    &.-on {
-      display: flex;
-    }
-  }
+& > .list > .item.-link {
+  line-height: @navbar-height + @navbar-item-border-width;
+  color: @navbar-item-color;
+  border-bottom: @navbar-item-border-width solid @navbar-item-border;
   
-  & > .list > .item {
-    display: block;
-    flex-shrink: 0;
-    height: @navbar-height;
-    line-height: @navbar-height;
-    padding-left: round(((@navbar-height - 20)/2),2);
-    padding-right: round(((@navbar-height - 20)/2),2);
-    text-transform: uppercase;
-    color: @navbar-item-color;
-    font-size: @navbar-item-font-size;
+  &.-active,
+  &:hover,
+  &:focus {
+    color: @navbar-item-active-color;
+    border-bottom-color: @navbar-item-active-border;
   }
-    
-  & > .list > .item.-link {
-    line-height: @navbar-height + @navbar-item-border-width;
-    color: @navbar-item-color;
-    border-bottom: @navbar-item-border-width solid @navbar-item-border;
-    
-    &.-active,
-    &:hover,
-    &:focus {
-      color: @navbar-item-active-color;
-      border-bottom-color: @navbar-item-active-border;
-    }
-  }
+}
 }
 </style>

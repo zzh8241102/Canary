@@ -1,4 +1,4 @@
-# //////////// app factory and runner //////////// #
+    # //////////// app factory and runner //////////// #
 
 from flask import Flask
 from flask_cors import CORS
@@ -7,12 +7,13 @@ from flask_migrate import Migrate
 import utils.config as config
 from utils import add_apis,add_blueprints
 from api import api_bp, api
-
+from flask_jwt_extended import JWTManager
 # //////////// create app //////////// #
 app = Flask(__name__)
 app.config.from_object(config)
-# db.init_app(app)
-# Migrate(app, db)
+jwt = JWTManager(app)
+db.init_app(app)
+Migrate(app, db)
 CORS(app, supports_credentials=True)
 add_apis()
 api.init_app(app)

@@ -3,6 +3,7 @@ import {ref,computed} from 'vue'
 
 export default defineStore('store', () => {
     const hello = ref(2)
+    const loggedError = ref(false)
     const increment = () => {
         hello.value++
     }
