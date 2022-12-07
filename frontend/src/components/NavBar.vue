@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <el-dialog v-model="dialogVisible" title="Mixed Search" width="60%" draggable style="background-color:#FAFAFA; "
+  <el-dialog v-model="dialogVisible" title="Mixed Search" width="55%" draggable style="background-color:#FAFAFA; "
     class="search-dialog">
     <center>
       <h5>

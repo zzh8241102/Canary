@@ -1,6 +1,6 @@
 <template>
+     <NavBar></NavBar>
     <div>
-        
         <div class="main-area flex">
             <div class="content-area flex3  mg-r8">
                 <div class="article-block black-border mg-b8 mg-t4">
@@ -54,6 +54,8 @@
 </template>
 <script setup>
 import NavBar from '../components/NavBar.vue'
+import useStore from '../stores/store.js'
+const store = useStore()
 
 </script>
 <style scoped>
@@ -101,9 +103,9 @@ import NavBar from '../components/NavBar.vue'
 .mg-r8{
     margin-right: 8px;
 }
-.content-area {}
+/* .content-area {}
 
-.recommend-area {}
+.recommend-area {} */
 
 .article-block {
     height: 90px;
