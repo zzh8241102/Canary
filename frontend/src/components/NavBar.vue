@@ -14,14 +14,15 @@
             <h5 class="inline font-setter margin-search">Search</h5>
           </span>
           <span class="little-box">
-            <kdb class="kb">⌘</kdb>
-            <kdb class="kb">J</kdb>
+            <div class="kb">⌘</div>
+            <div class="kb">J</div>
           </span>
         </button>
         <router-link to="/" class="item -link margin-bottom">Home</router-link>
         <router-link to="/tags" class="item -link margin-bottom">tags</router-link>
         <a href="#" class="item -link">
-          <el-button color="#626aef" style="margin-bottom:5px" :dark="isDark">Post</el-button>
+          <router-link to="/post"><el-button color="#626aef" style="margin-bottom:5px">Post</el-button></router-link>
+
         </a>
         <router-link to="/user/:id" class="margin-left">
           <GithubIcon></GithubIcon>
@@ -35,21 +36,23 @@
     </div>
   </div>
 
-  <el-dialog v-model="dialogVisible" title="Mixed Search" width="55%" draggable style="background-color:#FAFAFA; "
+  <el-dialog v-model="dialogVisible" title="Mixed Search" :width="dialogWidthComputed" draggable style="background-color:#FAFAFA; "
     class="search-dialog">
     <center>
       <h5>
         <p class="font-setter-normal">Search</p>
       </h5>
     </center>
-    <el-input v-model="searchContent" class="w-80 m-2" placeholder="Search around the site" :suffix-icon="Calendar" />
+    <el-input v-model="searchContent" class="w-80 m-2" placeholder="Search around the site"/>
     <el-card shadow="always" class="res-card" style="margin:8px;"> Result </el-card>
-    <el-card shadow="always" class="res-card"> Result </el-card>
+    <el-card shadow="always" class="res-card" style="margin:8px;"> Result </el-card>
+    <el-card shadow="always" class="res-card" style="margin:8px;"> Result </el-card>
+
     <div class="footer dialog-footer">
-      <kdb class="kb_inner">⌘</kdb>
-      <kdb class="kb_inner">J</kdb>
+      <div class="kb_inner">⌘</div>
+      <div class="kb_inner">J</div>
       <span class="fter-instruct-open font-setter-normal">To open</span>
-      <kdb class="kb_inner">ESC</kdb>
+      <div class="kb_inner">ESC</div>
       <span class="fter-instruct font-setter-normal">to quit</span>
     </div>
   </el-dialog>
@@ -61,10 +64,23 @@ import HomeButton from './icons/HomeButtonIcon.vue'
 import GithubIcon from './icons/GithubIcon.vue'
 import SearchIcon from './icons/SearchIcon.vue'
 import router from '../router/index.js'
-import { ref } from 'vue'
+import { ref,onMounted} from 'vue'
 //////////////////////////////////////////////////////
+
 const dialogVisible = ref(false);
 const searchContent = ref('');
+const dialogWidthComputed = ref('55%');
+
+onMounted(() => {
+  window.onresize = () =>{
+    if(window.innerWidth <= 800){
+      dialogWidthComputed.value = '80%'
+  } else if(window.innerWidth>800){
+      dialogWidthComputed.value = '55%'
+  }
+  }
+
+}),
 
 //////////////////////////////////////////////////////
 (function () {
@@ -78,6 +94,7 @@ const searchContent = ref('');
       var isParentCollapse = el.parentElement.getAttribute('data-collapse');
       return (isParentCollapse !== null) ? el.parentElement : undefined;
     }
+    return el;
   };
 
   // A handler for click on toggle button
@@ -85,6 +102,8 @@ const searchContent = ref('');
     var triggerEl = getTriggerElement(event.target);
     // If trigger element does not exist
     if (triggerEl === undefined) {
+      console.log(triggerEl)
+      console.log('No trigger element');
       event.preventDefault();
       return false;
     }
@@ -294,11 +313,10 @@ a {
   // 永远在顶部
   position: sticky;
   top: 0;
-
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
-  // 高斯模糊
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 2px 1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 10;
 
 
   &>.navbar {
@@ -309,12 +327,7 @@ a {
   }
 }
 
-.navigation {
 
-  backdrop-filter: blur(10px);
-  // bottom shadow
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
-}
 
 .small-img {
   width: 131px;
@@ -414,19 +427,20 @@ a {
       top: @navbar-height+30px;
       left: 1vw;
       width: 98%;
-      //顶部无阴影，底部有阴影
+      // backdrop-filter: blur(10px);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 
       overflow-y: hidden;
       overflow-x: auto;
       border-top: 1px solid @navbar-border;
-      background-color: @navbar-background;
-      // backdrop-filter: blur(10px);
+      background-color: white;
+      z-index:11;
       flex-direction: column;
     }
 
     &.-on {
       display: flex;
+      z-index:11;
     }
   }
 

@@ -8,6 +8,16 @@ import 'element-plus/theme-chalk/el-loading.css';
 import 'element-plus/theme-chalk/el-message.css';
 import {createPinia }from 'pinia'
 import './assets/main.css'
+import VueMarkdownEditor from '@kangc/v-md-editor';
+import '@kangc/v-md-editor/lib/style/base-editor.css';
+import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js';
+import '@kangc/v-md-editor/lib/theme/style/vuepress.css';
+
+import Prism from 'prismjs';
+
+VueMarkdownEditor.use(vuepressTheme, {
+    Prism,
+  });
 
 
 const app = createApp(App)
@@ -15,6 +25,7 @@ const app = createApp(App)
 app.use(ElementPlus)
 app.use(router)
 app.use(createPinia())
+app.use(VueMarkdownEditor);
 
 import useStore from './stores/store.js'
 const store = useStore()

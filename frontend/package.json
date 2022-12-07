@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@kangc/v-md-editor": "^2.3.15",
     "axios": "^1.2.0",
     "element-plus": "^2.2.26",
     "mdb-vue-ui-kit": "^3.1.1",

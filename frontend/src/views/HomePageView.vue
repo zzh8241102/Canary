@@ -1,9 +1,10 @@
-<template>
+[<template>
      <NavBar></NavBar>
     <div>
         <div class="main-area flex">
-            <div class="content-area flex3  mg-r8">
+            <div class="content-area flex3 mg-r8">
                 <div class="article-block black-border mg-b8 mg-t4">
+                    
                 </div>
                 <div class="article-block black-border mg-b8 ">
                 </div>
@@ -51,7 +52,7 @@
             </div>
         </div>
     </div>
-</template>
+</template>]
 <script setup>
 import NavBar from '../components/NavBar.vue'
 import useStore from '../stores/store.js'
@@ -109,6 +110,9 @@ const store = useStore()
 
 .article-block {
     height: 90px;
+    flex: 1;
+overflow: hidden;
+
 }
 
 .white-bg {
