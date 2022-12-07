@@ -4,7 +4,10 @@
         <div class="main-area flex">
             <div class="content-area flex3 mg-r8">
                 <div class="article-block black-border mg-b8 mg-t4">
-                    
+                    <div class="text-area">
+                        <p style="display:inline;">
+                            hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+                    </div>
                 </div>
                 <div class="article-block black-border mg-b8 ">
                 </div>
@@ -27,6 +30,7 @@
                 <div class="article-block black-border mg-b8 mg-t4">
                 </div>
                 <div class="article-block black-border mg-b8 ">
+
                 </div>
                 <div class="article-block black-border mg-b8 ">
                 </div>
@@ -109,14 +113,29 @@ const store = useStore()
 .recommend-area {} */
 
 .article-block {
+    /* height: 90px; */
     height: 90px;
-    flex: 1;
-overflow: hidden;
+    word-wrap: break-word;
+    max-width: 55vw;
 
 }
 
 .white-bg {
     background-color: white;
+}
+
+.text-area{
+    width: 80%;
+    background-color: aqua;
+    height: 50%;
+    /* 只显示一排文字 */
+    overflow: hidden;
+    /* 文字超出部分用省略号代替 */
+    text-overflow: ellipsis;
+    /* 文字超出部分用省略号代替 */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 
@@ -128,8 +147,13 @@ overflow: hidden;
         flex-direction: column;
         width: 90%;
     }
+    .article-block {
+    /* height: 90px; */
+    height: 90px;
+    word-wrap: break-word;
+    max-width: 90vw;
 
-    
+}
 }
 /* 屏幕宽度小于600时 */
 @media screen and (max-width: 600px) {
@@ -143,5 +167,12 @@ overflow: hidden;
     .content-area{
         margin: 0px;
     }
+    .article-block {
+    /* height: 90px; */
+    height: 90px;
+    word-wrap: break-word;
+    max-width: 100vw;
+
+}
 }
 </style>
