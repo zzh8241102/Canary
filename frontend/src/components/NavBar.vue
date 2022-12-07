@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <!-- Component -->
   <div class="navbar-component">
     <!-- Class `area` is a container -->
@@ -36,6 +36,9 @@ import MoreButton from './icons/MoreInfoIcon.vue'
 import HomeButton from './icons/HomeButtonIcon.vue'
 import GithubIcon from './icons/GithubIcon.vue'
 import SearchIcon from './icons/SearchIcon.vue'
+import router from '../router/index.js'
+
+
 
 (function() {
 
@@ -73,7 +76,7 @@ document.addEventListener('click', collapseClickHandler, false);
 })(document, window);
 
 </script>
-<style lang="less">
+<style lang="less" scoped>
   // Scaffolding
 *, *:before, *:after { box-sizing: border-box; }
 body { background-color: #f5f5f5; color: #333; font-size: 14px; line-height: 20px; }
@@ -112,7 +115,7 @@ display: flex; flex-flow: row wrap; align-items: stretch; margin-left: auto; mar
 
 .search-button-container{
    align-items: center;
-    background: #fff;
+    background: #efecec;
     border: 0;
     border-radius: 40px;
     color: #000;
@@ -131,6 +134,7 @@ display: flex; flex-flow: row wrap; align-items: stretch; margin-left: auto; mar
 .search-button-container:hover{
   background-color: #f5f5f5;
   border: 2px solid #673ab7;
+  
 }
 .kb{
   align-items: center;
@@ -141,7 +145,7 @@ display: flex; flex-flow: row wrap; align-items: stretch; margin-left: auto; mar
     margin: 2px;
     color:#555; 
     display: flex;
-    height: 18px;
+    height: 21px;
     justify-content: center;
     position: relative;
     border: 0;
@@ -165,7 +169,9 @@ display: flex; flex-flow: row wrap; align-items: stretch; margin-left: auto; mar
 }
 // Component skeleton
 .navbar-component {
-background-color: @navbar-background;
+  // 永远在顶部
+  position: sticky; top:0;
+
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 // 高斯模糊
 backdrop-filter: blur(10px);

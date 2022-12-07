@@ -1,31 +1,35 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {
+  createRouter,
+  createWebHistory
+} from 'vue-router'
 
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
+  history: createWebHistory(
+    import.meta.env.BASE_URL),
+  routes: [{
       path: '/',
       name: 'home',
-      component: () => import('../views/HomePageView.vue'),
-      children:[
-        {
-          path: '/post',
-          name: 'PostPage',
-          component: () => import('../views/WritingAndPush.vue')
-        },
-        {
-          path: '/tags',
-          name: 'tags',
-          component: () => import('../views/Tags.vue')
-        },
-        {
-          path: '/user/:id',
-          name: 'userPage',
-          component: () => import('../views/UserPage.vue')
-        },
-      ]
+      component: () => import('../views/HomePageView.vue')
     },
+    // children:[
+    {
+      path: '/post',
+      name: 'PostPage',
+      component: () => import('../views/WritingAndPush.vue')
+    },
+    {
+      path: '/tags',
+      name: 'tags',
+      component: () => import('../views/Tags.vue')
+    },
+    {
+      path: '/user/:id',
+      name: 'userPage',
+      component: () => import('../views/UserPage.vue')
+    },
+    // ]
+
     {
       path: '/login',
       name: 'login',

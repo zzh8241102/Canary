@@ -1,4 +1,5 @@
 <template>
+    <NavBar></NavBar>
     <router-view></router-view>
 </template>
 
@@ -8,6 +9,7 @@ import { computed, ref, onMounted } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { helloWorld } from './http/api';
 import useStore from './stores/store.js'
+import NavBar from './components/NavBar.vue'
 // import { helloWorld } from './http/api.js'
 
 ///////////////////////////////////////////////
