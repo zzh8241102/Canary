@@ -21,3 +21,5 @@ export const getTags = (data) => $http.get('/api/tags', data)
 export const postArticle = (data) => $http.post('/api/post', data)
 // /api/comment
 export const postComment = (data) => $http.post('/api/comment', data)
+// /api/search?search=keyword
+export const search = (data) => $http.get('/api/search', data)
