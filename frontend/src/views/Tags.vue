@@ -63,7 +63,7 @@ import NavBar from '../components/NavBar.vue'
 
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1050px) {
     .main-area {
         width: 100%;
     }

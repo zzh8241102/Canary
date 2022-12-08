@@ -20,10 +20,10 @@
         </button>
         <router-link to="/" class="item -link margin-bottom">Home</router-link>
         <router-link to="/tags" class="item -link margin-bottom">tags</router-link>
-        <a href="#" class="item -link">
-          <router-link to="/post"><el-button color="#626aef" style="margin-bottom:5px">Post</el-button></router-link>
+        
+          <router-link to="/post" class="item -link" ><el-button color="#626aef" style="margin-bottom:5px">Post</el-button></router-link>
 
-        </a>
+
         <router-link to="/user/:id" class="margin-left">
           <GithubIcon></GithubIcon>
         </router-link>
@@ -67,11 +67,20 @@ import router from '../router/index.js'
 import { ref,onMounted} from 'vue'
 //////////////////////////////////////////////////////
 
+const id = ref(0);
 const dialogVisible = ref(false);
 const searchContent = ref('');
 const dialogWidthComputed = ref('55%');
 
 onMounted(() => {
+
+  if(window.innerWidth <= 800){
+      dialogWidthComputed.value = '80%'
+  } else if(window.innerWidth>800){
+      dialogWidthComputed.value = '55%'
+  }
+
+
   window.onresize = () =>{
     if(window.innerWidth <= 800){
       dialogWidthComputed.value = '80%'
@@ -79,7 +88,7 @@ onMounted(() => {
       dialogWidthComputed.value = '55%'
   }
   }
-
+  
 }),
 
 //////////////////////////////////////////////////////

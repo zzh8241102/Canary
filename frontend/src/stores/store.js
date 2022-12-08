@@ -22,6 +22,11 @@ export default defineStore('store', () => {
     }
     const doubleCount = computed(() => hello.value * 2)
 
+    ////////////////////////////////////////////////////
+    const userCardWidth = ref(320)
+    
+    ////////////////////////////////////////////////////
+    
     return {
         cardChecker
     }
