@@ -7,7 +7,7 @@
         </div>
         <div class="setting-area flex column">
             <div class="safety-area black-border">
-
+                <PasswordPic></PasswordPic>
             </div>
             <div class="recent-area">
                 <div class="article-block black-border mg-b8 ">
@@ -38,6 +38,7 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
 import UserCard from '../components/UserCard.vue'
+import PasswordPic from '../components/icons/PasswordPic.vue'
 import useStore from '../stores/store.js'
 
 const store = useStore()

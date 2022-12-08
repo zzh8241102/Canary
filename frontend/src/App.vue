@@ -27,6 +27,7 @@ onMounted(() => {
 </script>
 
 
-<style>
+<style scoped>
+
 
 </style>

@@ -1,4 +1,5 @@
 # contains all the models and their fields
+from enum import unique
 from sqlalchemy import Column
 from extension import db
 from datetime import datetime
@@ -15,7 +16,7 @@ class User(db.Model):
     # user id as primary key
     user_id = db.Column(db.Integer, primary_key=True)
     # user name
-    user_name = db.Column(db.String(20),nullable=False)
+    user_name = db.Column(db.String(20),nullable=False,unique=True)
     # user password using length 200 since it maybe decrpted
     user_password = db.Column(db.String(200),nullable=False)
     # user email

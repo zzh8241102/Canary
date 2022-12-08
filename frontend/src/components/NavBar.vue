@@ -59,8 +59,6 @@
 </template>
 <script setup>
 //////////////////////////////////////////////////////
-import MoreButton from './icons/MoreInfoIcon.vue'
-import HomeButton from './icons/HomeButtonIcon.vue'
 import GithubIcon from './icons/GithubIcon.vue'
 import SearchIcon from './icons/SearchIcon.vue'
 import router from '../router/index.js'
@@ -75,20 +73,19 @@ const dialogWidthComputed = ref('55%');
 onMounted(() => {
 
   if(window.innerWidth <= 800){
-      dialogWidthComputed.value = '80%'
+      dialogWidthComputed.value = '80%';
   } else if(window.innerWidth>800){
-      dialogWidthComputed.value = '55%'
+      dialogWidthComputed.value = '55%';
   }
 
 
   window.onresize = () =>{
     if(window.innerWidth <= 800){
-      dialogWidthComputed.value = '80%'
+      dialogWidthComputed.value = '80%';
   } else if(window.innerWidth>800){
-      dialogWidthComputed.value = '55%'
+      dialogWidthComputed.value = '55%';
   }
-  }
-  
+  }  
 }),
 
 //////////////////////////////////////////////////////

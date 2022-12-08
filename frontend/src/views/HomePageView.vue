@@ -6,7 +6,7 @@
                 <div class="article-block black-border mg-b8 mg-t4">
                     <div class="text-area">
                         <p>
-                            This is a test
+                          
                         </p>
                     </div>
                 </div>
