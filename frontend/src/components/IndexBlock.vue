@@ -58,8 +58,6 @@ getArticlesList().then(res => {
     // console.log(res.data.data.articles)
     // console.log(res.data.data.articles[0].author)
     articlesList.articles = res.data.data.articles
-    console.log(articlesList.articles)
-    console.log(articlesList.articles[0].title)
 })
 
 

@@ -21,7 +21,7 @@ class ArticlesListApi(Resource):
         self.response_obj_sample = {
             'message': "successfully get the articles list",
             'code': 0,
-            'data': 
+            'data':
             {
                 'articles':
                 [
@@ -43,7 +43,7 @@ class ArticlesListApi(Resource):
                         'comments':5,
                         'likes':11
                     },
-                                        {
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'black',
@@ -51,7 +51,8 @@ class ArticlesListApi(Resource):
                         'date':'2022-12-9',
                         'comments':15,
                         'likes':110
-                    },                                        {
+                    },                                         
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'MarioSpr',
@@ -59,8 +60,8 @@ class ArticlesListApi(Resource):
                         'date':'2022-12-9',
                         'comments':15,
                         'likes':110
-                    },         
-                                                          {
+                    },
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'MarioSpr',
@@ -68,7 +69,8 @@ class ArticlesListApi(Resource):
                         'date':'2022-12-9',
                         'comments':15,
                         'likes':110
-                    },                                               {
+                    },                                               
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'MarioSpr',
@@ -76,7 +78,8 @@ class ArticlesListApi(Resource):
                         'date':'2022-12-9',
                         'comments':15,
                         'likes':110
-                    },                                               {
+                    },                                               
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'MarioSpr',
@@ -84,7 +87,8 @@ class ArticlesListApi(Resource):
                         'date':'2022-12-9',
                         'comments':15,
                         'likes':110
-                    },                                               {
+                    },                                               
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'MarioSpr',
@@ -92,7 +96,8 @@ class ArticlesListApi(Resource):
                         'date':'2022-12-9',
                         'comments':15,
                         'likes':110
-                    },                                               {
+                    }, 
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'MarioSpr',
@@ -100,7 +105,8 @@ class ArticlesListApi(Resource):
                         'date':'2022-12-9',
                         'comments':15,
                         'likes':110
-                    },                                               {
+                    },                                               
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'MarioSpr',
@@ -108,7 +114,8 @@ class ArticlesListApi(Resource):
                         'date':'2022-12-9',
                         'comments':15,
                         'likes':110
-                    },                                        {
+                    },                                        
+                    {
                         'id': 2,
                         'title': 'How can use GDB',
                         'author': 'author',
@@ -117,12 +124,12 @@ class ArticlesListApi(Resource):
                         'comments':15,
                         'likes':110
                     },
-                            
+
                 ]
             }
 
         }
 
     def get(self):
-        
+
         return make_response(jsonify(self.response_obj_sample), 200)

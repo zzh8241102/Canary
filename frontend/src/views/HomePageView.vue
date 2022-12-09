@@ -7,34 +7,103 @@
             </div>
             <div class="big-post">
                 <router-link to="/post">
-                <el-button color="#626aef" size="large" style="margin-bottom:5px">
-                   Ask a question
-                </el-button>
-            </router-link>
+                    <el-button color="#626aef" size="large" style="margin-bottom:5px">
+                        Ask a question
+                    </el-button>
+                </router-link>
             </div>
         </div>
         <div class="main-area flex">
             <div class="content-area flex3 mg-r8">
                 <IndexBlockVue></IndexBlockVue>
             </div>
-            <div class="recommend-area flex1 black-border flex column mg-r8">
-                <div class="tag-area black-border mg-b8" style="height:150px"></div>
-                <div class="passage-area black-border mg-t4" style="overflow: auto;"></div>
+            <div class="recommend-area flex1 flex column mg-r8">
+                <div class="tag-area black-border mg-b8">
+                    <div class="tag-title-area" style="display:inline-block">
+                        <h5 class="font-setter tag-banner">You Tags</h5>
+                    </div>
+                    <div class="tag-manage-bottom" style="display:inline-block">
+                        <el-button color="#626aef" size="small">
+                            manage
+                        </el-button>
+                    </div>
+                    <hr>
+                    <div class="tags-area">
+                        <div class="tag-inner-area">
+                            <div v-for="(item, index) in user_tag_list.tags" :key="index">
+                                <span>
+                                    <el-tag size="large" effect="light" class="small-tags"><b>{{ item }}</b>
+                                    </el-tag>
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="bonfire">
+                    <BonfireRec></BonfireRec>
+                </div>
 
             </div>
         </div>
     </div>
 </template>
 <script setup>
+////////////////////////////////////////////////
 import NavBar from '../components/NavBar.vue'
 import IndexBlockVue from '../components/IndexBlock.vue';
+import BonfireRec from '../components/BonfireRec.vue'
 import useStore from '../stores/store.js'
+import { getUserTags } from '../http/api.js'
+import { ref, reactive } from 'vue'
 const store = useStore()
+////////////////////////////////////////////////  
+const user_tag_list = reactive({
+    tags: []
+})
 
-
-
+getUserTags().then((res) => {
+    console.log(res.data.tags)
+    user_tag_list.tags = res.data.tags
+})
+////////////////////////////////////////////////
 </script>
 <style scoped>
+.tag-inner-area {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+
+.small-tags {
+    margin: 4px;
+    font-size: 13px;
+}
+
+
+.tag-manage-bottom {
+    position: relative;
+    left: 36%;
+}
+
+.tag-banner {
+    margin-top: 14px;
+    margin-left: 20px;
+}
+
+.tag-title-area {
+    height: 22px;
+    background-color: white;
+}
+
+.tag-area {
+    height: 220px;
+    background-color: white;
+}
+
 .font-setter {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -50,15 +119,18 @@ const store = useStore()
     margin-left: 10%;
     background-color: rgb(241, 239, 239);
 }
+
 .left-title {
-    width: 20%;    
+    width: 20%;
     display: inline-block;
 }
-.big-post{
+
+.big-post {
     width: 15%;
     display: inline-block;
     margin-left: 32%;
 }
+
 .mg-b8 {
     margin-bottom: 8px;
 }
