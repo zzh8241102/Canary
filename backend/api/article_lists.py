@@ -43,6 +43,33 @@ class ArticlesListApi(Resource):
                         'comments':5,
                         'likes':11
                     },
+                                     {
+                        'id': 2,
+                        'title': 'how to resolve the problem of overfitting',
+                        'author': 'author',
+                        'tags': ['machine learning', 'python', 'deep learning'],
+                        'date':'2022-12-9',
+                        'comments':5,
+                        'likes':11
+                    },
+                                     {
+                        'id': 2,
+                        'title': 'how to resolve the problem of overfitting',
+                        'author': 'author',
+                        'tags': ['machine learning', 'python', 'deep learning'],
+                        'date':'2022-12-9',
+                        'comments':5,
+                        'likes':11
+                    },
+                                     {
+                        'id': 2,
+                        'title': 'how to resolve the problem of overfitting',
+                        'author': 'author',
+                        'tags': ['machine learning', 'python', 'deep learning'],
+                        'date':'2022-12-9',
+                        'comments':5,
+                        'likes':11
+                    },
                 ]
             }
 
