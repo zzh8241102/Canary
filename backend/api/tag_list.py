@@ -25,3 +25,19 @@ class TagUserApi(Resource):
         
     def get(self):
         return make_response(jsonify(self.response_obj_sample), 200)
+
+# api/addtag
+class AddTagApi(Resource):
+    def __init__(self):
+    #     self.response_obj_sample = {
+    #         'message': "successfully add the tag",
+    #         'code': 0,
+    #         'data': {
+    #             'tag': 'c++',
+    #         }
+    #     }
+        pass
+
+        
+    # def post(self):
+    #     return make_response(jsonify(self.response_obj_sample), 200)

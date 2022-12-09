@@ -5,6 +5,9 @@
                 :inline="true" />
             <el-button round id="post-button" :inline="true">Post</el-button>
         </div>
+        <div class="tag-selector">
+            <TagSelector></TagSelector>
+        </div>
         <div class="editor">
             <v-md-editor v-model="markDownContent" height="500px"></v-md-editor>
         </div>
@@ -12,6 +15,7 @@
 <script setup>
 import { ref } from 'vue'
 import NavBar from '../components/NavBar.vue'
+import TagSelector from '../components/TagSelector.vue';
 const articleTitle = ref('')
 const markDownContent = ref('')
 </script>
@@ -24,7 +28,14 @@ const markDownContent = ref('')
     flex-direction: row;
     align-items: center;
     margin: 0 0 1rem 0;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
+}
+.tag-selector{
+    position: relative;
+    left: 20vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .title-input {
@@ -36,7 +47,7 @@ const markDownContent = ref('')
     margin: 15px;
 }
 /* 当超宽屏时候 */
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
     .editor {
         margin-left: 15vw;
         margin-right: 15vw;
@@ -44,6 +55,9 @@ const markDownContent = ref('')
     .title-group {
         left: 15vw;
         width: 70vw;
+    }
+    .tag-selector{
+        left:15vw;
     }
 }
 </style>

@@ -128,7 +128,7 @@ getUserTags().then((res) => {
 .big-post {
     width: 15%;
     display: inline-block;
-    margin-left: 32%;
+    margin-left: 30%;
 }
 
 .mg-b8 {
