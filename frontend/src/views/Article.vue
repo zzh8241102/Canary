@@ -2,7 +2,7 @@
     <NavBar></NavBar>
     <div>
         <div class="main-area flex">
-            <div class="content-area flex3 flex column mg-r8">
+            <div class="content-area white-bg flex3 flex column mg-r8" >
                 <div class="article-area flex column black-border">
                     <!-- block b 能够撑开父级别元素 -->
                     <div class="article-block-b  black-border">
@@ -37,7 +37,9 @@ const store = useStore()
 .mg-b8 {
     margin-bottom: 8px;
 }
-
+.white-bg{
+    background-color: white;
+}
 .mg-t4 {
     margin-top: 4px;
 }
@@ -91,6 +93,7 @@ const store = useStore()
 .content-area {
     /* 能够被撑大 */
     min-height: 100px;
+    
 }
 
 /* .recommend-area {} */
