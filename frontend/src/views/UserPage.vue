@@ -10,21 +10,7 @@
                 <PasswordPic></PasswordPic>
             </div>
             <div class="recent-area">
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div><div class="article-block black-border mg-b8 ">
-                </div>
+                
             </div>
 
 
