@@ -7,6 +7,7 @@ export const  helloWorld = $http.get('api/test')
 export const login = (data) => $http.post('/api/signin', data)
 export const register = (data) => $http.post('/api/register', data)
 // Apis for articleslist
+// here the data should contain the limit, which is initally hardcoded to 15
 export const getArticlesList = (data) => $http.get('/api/articleslist', data)
 // /api/articleslist?tag=tagname
 export const getArticlesListByTag = (data) => $http.get('/api/articleslist', data)

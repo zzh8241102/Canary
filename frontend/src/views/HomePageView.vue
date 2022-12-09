@@ -3,52 +3,7 @@
     <div>
         <div class="main-area flex">
             <div class="content-area flex3 mg-r8">
-                <div class="article-block black-border mg-b8 mg-t4">
-                    <div class="text-area">
-                        <p>
-                          
-                        </p>
-                    </div>
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 mg-t4">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
-                <div class="article-block black-border mg-b8 ">
-                </div>
+                <IndexBlockVue></IndexBlockVue>
             </div>
             <div class="recommend-area flex1 black-border flex column mg-r8">
                 <div class="tag-area black-border mg-b8" style="height:150px"></div>
@@ -60,8 +15,11 @@
 </template>
 <script setup>
 import NavBar from '../components/NavBar.vue'
+import IndexBlockVue from '../components/IndexBlock.vue';
 import useStore from '../stores/store.js'
 const store = useStore()
+
+
 
 </script>
 <style scoped>
