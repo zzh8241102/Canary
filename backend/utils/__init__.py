@@ -7,6 +7,7 @@ from api.article_content import ArticleContentApi
 from api.article_lists import ArticlesListApi
 from api.tag_list import  TagUserApi
 from api.search import SearchApi
+from api.user_info import UserInfoApi
 # //////////////////////// posts ////////////////////////
 from api.posts import PostApi, PostCommentApi
 
@@ -24,6 +25,7 @@ def add_apis():
     api.add_resource(PostCommentApi, '/api/comment')
     api.add_resource(SearchApi, '/api/search')
     api.add_resource(TagUserApi, '/api/tags')
+    api.add_resource(UserInfoApi, '/api/user')
 
 # //////////////////////// api ////////////////////////
     

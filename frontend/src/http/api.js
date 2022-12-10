@@ -10,6 +10,9 @@ export const register = (data) => $http.post('/api/register', data)
 // here the data should contain the limit, which is initally hardcoded to 15
 export const getArticlesList = (data) => $http.get('/api/articleslist', data)
 
+// /api/user?user=username 
+export const getUserInfo = (data) => $http.get('/api/user', data)
+
 // /api/tags?user=username
 export const getUserTags = (data) => $http.get('/api/tags', data)
 // /api/articleslist?tag=tagname

@@ -108,8 +108,6 @@ onMounted(() => {
     var triggerEl = getTriggerElement(event.target);
     // If trigger element does not exist
     if (triggerEl === undefined) {
-      console.log(triggerEl)
-      console.log('No trigger element');
       event.preventDefault();
       return false;
     }

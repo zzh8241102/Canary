@@ -65,12 +65,12 @@ const user_tag_list = reactive({
 })
 
 getUserTags().then((res) => {
-    console.log(res.data.tags)
     user_tag_list.tags = res.data.tags
 })
 ////////////////////////////////////////////////
 </script>
 <style scoped>
+
 .tag-inner-area {
     padding: 8px;
     display: flex;

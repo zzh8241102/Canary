@@ -1,50 +1,161 @@
 <template>
 
     <NavBar></NavBar>
+    <div class="body">
+        <div class="banner-area">
+            <div class="left-title">
+                <h2 class="font-setter" style="display:none">Customize your experience</h2>
+            </div>
+        </div>
     <div class="main-area flex">
         <div class="user-card">
-            <UserCard></UserCard>
+            <UserCard>
+                <template #username>
+                    {{userInfo.username}}
+                </template>
+                <template #email>
+                    {{userInfo.email}}
+                </template>
+            </UserCard>
         </div>
         <div class="setting-area flex column">
             <div class="safety-area black-border">
-                <PasswordPic></PasswordPic>
+               
+                <div class="safe-setter">
+                    <hr>
+                        <div>
+                            <h5 class="font-setter">Password and account management</h5>
+                                <el-button type="info" class="change-button">Change your password</el-button>
+                        </div>    
+                        <hr>
+                        <div class="delete-area">
+                            <p>
+                                Once you delete your account, it is irreverseable.<b>Please be careful.</b>
+                            </p>
+                            
+                            <el-button type="danger" class="delete-button">Delete your account</el-button>    
+                        </div>
+                    <hr>
+
+                </div>
+                <div class="pic-container">
+                    <PasswordPic></PasswordPic>
+                </div>
+                <hr>
             </div>
             <div class="recent-area">
-                
+                <RecentBlock></RecentBlock>
             </div>
-
-
         </div>
-
-
-
     </div>
-
+</div>
 </template>
 <script setup>
+////////////////////////////////////////////////////////////
 import NavBar from '../components/NavBar.vue'
 import UserCard from '../components/UserCard.vue'
+import RecentBlock from '../components/RecentBlock.vue'
 import PasswordPic from '../components/icons/PasswordPic.vue'
 import useStore from '../stores/store.js'
+import { getUserInfo } from '../http/api'
+import {ref,reactive} from 'vue'
+////////////////////////////////////////////////////////////
 
 const store = useStore()
+const userInfo = reactive({
+    username: '',
+    email: '',
+    user_avatar: '',
+    user_tags: []
+})
 
+const userIndex = reactive({
+    username: '',
+})
+
+userIndex.username = sessionStorage.getItem('user_name')
+
+////////////////////////////////////////////////////////////
+console.log(userIndex)
+
+const data = reactive({
+    params: {
+        username: userIndex.username
+    }
+})
+
+getUserInfo(data).then((res) => {
+    // console.log(res.data.data.user)
+    store.setUserInfo(res.data.data.user.username,res.data.data.user.email)
+    userInfo.username = res.data.data.user.username
+    userInfo.email = res.data.data.user.email
+}).catch((err) => {
+    console.log(err)
+})
 </script>
 <style scoped>
+.delete-button{
+    width: 53%;
+}
+.delete-area{
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    
+    margin-top: 2%;
+    margin-right: 5%;
+}
+.change-button{
+    margin-top: 15px;
+    width: 45%;
+}
+.safe-setter{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-right: 5%;
+}
+.pic-container {
+    margin-right: 2%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 110px;
+}
+.banner-area {
+    height: 60px;
+    padding-top: 20px;
+    margin-left: 10%;
+    background-color: rgb(241, 239, 239);
+}
 
-.recent-area{
-    margin-top: 30px;
+.font-setter {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.body
+{
+    background-color: #F1EFEF;
+}
+.recent-area {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
     margin-left: 2.5%;
     width: 95%;
     height: 100%;
     overflow: auto;
+    background-color: white;
 }
 
 .safety-area {
-    height: 125px;
-    width: 88%;
+    /* 边框浅shadow */
+    display: flex;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    background-color: white;
+    height: 300px;
+    width: 95%;
     margin-top: 10px;
-    margin-left: 6%;
+    margin-left: 2.5%;
 }
 
 .setting-area {
@@ -66,11 +177,7 @@ const store = useStore()
     margin-top: 4px;
 }
 
-.black-border {
-    /* border: 1px solid black; */
-    /* shadow */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
-}
+
 
 .flex {
     display: flex;
@@ -84,7 +191,7 @@ const store = useStore()
     /* 在宽屏时候，总是占据78%的空间,剧中显示 */
     width: 80%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-bottom: 20px;
     /*高度随滚动增加  */
     min-height: 100vh;
@@ -133,25 +240,30 @@ const store = useStore()
         width: 100%;
         flex-direction: column;
     }
-    .user-card{ 
+
+    .user-card {
         text-align: center;
         width: 80vw;
         margin: auto;
     }
-    .setting-area{
+
+    .setting-area {
         width: 100vw;
-        
+
     }
-    .recent-area{
+
+    .recent-area {
         margin-left: 0;
         width: 100%;
     }
-    .article-block{
-        max-width: 100%;;   
-        
+
+    .article-block {
+        max-width: 100%;
+        ;
+
         width: 100%;
-        
-        
+
+
     }
 
 }

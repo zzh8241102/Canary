@@ -1,7 +1,6 @@
 from flask_restful import Resource, reqparse
 from flask import request,make_response
 from flask import jsonify
-from importlib_metadata import pass_none
 from models import User
 from forms import RegisterForm,LoginForm
 # from controller.auth_controller import auth_controller

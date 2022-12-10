@@ -3,11 +3,11 @@ import {
 } from "pinia";
 import {
     ref,
-    computed
+    computed,reactive
 } from 'vue'
 
 export default defineStore('store', () => {
-    const hello = ref(2)
+
     const loggedError = ref(false)
     const setLogged = ref(false)
     const smallCard = ref(350)
@@ -20,14 +20,26 @@ export default defineStore('store', () => {
             smallCard.value = 250
         }
     }
-    const doubleCount = computed(() => hello.value * 2)
-
+    ////////////////////////////////////////////////////    
     ////////////////////////////////////////////////////
-    const userCardWidth = ref(320)
     
-    ////////////////////////////////////////////////////
+    const userInfo = reactive({
+        username: '',
+        email: '',
+    })
+
+    const setUserInfo = (username, email) => {
+        userInfo.username = username
+        userInfo.email = email
+    }
+    const getUserInfo = () => {
+        return userInfo
+    }
+
     
     return {
-        cardChecker
+        setUserInfo,
+        cardChecker,
+        getUserInfo
     }
 })

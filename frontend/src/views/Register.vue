@@ -79,7 +79,6 @@ const submitForm = () => {
     .then(res => { 
         if(res.data.success == "true"){
             ElMessage.success("Register successfully")
-            console.log(res.data)
             sessionStorage.setItem('user_name', res.data.session)
             router.push({path: '/'})
         }

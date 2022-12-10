@@ -78,15 +78,14 @@ const submitForm = () => {
         ElMessage.info("The filed are reset for you")
         return
     }
+    console.log(loginData)
     login(loginData).
     then(res => {
-        console.log(res)
         if(res.data.success == "true"){
             ElMessage.success("Login success")
             // store user data into sessionStorag         
             // redirect to home page
             sessionStorage.setItem('user_name', res.data.session)
-            console.log("redirect to home page")
             router.push({path: "/"})
         }
     }).catch(err => {
