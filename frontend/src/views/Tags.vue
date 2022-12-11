@@ -1,41 +1,84 @@
 <template>
     <NavBar></NavBar>
-<div class="main-area flex column">
+    <div class="body">
+        <div class="info-area flex black ">
 
-    <div class="info-area flex black " style="height: 100px;">
+            <h3 class="font-setter tag-banner">
+                <div style="display: inline-block;">
+                    <TagdecVue></TagdecVue> &nbsp;
+                </div>Tags
+            </h3>
+            <div class="slogan">
+                <p class="font-setter">
+                    Explore your interests by tags.
+                    It can link similar articles together.
+                    As well as original articles in a better way.
+                </p>
+            </div>
+            <div class="tag-box">
+                <el-input v-model="tagInputted" class="w-50 m-2" placeholder="Search your tag"/>
+            </div>
+            
+        </div>
+        <div class="main-area flex column">
+
+            <div class="tag-grid grid ">
+                <SingleTag></SingleTag>
+                <SingleTag></SingleTag>
+                <SingleTag></SingleTag>
+                <SingleTag></SingleTag>
+                <SingleTag></SingleTag>
+                <SingleTag></SingleTag>
+                <SingleTag></SingleTag>
+                <SingleTag></SingleTag>
+                <SingleTag></SingleTag>
+            </div>
+        </div>
     </div>
-        <div class="tag-grid grid ">
-            <SingleTag></SingleTag>
-            <SingleTag></SingleTag>
-            <SingleTag></SingleTag>
-            <SingleTag></SingleTag>
-            <SingleTag></SingleTag>
-            <SingleTag></SingleTag>
-            <SingleTag></SingleTag>
-            <SingleTag></SingleTag>
-            <SingleTag></SingleTag>
-    </div>
-</div>
 </template>
 <script setup>
+/////////////////////////////////////////////////
 import SingleTag from '../components/SingleTag.vue'
 import NavBar from '../components/NavBar.vue'
+import TagdecVue from '../components/icons/Tagdec.vue'
+/////////////////////////////////////////////////
 
-// 当窗口
 </script>
 <style scoped>
+.slogan {
 
-.black{
-    /* border: 1px solid black; */
-    /* 很浅的阴影 */
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 0px;
 }
+
+.tag-banner {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.info-area {
+    display: flex;
+    flex-direction: column;
+    width: 76%;
+    margin: auto;
+}
+
+.font-setter {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body {
+    background-color: #F1EFEF;
+}
+
+
 .flex {
     display: flex;
 }
-.grid{
+
+.grid {
     display: grid;
 }
+
 .flex1 {
     flex: 1;
 }
@@ -44,10 +87,10 @@ import NavBar from '../components/NavBar.vue'
     flex-direction: column;
 }
 
-.tag-grid{
+.tag-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
-	place-items: center;
+    place-items: center;
     margin: 20px;
 
 }
@@ -56,7 +99,7 @@ import NavBar from '../components/NavBar.vue'
     /* 在宽屏时候，总是占据78%的空间,剧中显示 */
     width: 80%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 20px;
     /*高度随滚动增加  */
     min-height: 100vh;

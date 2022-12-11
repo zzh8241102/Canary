@@ -24,7 +24,7 @@ const router = createRouter({
       component: () => import('../views/Tags.vue')
     },
     {
-      path: '/user/:id',
+      path: '/user/userpage',
       name: 'userPage',
       component: () => import('../views/UserPage.vue')
     },

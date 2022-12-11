@@ -3,9 +3,14 @@
 
     <div class="card-header">
       <div class="block">
-        <el-avatar :size="80" :src="circleUrl" />
+        <el-avatar :size="80" :src="circleUrl" :key="circleUrl" id="avatar-image" />
+
+        <div class="avatar">
+        </div>
       </div>
       <div class="font-setter">
+        <AdminBanner></AdminBanner>
+        &nbsp;
         <slot name="username"></slot>
       </div>
       <div class="badge-area">
@@ -40,62 +45,214 @@
         <center>
           <slot name="email"></slot>
         </center>
-        <el-button round bg>edit</el-button>
+        <el-button round bg @click="dialogVisible = true">edit</el-button>
       </div>
       <div class="combo-area">
         <div class="font-setter"><b>
-            <center>phone number</center>
+            <center>Phone</center>
           </b></div>
 
-        <center>18608133373</center>
-        <el-button round bg>edit</el-button>
+        <center>
+          <slot name="phoneNumber"></slot>
+        </center>
+        <el-button round bg @click="dialogVisible = true">edit</el-button>
       </div>
       <div class="combo-area">
         <div class="font-setter"><b>
             <center>location</center>
           </b></div>
 
-        <center>Chengdu</center>
-        <el-button round bg>edit</el-button>
+        <center>
+          <slot name="location"></slot>
+        </center>
+        <el-button round bg @click="dialogVisible = true">edit</el-button>
       </div>
       <hr>
       <div class="combo-area">
         <div class="font-setter"><b>
-            <center>log out</center>
+            <center>change avatar</center>
+
           </b></div>
-          <br>
+        <el-upload class="upload-demo" drag action="" multiple=False :before-upload="beforeAvatarUpload"
+          :http-request="uploadFile">
+          <el-icon class="el-icon--upload">
+            <upload-filled />
+          </el-icon>
+          <div class="el-upload__text">
+            Drop file here to upload your new avatar
+          </div>
+          <template #tip>
+            <div class="el-upload__tip">
+              jpg/png files with a size less than 500kb
+            </div>
+          </template>
+        </el-upload>
+      </div>
+      <div class="combo-area">
+        <div class="font-setter mb-4"><b>
+            <center>log out</center>
+          </b>
+        </div>
         <el-button round bg type="warning">log out</el-button>
       </div>
     </div>
 
 
   </el-card>
+
+  <el-dialog v-model="dialogVisible" title="Change your personal info" width="30%">
+    <hr>
+    <div style="display: flex;flex-direction: column;">
+
+      <span class="font-setter">
+        <h6>Change your email</h6>
+      </span>
+
+      <el-input v-model="userInfo.email" placeholder="Please input" />
+      <br>
+      <span class="font-setter">
+        <h6>Change your phone number</h6>
+      </span>
+
+      <el-input v-model="userInfo.phoneNumber" placeholder="Please input" />
+      <br>
+      <span class="font-setter">
+        <h6>Change your location</h6>
+      </span>
+
+      <el-input v-model="userInfo.location" placeholder="Please input" />
+      <hr>
+    </div>
+
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="dialogVisible = false">Cancel</el-button>
+        <el-button type="primary" @click="submitForm">
+          Confirm
+        </el-button>
+      </span>
+    </template>
+  </el-dialog>
+
 </template>
   
-<script setup>
-
+<script setup lang="ts">
+import required from 'vue'
+import { defineProps } from 'vue'
 import { ref, onMounted, reactive } from 'vue'
+import { ElMessage } from 'element-plus'
+import AdminBanner from './icons/AdminBanner.vue';
+import { UploadFilled } from '@element-plus/icons-vue'
 import useStore from '../stores/store.js'
-////////////////////////////////////////////////////////
-const store = useStore()
+import type { UploadProps } from 'element-plus'
+import { Plus } from '@element-plus/icons-vue'
+import axios from 'axios'
+import { getUserInfo,changeUserInfo } from '../http/api';
+import { userInfo } from 'os';
 
+////////////////////////////////////////////////////////
+// Props
+////////////////////////////////////////////////////////
+
+
+let dialogVisible = ref(false)
+let imageUrl = ref('')
 const boxStyleObj = ref({
   display: 'inline-block',
   width: '320px',
-  height: '620px'
+  height: '900px'
 })
-const userCardInfo = reactive({
+
+// replace with server url latter
+let circleUrl = ref('https://avatars.githubusercontent.com/u/227713?s=200&v=3')
+// set username
+
+
+
+const userInfo = reactive({
   username: '',
   email: '',
-  user_avatar: '',
-  user_tags: []
+  phoneNumber: '',
+  location: ''
 })
-// replace with server url latter
-const circleUrl = ref('https://avatars.githubusercontent.com/u/227713?s=200&v=3')
+
+// typescript assign the sessionStorage('username') to userIndex.username
+
 
 
 ////////////////////////////////////////////////////////
 
+// verify the file type and size
+
+const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
+  const isJPG = rawFile.type === 'image/jpeg'
+  const isPNG = rawFile.type === 'image/png'
+  if (!isJPG && !isPNG) {
+    ElMessage.error('Avatar picture must be JPG/P NG format!')
+    return false
+  } else if (rawFile.size / 1024 / 1024 > 2) {
+    ElMessage.error('Avatar picture size can not exceed 2MB!')
+    return false
+  }
+  return true
+}
+const userIndex = reactive({
+  username: '',
+})
+userIndex.username = sessionStorage.getItem('user_name')!;
+const uploadFile = (param) => {
+  let fileObj = param.file
+  let form = new FormData()
+
+  form.append("fileToUpload", fileObj)
+  form.append("username", userIndex.username)
+  axios.post("http://127.0.0.1:8000/api/upload/avatar", form, {
+    headers: { 'content-type': 'multipart/form-data' }
+  }).then(res => {
+    imageUrl = res.data.avatar
+    setTimeout(() => {
+      window.location.reload()
+    }, 600)
+  }).catch(err => {
+    ElMessage.error('Avatar picture upload failed!')
+    return false
+  })
+  ElMessage.success('Avatar picture uploaded successfully!')
+
+}
+
+////////////////////////////////////////////////////////
+
+const data = reactive({
+  params: {
+    username: userIndex.username
+  }
+})
+
+getUserInfo(data).then((res) => {
+  // console.log(res.data.data.user)
+  userInfo.username = res.data.data.user.username
+  userInfo.email = res.data.data.user.email
+  userInfo.location = res.data.data.user.location
+  userInfo.phoneNumber = res.data.data.user.phoneNumber
+}).catch((err) => {
+  console.log(err)
+})
+
+
+const submitForm = () => {
+  dialogVisible.value = false
+  changeUserInfo(userInfo).then((res) => {
+    ElMessage.success('Change successfully!')
+    console.log(res)
+    setTimeout(() => {
+      window.location.reload()
+    }, 600)
+  }).catch((err) => {
+    ElMessage.error('Change failed!')
+  })
+}
+////////////////////////////////////////////////////////
 onMounted(() => {
   if (window.innerWidth <= 1100) {
     // 将box-card类的宽度设置为100%
@@ -114,11 +271,16 @@ onMounted(() => {
 
 
 })
+
 ////////////////////////////////////////////////////////
 
 </script>
 
 <style scoped>
+.mb-4 {
+  margin-bottom: 1px;
+}
+
 .combo-area {
   display: flex;
   flex-direction: column;
@@ -154,7 +316,7 @@ onMounted(() => {
 
 .block {
   display: block;
-
+  cursor: pointer;
 }
 
 .card-header {

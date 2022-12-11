@@ -2,14 +2,17 @@
 
 from api import api_bp,api
 from api.tests import TestApi
-#  //////////////////////// gets ////////////////////////
+
 from api.article_content import ArticleContentApi
 from api.article_lists import ArticlesListApi
 from api.tag_list import  TagUserApi
 from api.search import SearchApi
 from api.user_info import UserInfoApi
-# //////////////////////// posts ////////////////////////
+from api.user_info import ChangePasswordAPi
+
 from api.posts import PostApi, PostCommentApi
+from api.upload import UploadAvatarApi, FindAvatarApi
+from api.user_info import ChangeUserInfoAPi
 
 from api.auth import UserRegistrationApi, UserSignInApi
 # //////////////////////// api ////////////////////////
@@ -26,7 +29,10 @@ def add_apis():
     api.add_resource(SearchApi, '/api/search')
     api.add_resource(TagUserApi, '/api/tags')
     api.add_resource(UserInfoApi, '/api/user')
-
+    api.add_resource(UploadAvatarApi, '/api/upload/avatar')
+    api.add_resource(FindAvatarApi, '/api/find/avatar')
+    api.add_resource(ChangeUserInfoAPi, '/api/user/change')
+    api.add_resource(ChangePasswordAPi, '/api/user/change/password')
 # //////////////////////// api ////////////////////////
     
 # //////////////////////// blueprints ////////////////////////

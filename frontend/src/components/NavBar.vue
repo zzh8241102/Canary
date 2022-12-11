@@ -24,7 +24,7 @@
           <router-link to="/post" class="item -link" ><el-button color="#626aef" style="margin-bottom:5px">Post</el-button></router-link>
 
 
-        <router-link to="/user/:id" class="margin-left">
+        <router-link to="/user/userpage" class="margin-left">
           <GithubIcon></GithubIcon>
         </router-link>
       </nav>

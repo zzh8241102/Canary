@@ -25,10 +25,10 @@ class User(db.Model):
     user_phone = db.Column(db.String(20),nullable=True)
     # user
     user_reg_time = db.Column(db.DateTime, default=datetime.now)
-    # user age
-    user_age = db.Column(db.Integer,nullable=True)
     # user avatar url
     user_avatar = db.Column(db.String(100),nullable=True)
+    # user location
+    user_location = db.Column(db.String(100),nullable=True)
     
     def encrypt_password(self, password):
         self.user_password = custom_app_context.encrypt(password)

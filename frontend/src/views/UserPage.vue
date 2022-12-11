@@ -7,48 +7,84 @@
                 <h2 class="font-setter" style="display:none">Customize your experience</h2>
             </div>
         </div>
-    <div class="main-area flex">
-        <div class="user-card">
-            <UserCard>
-                <template #username>
-                    {{userInfo.username}}
-                </template>
-                <template #email>
-                    {{userInfo.email}}
-                </template>
-            </UserCard>
-        </div>
-        <div class="setting-area flex column">
-            <div class="safety-area black-border">
-               
-                <div class="safe-setter">
-                    <hr>
+        <div class="main-area flex">
+            <div class="user-card">
+                <UserCard userInfo="userInfo">
+                    <template #username>
+                        {{ userInfo.username }}
+                    </template>
+                    <template #email>
+                        {{ userInfo.email }}
+                    </template>
+                    <template #phoneNumber>
+                        {{ userInfo.phoneNumber }}
+                    </template>
+                    <template #location>
+                        {{ userInfo.location }}
+                    </template>
+                </UserCard>
+            </div>
+            <div class="setting-area flex column">
+                <div class="safety-area black-border">
+
+                    <div class="safe-setter">
+                        <hr>
                         <div>
                             <h5 class="font-setter">Password and account management</h5>
-                                <el-button type="info" class="change-button">Change your password</el-button>
-                        </div>    
+                            <el-button type="info" class="change-button" @click="dialogPasswordVisible = true">Reset your
+                                password</el-button>
+                        </div>
                         <hr>
                         <div class="delete-area">
                             <p>
                                 Once you delete your account, it is irreverseable.<b>Please be careful.</b>
                             </p>
-                            
-                            <el-button type="danger" class="delete-button">Delete your account</el-button>    
-                        </div>
-                    <hr>
 
+                            <el-button type="danger" class="delete-button">Delete your account</el-button>
+                        </div>
+                        <hr>
+
+                    </div>
+                    <div class="pic-container">
+                        <PasswordPic></PasswordPic>
+                    </div>
+                    <hr>
                 </div>
-                <div class="pic-container">
-                    <PasswordPic></PasswordPic>
+                <div class="recent-area">
+                    <RecentBlock></RecentBlock>
                 </div>
-                <hr>
-            </div>
-            <div class="recent-area">
-                <RecentBlock></RecentBlock>
             </div>
         </div>
+
+
+
+
+
+        <el-dialog v-model="dialogPasswordVisible" title="change your password" width="30%">
+            <div style="display: flex;flex-direction: column;">
+                <span class="font-setter">
+                    <h6>Your old password</h6>
+                </span>
+                <el-input v-model="passwordGroup.oldPassword" type="password"
+                show-password  placeholder="Please input your old password" />
+                <br>
+                <span class="font-setter">
+                    <h6>Your new password</h6>
+                </span>
+                <el-input   v-model="passwordGroup.newPassword" type="password"
+                show-password placeholder="Please input your new password"  />
+
+            </div>
+            <template #footer>
+                <span class="dialog-footer">
+                    <el-button @click="dialogPasswordVisible = false">Cancel</el-button>
+                    <el-button type="primary" @click="changePassWordSub">
+                        Confirm
+                    </el-button>
+                </span>
+            </template>
+        </el-dialog>
     </div>
-</div>
 </template>
 <script setup>
 ////////////////////////////////////////////////////////////
@@ -57,16 +93,25 @@ import UserCard from '../components/UserCard.vue'
 import RecentBlock from '../components/RecentBlock.vue'
 import PasswordPic from '../components/icons/PasswordPic.vue'
 import useStore from '../stores/store.js'
-import { getUserInfo } from '../http/api'
-import {ref,reactive} from 'vue'
-////////////////////////////////////////////////////////////
+import { getUserInfo, changePassword } from '../http/api'
+import { ref, reactive } from 'vue'
+import { ElMessage } from 'element-plus'
 
-const store = useStore()
+// ////////////////////////////////////////////////////////////
+
+let dialogPasswordVisible = ref(false)
+
+const passwordGroup = reactive({
+    username:'',
+    oldPassword: '',
+    newPassword: ''
+})
+
 const userInfo = reactive({
     username: '',
     email: '',
-    user_avatar: '',
-    user_tags: []
+    phoneNumber: '',
+    location: ''
 })
 
 const userIndex = reactive({
@@ -74,7 +119,7 @@ const userIndex = reactive({
 })
 
 userIndex.username = sessionStorage.getItem('user_name')
-
+passwordGroup.username = sessionStorage.getItem('user_name')
 ////////////////////////////////////////////////////////////
 console.log(userIndex)
 
@@ -86,30 +131,51 @@ const data = reactive({
 
 getUserInfo(data).then((res) => {
     // console.log(res.data.data.user)
-    store.setUserInfo(res.data.data.user.username,res.data.data.user.email)
     userInfo.username = res.data.data.user.username
     userInfo.email = res.data.data.user.email
+    userInfo.phoneNumber = res.data.data.user.phoneNumber
+    userInfo.location = res.data.data.user.location
+
 }).catch((err) => {
     console.log(err)
 })
+
+// const deleteAccount = () => {
+//     console.log('delete')
+// }
+
+const changePassWordSub = () => {
+    dialogPasswordVisible.value = false
+    changePassword(passwordGroup).then((res) => {
+        console.log(res)
+        
+    }).catch((err) => {
+        console.log(err.response.data.message)
+        ElMessage.error(err.response.data.message)
+    })
+
+}
 </script>
 <style scoped>
-.delete-button{
+.delete-button {
     width: 53%;
 }
-.delete-area{
+
+.delete-area {
     display: flex;
     flex-direction: column;
     width: 88%;
-    
+
     margin-top: 2%;
     margin-right: 5%;
 }
-.change-button{
+
+.change-button {
     margin-top: 15px;
     width: 45%;
 }
-.safe-setter{
+
+.safe-setter {
     display: flex;
     flex-direction: column;
     width: 85%;
@@ -117,26 +183,29 @@ getUserInfo(data).then((res) => {
     margin-top: 2%;
     margin-right: 5%;
 }
+
 .pic-container {
     margin-right: 2%;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 110px;
 }
+
 .banner-area {
-    height: 60px;
+    height: 20px;
     padding-top: 20px;
     margin-left: 10%;
     background-color: rgb(241, 239, 239);
 }
 
 .font-setter {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-.body
-{
+
+.body {
     background-color: #F1EFEF;
 }
+
 .recent-area {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     margin-top: 10px;

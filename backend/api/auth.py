@@ -80,10 +80,7 @@ class UserSignInApi(Resource):
     def post(self):
         # get the post data
         data = login_parser.parse_args()
-        print(data)
         form = LoginForm(ImmutableMultiDict(data))
-        print(form.data)
-        print(form.validate())
         if(form.validate()==False):
             self.response_obj['message'] = 'Invalid form data.'
             self.response_obj['success'] = "false"
