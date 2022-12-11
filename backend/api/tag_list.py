@@ -3,6 +3,7 @@
 # api/tags
 from flask_restful import Resource, reqparse
 from flask import jsonify, make_response
+from models import Tags
 
 # class TagApi(Resource):
 #     def get(self):
@@ -41,3 +42,22 @@ class AddTagApi(Resource):
         
     # def post(self):
     #     return make_response(jsonify(self.response_obj_sample), 200)
+
+class AllTagsApi(Resource):
+    def __init__(self):
+        self.response_obj_sample = {
+            'tags': [
+             
+            ]
+        }
+        
+    def get(self):
+        # fetch all the tags from the database
+        tags = Tags.query.all()
+        for tag in tags:
+            self.response_obj_sample['tags'].append({
+                'tag_name':tag.tag_name,
+                'tag_description':tag.tag_description,
+            })
+            
+        return make_response(jsonify(self.response_obj_sample), 200)

@@ -23,24 +23,17 @@
         <div class="main-area flex column">
 
             <div class="tag-grid grid ">
-                <SingleTag></SingleTag>
-                <SingleTag></SingleTag>
-                <SingleTag></SingleTag>
-                <SingleTag></SingleTag>
-                <SingleTag></SingleTag>
-                <SingleTag></SingleTag>
-                <SingleTag></SingleTag>
-                <SingleTag></SingleTag>
-                <SingleTag></SingleTag>
+                <TagsArea></TagsArea>
             </div>
         </div>
     </div>
 </template>
 <script setup>
 /////////////////////////////////////////////////
-import SingleTag from '../components/SingleTag.vue'
+import TagsArea from '../components/TagsArea.vue'
 import NavBar from '../components/NavBar.vue'
 import TagdecVue from '../components/icons/Tagdec.vue'
+import {ref} from 'vue'
 /////////////////////////////////////////////////
 
 </script>

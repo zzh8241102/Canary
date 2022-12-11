@@ -8,6 +8,7 @@ import utils.config as config
 from utils import add_apis,add_blueprints
 from api import api_bp, api
 from flask_jwt_extended import JWTManager
+from controller.tag_controller import generate_basic_tags
 # //////////// create app //////////// #
 app = Flask(__name__)
 app.config.from_object(config)
@@ -22,3 +23,4 @@ add_blueprints(app)
 
 if __name__ == 'main':
     app.run(debug=True, port=8000)
+    

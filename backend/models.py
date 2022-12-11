@@ -105,6 +105,8 @@ class Tags(db.Model):
     tag_id = db.Column(db.Integer, primary_key=True)
     # tag name
     tag_name = db.Column(db.String(20),nullable=False)
+    # tag description
+    tag_description = db.Column(db.String(100),nullable=True)
     # tag article, which is a foreign key, link to article table article_id
     tag_corr_article = db.Column(db.Integer, db.ForeignKey('Article.article_id'))
     # the article can be ref by tag.article

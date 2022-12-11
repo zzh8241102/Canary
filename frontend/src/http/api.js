@@ -29,7 +29,7 @@ export const getArticlesListByUser = (data) => $http.get('/api/articleslist', da
 // /api/article?article_id=article_id
 export const getArticle = (data) => $http.get('/api/article', data)
 // api/tags
-export const getTags = (data) => $http.get('/api/tags', data)
+export const getTags = (data) => $http.get('/api/alltags', data)
 
 // /api/post
 export const postArticle = (data) => $http.post('/api/post', data)
