@@ -38,6 +38,11 @@ class User(db.Model):
         db.session.add(self)
         db.session.commit()
     @classmethod
+    def delete(cls, user_name):
+        user = cls.query.filter_by(user_name=user_name).first()
+        db.session.delete(user)
+        db.session.commit()
+    @classmethod
     def find_by_username(cls, username):
         return cls.query.filter_by(user_name = username).first()
 

@@ -13,6 +13,8 @@ export const getArticlesList = (data) => $http.get('/api/articleslist', data)
 // /api/user?user=username 
 export const getUserInfo = (data) => $http.get('/api/user', data)
 
+export const deleteAccount = (data) => $http.post('/api/user/delete', data)
+
 export const changeUserInfo = (data) => $http.post('/api/user/change', data)
 
 // /api/tags?user=username

@@ -119,7 +119,31 @@ class ChangePasswordAPi(Resource):
             self.response_obj['success'] = "false"
             self.response_obj['message'] = "User not found."
             return make_response(jsonify(self.response_obj), 404)
-            
+
+delete_user_parser = reqparse.RequestParser()
+delete_user_parser.add_argument('username', type=str, required=True, help='username is required')
+
+class DeleteAccountApi(Resource):
+    def __init__(self):
+        self.response_obj = {
+            'success': "true",
+            'message': "",
+            'code': 0,
+            }
+    def post(self):
+        data = delete_user_parser.parse_args()
+        if(User.find_by_username(data['username'])):
+            # return the user info
+            user = User.query.filter_by(user_name=data['username']).first()
+            # delete the user
+            user.delete(user.user_name)
+            self.response_obj['message'] = "User deleted."
+            return make_response(jsonify(self.response_obj), 200)
+        else:
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "User not found."
+            return make_response(jsonify(self.response_obj), 404)
+
 
         
         

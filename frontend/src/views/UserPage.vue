@@ -40,7 +40,7 @@
                                 Once you delete your account, it is irreverseable.<b>Please be careful.</b>
                             </p>
 
-                            <el-button type="danger" class="delete-button">Delete your account</el-button>
+                            <el-button type="danger" class="delete-button" @click="dialogDeleteVisible=true">Delete your account</el-button>
                         </div>
                         <hr>
 
@@ -57,7 +57,20 @@
         </div>
 
 
+        <el-dialog v-model="dialogDeleteVisible" title="change your password" width="30%">
+            <div style="display: flex;flex-direction: column;">
+                <h6>Once you delete your account, it is irreverseable.<b>Please be careful.</b></h6>
 
+            </div>
+            <template #footer>
+                <span class="dialog-footer">
+                    <el-button @click="dialogDeleteVisible = false">Cancel</el-button>
+                    <el-button type="danger" @click="deleteAccountSub">
+                        Confirm Delete
+                    </el-button>
+                </span>
+            </template>
+        </el-dialog>
 
 
         <el-dialog v-model="dialogPasswordVisible" title="change your password" width="30%">
@@ -93,13 +106,14 @@ import UserCard from '../components/UserCard.vue'
 import RecentBlock from '../components/RecentBlock.vue'
 import PasswordPic from '../components/icons/PasswordPic.vue'
 import useStore from '../stores/store.js'
-import { getUserInfo, changePassword } from '../http/api'
+import { getUserInfo, changePassword,deleteAccount } from '../http/api'
 import { ref, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
 
 // ////////////////////////////////////////////////////////////
 
 let dialogPasswordVisible = ref(false)
+let dialogDeleteVisible = ref(false)
 
 const passwordGroup = reactive({
     username:'',
@@ -140,9 +154,17 @@ getUserInfo(data).then((res) => {
     console.log(err)
 })
 
-// const deleteAccount = () => {
-//     console.log('delete')
-// }
+const deleteAccountSub = () => {
+    deleteAccount(userIndex).then((res) => {
+        console.log(res)
+        dialogDeleteVisible.value = false
+        window.location.href = '/login'
+        ElMessage.success('Delete your account successfully')
+    }).catch((err) => {
+        console.log(err.response.data.message)
+        ElMessage.error(err.response.data.message)
+    })
+}
 
 const changePassWordSub = () => {
     dialogPasswordVisible.value = false

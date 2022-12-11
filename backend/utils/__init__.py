@@ -8,7 +8,7 @@ from api.article_lists import ArticlesListApi
 from api.tag_list import  TagUserApi
 from api.search import SearchApi
 from api.user_info import UserInfoApi
-from api.user_info import ChangePasswordAPi
+from api.user_info import ChangePasswordAPi,DeleteAccountApi
 
 from api.posts import PostApi, PostCommentApi
 from api.upload import UploadAvatarApi, FindAvatarApi
@@ -33,6 +33,7 @@ def add_apis():
     api.add_resource(FindAvatarApi, '/api/find/avatar')
     api.add_resource(ChangeUserInfoAPi, '/api/user/change')
     api.add_resource(ChangePasswordAPi, '/api/user/change/password')
+    api.add_resource(DeleteAccountApi, '/api/user/delete')
 # //////////////////////// api ////////////////////////
     
 # //////////////////////// blueprints ////////////////////////
