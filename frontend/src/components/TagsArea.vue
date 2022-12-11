@@ -9,7 +9,6 @@
           {{ item.tag_description }}
         </p>
       </div>
-      
     
   </el-card>
 </div>
@@ -21,6 +20,7 @@
   import { ElMessage } from 'element-plus'
   import { getTags } from '../http/api';
   import { all } from 'axios';
+  import AddTagVue from './icons/AddTag.vue';
 
   const allTags = ref([])
 
@@ -32,7 +32,6 @@
 
   getTags().then((res) => {
     allTags.value = res.data.tags
-    console.log(allTags.value)
   }).catch((err) => {
     console.log(err)
   })

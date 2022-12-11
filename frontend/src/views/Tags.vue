@@ -1,7 +1,7 @@
 <template>
     <NavBar></NavBar>
     <div class="body">
-        <div class="info-area flex black ">
+        <div class="info-area">
 
             <h3 class="font-setter tag-banner">
                 <div style="display: inline-block;">
@@ -15,10 +15,14 @@
                     As well as original articles in a better way.
                 </p>
             </div>
-            <div class="tag-box">
-                <el-input v-model="tagInputted" class="w-50 m-2" placeholder="Search your tag"/>
+            <div class="search-add-area flex">
+                <div class="tag-box">
+                    <el-input v-model="tagInputted"  placeholder="Search your tag"/>
+                </div>
+                <div class="add">
+                    <el-button @click="dialogVisible = true"><AddTagVue></AddTagVue>Add a new tag</el-button>
+                </div>
             </div>
-            
         </div>
         <div class="main-area flex column">
 
@@ -27,17 +31,68 @@
             </div>
         </div>
     </div>
+<el-dialog
+    v-model="dialogVisible"
+    title="Add a new tag"
+    width="40%"
+  >
+  <div style="display: flex;flex-direction: column;">
+                <span class="font-setter">
+                    <h6>Tag name</h6>
+                </span>
+                <el-input v-model="newTagPair.tag_name" 
+                  placeholder="Please input tag name" />
+                <br>
+                <span class="font-setter">
+                    <h6>Tag Description</h6>
+                </span>
+                <el-input  type="textarea" v-model="newTagPair.tag_description" 
+               placeholder="Please input tag description"  />
+            </div>
+    <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="dialogVisible = false">Cancel</el-button>
+        <el-button type="primary" @click = "subTagAdded">
+          Confirm
+        </el-button>
+      </span>
+    </template>
+  </el-dialog>
 </template>
 <script setup>
 /////////////////////////////////////////////////
 import TagsArea from '../components/TagsArea.vue'
 import NavBar from '../components/NavBar.vue'
 import TagdecVue from '../components/icons/Tagdec.vue'
-import {ref} from 'vue'
+import {ref,reactive} from 'vue'
+import AddTagVue from '../components/icons/AddTag.vue'
+import {addNewTag} from '../http/api.js'
 /////////////////////////////////////////////////
+let dialogVisible = ref(false)
+
+const subTagAdded = () => {
+    dialogVisible.value = false
+    addNewTag(newTagPair).then(res => {
+        console.log(res)
+        // refresh the page
+        window.location.reload()
+    }).catch(err => {
+        console.log(err)
+    })
+}
+const newTagPair = reactive({
+    tag_name: '',
+    tag_description: ''
+})
+
 
 </script>
 <style scoped>
+
+.tag-box{
+    width: 50%;
+    margin-right: 5px;
+}
 .slogan {
 
     margin-bottom: 0px;

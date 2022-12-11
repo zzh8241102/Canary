@@ -111,6 +111,9 @@ class Tags(db.Model):
     tag_corr_article = db.Column(db.Integer, db.ForeignKey('Article.article_id'))
     # the article can be ref by tag.article
     article = db.relationship('Article', backref=db.backref('Tags'))
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
 
 # many to many relation
 # An article can be liked by many users

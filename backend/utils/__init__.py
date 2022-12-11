@@ -5,7 +5,7 @@ from api.tests import TestApi
 
 from api.article_content import ArticleContentApi
 from api.article_lists import ArticlesListApi
-from api.tag_list import  TagUserApi,AllTagsApi
+from api.tag_list import  TagUserApi,AllTagsApi,AddNewTagApi
 from api.search import SearchApi
 from api.user_info import UserInfoApi
 from api.user_info import ChangePasswordAPi,DeleteAccountApi
@@ -35,6 +35,7 @@ def add_apis():
     api.add_resource(ChangeUserInfoAPi, '/api/user/change')
     api.add_resource(ChangePasswordAPi, '/api/user/change/password')
     api.add_resource(DeleteAccountApi, '/api/user/delete')
+    api.add_resource(AddNewTagApi, '/api/addtag')
 # //////////////////////// api ////////////////////////
     
 # //////////////////////// blueprints ////////////////////////

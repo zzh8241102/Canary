@@ -22,3 +22,7 @@ class UserBasicInfoForm(wtforms.Form):
     email = wtforms.StringField(validators=[email(message='the email format is not correct')])
     phoneNumber = wtforms.StringField(validators=[length(min=2, max=11, message='the length of the phone number should be 11')])
     location = wtforms.StringField(validators=[length(min=4, max=20, message='the length of the location should be between 4 and 20')])
+
+# class NewTagForm(wtforms.Form):
+#     tag_name = wtforms.StringField(validators=[length(min=4, max=20, message='the length of the tag name should be between 4 and 20')])
+#     tag_description = wtforms.StringField(validators=[length(min=4, max=20, message='the length of the tag description should be between 4 and 20')])
