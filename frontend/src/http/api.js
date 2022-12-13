@@ -36,7 +36,10 @@ export const getTags = (data) => $http.get('/api/alltags', data)
 
 // /api/post
 export const postArticle = (data) => $http.post('/api/post', data)
-// /api/comment
-export const postComment = (data) => $http.post('/api/comment', data)
+
+// /api/comment?article_id=article_id
+export const getComments = (data) => $http.get('/api/comment', data)
+// /api/postcomment
+export const postComment = (data) => $http.post('/api/postcomment', data)
 // /api/search?search=keyword
 export const search = (data) => $http.get('/api/search', data)

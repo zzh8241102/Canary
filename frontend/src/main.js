@@ -43,5 +43,10 @@ router.beforeEach((to, from, next) => {
     }
 })
 
+//  解决vue3点击路由不跳转的问题
+const originalPush = router.push
+router.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+}
 
 app.mount('#app')

@@ -9,7 +9,7 @@ from api.tag_list import  TagUserApi,AllTagsApi,AddNewTagApi
 from api.search import SearchApi
 from api.user_info import UserInfoApi
 from api.user_info import ChangePasswordAPi,DeleteAccountApi
-
+from api.comments import GetCommentByArticleIdApi
 from api.posts import PostApi, PostCommentApi
 from api.upload import UploadAvatarApi, FindAvatarApi
 from api.user_info import ChangeUserInfoAPi
@@ -25,7 +25,7 @@ def add_apis():
     api.add_resource(ArticleContentApi, '/api/article')
     # api.add_resource(TagApi, '/api/tags')
     api.add_resource(PostApi, '/api/post')
-    api.add_resource(PostCommentApi, '/api/comment')
+    api.add_resource(PostCommentApi, '/api/postcomment')
     api.add_resource(SearchApi, '/api/search')
     api.add_resource(TagUserApi, '/api/tags')
     api.add_resource(AllTagsApi, '/api/alltags')
@@ -36,6 +36,7 @@ def add_apis():
     api.add_resource(ChangePasswordAPi, '/api/user/change/password')
     api.add_resource(DeleteAccountApi, '/api/user/delete')
     api.add_resource(AddNewTagApi, '/api/addtag')
+    api.add_resource(GetCommentByArticleIdApi, '/api/comment')
 # //////////////////////// api ////////////////////////
     
 # //////////////////////// blueprints ////////////////////////

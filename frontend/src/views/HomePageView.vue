@@ -3,7 +3,8 @@
     <div class="body">
         <div class="banner-area">
             <div class="left-title">
-                <h2 class="font-setter">Questions</h2>
+                <QuestionTagVue></QuestionTagVue>
+                <h3 class="font-setter">Questions</h3>
             </div>
             <div class="big-post">
                 <router-link to="/post">
@@ -58,6 +59,7 @@ import BonfireRec from '../components/BonfireRec.vue'
 import useStore from '../stores/store.js'
 import { getUserTags } from '../http/api.js'
 import { ref, reactive } from 'vue'
+import QuestionTagVue from '../components/icons/QuestionTag.vue';
 const store = useStore()
 ////////////////////////////////////////////////  
 const user_tag_list = reactive({
@@ -114,13 +116,15 @@ getUserTags().then((res) => {
 }
 
 .banner-area {
-    height: 80px;
+    display: flex;
+    min-height: 80px;
     padding-top: 20px;
     margin-left: 10%;
     background-color: rgb(241, 239, 239);
 }
 
 .left-title {
+    display: flex !important;
     width: 20%;
     display: inline-block;
 }

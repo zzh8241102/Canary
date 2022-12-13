@@ -53,34 +53,42 @@
                     <h5>Your Comment</h5>
                 </div>
                 <div class="comment-block flex column">
-                    <v-md-editor v-model="markDownContent" height="300px"></v-md-editor>
+                    <v-md-editor v-model="currComment_content.content" height="300px"></v-md-editor>
 
                     <el-button class="sub-comment " type="primary" @click="submitComment">
                         <CommentSub></CommentSub>
                         &nbsp;
                         Submit
                     </el-button>
+                    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////-->
                 </div>
                 <div class="banner-com font-setter">
                     <h4>Comments</h4>
                 </div>
                 <div class="comment-area white-bg">
-                    <!-- comment content here -->
-                    <div class="comment-block">
+                    <div v-for="(comment, index) in comments" :key="index">
+                        <div class="comment-block">
+                            <hr>
+                            <div class="comment-header flex">
+                                <div class="comment-author">
+                                    <GitAvatarVue></GitAvatarVue>
+                                    {{ comment.comment_author}}
+                                </div>
+                                <div class="vertical-divider"></div>
+                                <div class="comment-date">
+
+                                    <el-tag>{{ comment.comment_time }}</el-tag>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <v-md-editor :model-value="comment.comment_content" mode="preview"></v-md-editor>
+                            </div>
+                        </div>
 
                     </div>
-                    <hr>
-                    <div class="comment-block flex"></div>
-
-
-                    <hr>
-                    <div class="comment-block "></div>
-                    <hr>
-                    <div class="comment-block "></div>
-                    <hr>
-                    <div class="comment-block"></div>
-                    <hr>
                 </div>
+
+
             </div>
 
             <div class="recommend-area flex1 flex column mg-r8">
@@ -101,8 +109,6 @@
                     </div>
 
 
-
-
                 </div>
                 <div class="related-questions black-border">
                     <div class="tag-title-area" style="display:inline-block">
@@ -118,20 +124,22 @@
     </div>
 </template>
 <script setup>
+
+//////////////////////////////////////////////////////////////////
 import NavBar from '../components/NavBar.vue'
 import router from '../router';
 import GitAvatarVue from '../components/icons/GitAvatar.vue';
-import { getArticle, getUserTags } from '../http/api';
-import { reactive } from 'vue';
+import { getArticle, getUserTags, postComment,getComments } from '../http/api';
+import { reactive,onMounted } from 'vue';
 import Liketag from '../components/icons/LikeTagB.vue';
 import CommentTag from '../components/icons/CommentTag.vue';
 import ComentSub from '../components/icons/CommentSub.vue';
 import { ref } from 'vue';
 // get the rounter string
+//////////////////////////////////////////////////////////////////
 
 const articleId = router.currentRoute.value.params.id
 
-const commentComment = ref('')
 
 const data = reactive({
     params: {
@@ -144,20 +152,32 @@ const article = reactive({
     author: '',
     date: '',
     tags: [],
-    comments: [],
+    // comments: [],
     likes: 0
 })
 
-const comments = [
+
+const currComment_content = reactive(
     {
+        article_id: articleId,
+        content: '',
+        commentor: ''
+    }
+)
 
-        username: 'user1',
-        content: '### this is a comment',
-        date: '2021-01-01',
+currComment_content.commentor = sessionStorage.getItem('user_name')
 
-    },
 
-]
+const submitComment = () => {
+    postComment(currComment_content).then(res => {
+        console.log(res)
+    }).catch(err => {
+        console.log(err)
+    })
+}
+
+
+
 
 const user_tag_list = reactive({
     tags: []
@@ -168,21 +188,33 @@ getUserTags().then((res) => {
 })
 
 getArticle(data).then(res => {
-    console.log(res.data)
     article.title = res.data.data.article.article_title
     article.content = res.data.data.article.article_content
     article.author = res.data.data.article.article_author
     article.date = res.data.data.article.article_date
     article.tags = res.data.data.article.tags
-    article.comments = res.data.data.article.comments
+    // article.comments = res.data.data.article.comments
     article.likes = 10
-    console.log(article)
+    
 })
 
 
+let comments = ref([])
+
+onMounted(() => {
+    
+    getComments(data).then(res => {
+        console.log(res.data.data)
+        comments = res.data.data
+    })
+})
 
 </script>
 <style scoped>
+.comment-author {
+    margin-left: 10px;
+}
+
 .related-questions {
     margin-top: 10px;
 
@@ -310,6 +342,7 @@ getArticle(data).then(res => {
     margin-top: 10px;
     min-height: 100px;
     overflow: auto;
+    padding: 30px;
 }
 
 .main-area {

@@ -78,10 +78,7 @@ class Article(db.Model):
 
 #////////////////////////// jurstification end //////////////////////////#
 
-# many to many relation
-# An article can be commented by many users
-# A user can comment many articles
-# comments is a mid level table
+
 class Comments(db.Model):
     # comment id as primary key
     __tablename__ = 'Comments'
@@ -101,6 +98,10 @@ class Comments(db.Model):
     # the article can be ref by comment.article
     article = db.relationship('Article', backref=db.backref('Comments'))
 
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+        
 
 
 # An article can have many tags

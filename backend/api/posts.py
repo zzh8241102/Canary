@@ -1,7 +1,7 @@
 from flask_restful import Resource,reqparse
 from flask import jsonify, make_response
 from numpy import array
-from models import Article,User,Tags,Tags_Mid
+from models import Article,User,Tags,Tags_Mid,Comments
 # api for posting the article and comment
 # /api/post
 # /api/comment
@@ -60,7 +60,32 @@ class PostApi(Resource):
             return make_response(jsonify(self.response_obj), 404)
 
 
-# //////////////////////////////////////////////////////////////////////# //////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////
+Comment_parser = reqparse.RequestParser()
+Comment_parser.add_argument('article_id', type=str, required=True, help='article_id is required')
+Comment_parser.add_argument('content', type=str, required=True, help='comment is required')
+Comment_parser.add_argument('commentor', type=str, required=True, help='author is required')
+
+# //////////////////////////////////////////////////////////////////////
 class PostCommentApi(Resource):
+    def __init__(self) -> None:
+        self.response_obj = {
+            'success': "true",
+            'message': "",
+            'code': 0,
+        }
     def post(self):
-        pass
+        data = Comment_parser.parse_args()
+        if(User.find_by_username(data['commentor'])):
+            comment = Comments()
+            comment.comment_article = data['article_id']
+            comment.comment_content = data['content']
+            comment.comment_author = data['commentor']
+            comment.save()
+            self.response_obj['message'] = "Comment posted."
+            return make_response(jsonify(self.response_obj), 200)
+        else:
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "User not found."
+            return make_response(jsonify(self.response_obj), 404)
+

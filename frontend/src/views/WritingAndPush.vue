@@ -1,7 +1,11 @@
 <template>
     <NavBar></NavBar>
     <div class="body">
-
+        <div class="text-banner font-setter ">
+            <PostIconVue></PostIconVue>
+            &nbsp;&nbsp;
+            <h3>Post your Piazzas</h3>
+        </div>
         <div class="title-group">
             <el-input v-model="articleTitle" placeholder="Please input Your Title Here" class="title-input"
                 :inline="true" />
@@ -21,7 +25,7 @@
 <script setup>
 
 /////////////////////////////////////////////
-
+import PostIconVue from '../components/icons/PostIcon.vue';
 import { ref,reactive,onMounted } from 'vue'
 import NavBar from '../components/NavBar.vue'
 import TagSelector from '../components/TagSelector.vue';
@@ -90,14 +94,28 @@ const postArticleInter = () => {
 /////////////////////////
 </script>
 <style scoped>
+.text-banner{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    background-color: #F1EFEF;
+    margin-left:15%;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
 .body {
     background-color: #F1EFEF;
     height: 100vh;
 }
 
+.font-setter{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
 .title-group {
     position: relative;
-    top: 30px;
+    top: 15px;
     left: 20vw;
     display: flex;
     flex-direction: row;
