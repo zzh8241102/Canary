@@ -51,7 +51,7 @@
     <div class="footer dialog-footer">
       <div class="kb_inner">⌘</div>
       <div class="kb_inner">J</div>
-      <span class="fter-instruct-open font-setter-normal">To open</span>
+      <span class="fter-instruct-open font-setter-normal">To toggle</span>
       <div class="kb_inner">ESC</div>
       <span class="fter-instruct font-setter-normal">to quit</span>
     </div>
@@ -69,6 +69,14 @@ const id = ref(0);
 const dialogVisible = ref(false);
 const searchContent = ref('');
 const dialogWidthComputed = ref('55%');
+
+// 按下command+j toggle search dialog
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'j' && e.metaKey) {
+    dialogVisible.value = !dialogVisible.value;
+  }
+});
+
 
 onMounted(() => {
 

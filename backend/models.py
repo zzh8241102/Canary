@@ -62,7 +62,10 @@ class Article(db.Model):
     published_time = db.Column(db.DateTime, default=datetime.now)
     # the author can be ref by article.author
     author = db.relationship('User', backref=db.backref('Article'))
-
+    
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
 #////////////////////////// jurstification //////////////////////////#
 
 # why not use the more simple db.Table in many to many relation #
@@ -108,9 +111,31 @@ class Tags(db.Model):
     # tag description
     tag_description = db.Column(db.String(100),nullable=True)
     # tag article, which is a foreign key, link to article table article_id
-    tag_corr_article = db.Column(db.Integer, db.ForeignKey('Article.article_id'))
-    # the article can be ref by tag.article
-    article = db.relationship('Article', backref=db.backref('Tags'))
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+    @classmethod
+    def getTagIdbyName(cls, tag_name):
+        return cls.query.filter_by(tag_name = tag_name).first().tag_id
+    @classmethod
+    def getTagNamebyId(cls, tag_id):
+        return cls.query.filter_by(tag_id = tag_id).first().tag_name
+
+# many to many relation
+# An article can have many tags
+# A tag can be include by many articles
+# tags_mid is a mid level table
+class Tags_Mid(db.Model):
+    __tablename__ = 'Tags_Mid'
+    # tag id as primary key
+    tag_id = db.Column(db.Integer, db.ForeignKey('Tags.tag_id'), primary_key=True)
+    # article id as primary key
+    article_id = db.Column(db.Integer, db.ForeignKey('Article.article_id'), primary_key=True)
+    # the article can be ref by tag_mid.article
+    article = db.relationship('Article', backref=db.backref('Tags_Mid'))
+    # the tag can be ref by tag_mid.tag
+    tag = db.relationship('Tags', backref=db.backref('Tags_Mid'))
+
     def save(self):
         db.session.add(self)
         db.session.commit()

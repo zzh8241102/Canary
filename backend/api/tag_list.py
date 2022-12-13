@@ -79,7 +79,6 @@ class AddNewTagApi(Resource):
         data = new_tag_parser.parse_args()
         # check if the tag already exist
             # add the tag to the database
-        print(data)
         if(data['tag_name'] not in [tag.tag_name for tag in Tags.query.all()]):
             new_tag = Tags(tag_name=data['tag_name'], tag_description=data['tag_description'])
             new_tag.save()

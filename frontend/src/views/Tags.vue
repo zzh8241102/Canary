@@ -67,6 +67,7 @@ import TagdecVue from '../components/icons/Tagdec.vue'
 import {ref,reactive} from 'vue'
 import AddTagVue from '../components/icons/AddTag.vue'
 import {addNewTag} from '../http/api.js'
+import { ElMessage } from 'element-plus'
 /////////////////////////////////////////////////
 let dialogVisible = ref(false)
 
@@ -77,6 +78,7 @@ const subTagAdded = () => {
         // refresh the page
         window.location.reload()
     }).catch(err => {
+        ElMessage.error('Failed to add a new tag due to the name conflict.')
         console.log(err)
     })
 }

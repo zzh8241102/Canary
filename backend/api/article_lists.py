@@ -10,7 +10,14 @@ from flask_restful import Resource, reqparse
 from flask import request, make_response
 from flask import jsonify
 from importlib_metadata import pass_none
-from models import User
+from models import User,Article,Tags,Tags_Mid
+
+def fetch_article_info():
+
+    # fetch all the articles from the database,where the id, title author and date are fetched
+    pass
+
+    
 
 
 class ArticlesListApi(Resource):
@@ -129,7 +136,39 @@ class ArticlesListApi(Resource):
             }
 
         }
-
+        self.response_obj = {
+            'message': "successfully get the articles list",
+            'code': 0,
+            'data':
+            {
+                'articles':[]
+            },
+        }
     def get(self):
-
-        return make_response(jsonify(self.response_obj_sample), 200)
+        articles = Article.query.all()
+        # fetch all the tags from the database, notice the tag_mid is the model for many to many
+        # relationship between tags and articles
+        tag_mids = Tags_Mid.query.all()
+        # for each article, fetch the tags using article id
+        for article in articles:
+            # fetch the tags for each article
+            tags = []
+            for tag_mid in tag_mids:
+                if tag_mid.article_id == article.article_id:
+                    tag_name = Tags.getTagNamebyId(tag_mid.tag_id)
+                    tags.append(tag_name)
+            # record the all the info into the response_obj_sample
+            p_time = article.published_time
+            # change the published time to the format of 2022-11-11
+            p_time = p_time.strftime("%Y-%m-%d")
+            self.response_obj['data']['articles'].append(
+            {
+                'id': article.article_id,
+                'title': article.article_title,
+                'author': article.article_author,
+                'tags': tags,
+                'date': p_time,
+                'comments':999,
+                'likes': 999,
+            })
+        return make_response(jsonify(self.response_obj), 200)
