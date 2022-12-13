@@ -62,7 +62,11 @@ class Article(db.Model):
     published_time = db.Column(db.DateTime, default=datetime.now)
     # the author can be ref by article.author
     author = db.relationship('User', backref=db.backref('Article'))
-    
+
+    @classmethod
+    def find_by_article_id(cls, article_id):
+        return cls.query.filter_by(article_id = article_id).first()
+
     def save(self):
         db.session.add(self)
         db.session.commit()
@@ -98,10 +102,9 @@ class Comments(db.Model):
     article = db.relationship('Article', backref=db.backref('Comments'))
 
 
-# many to many relation
+
 # An article can have many tags
 # A tag can be include by many articles
-# tags is a mid level table
 class Tags(db.Model):
     # tag id as primary key
     __tablename__ = 'Tags'

@@ -100,7 +100,7 @@ getUserTags().then((res) => {
 }
 
 .tag-area {
-    height: 220px;
+    min-height: 220px;
     background-color: white;
 }
 
@@ -162,8 +162,6 @@ getUserTags().then((res) => {
     /* 在宽屏时候，总是占据78%的空间,剧中显示 */
     width: 80%;
     margin: auto;
-
-    margin-bottom: 20px;
     /*高度随滚动增加  */
     min-height: 100vh;
 

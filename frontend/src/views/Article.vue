@@ -1,45 +1,284 @@
 <template>
     <NavBar></NavBar>
-    <div>
+    <div class="body">
+        <div class="index-area">
+            <el-breadcrumb separator="/">
+                <el-breadcrumb-item :to="{ path: '/' }" style="font-size: ;"><b>Homepage</b></el-breadcrumb-item>
+                <el-breadcrumb-item style="font-size: medium;">
+                    <a href="/">article</a>
+                </el-breadcrumb-item>
+                <el-breadcrumb-item>
+                    {{ article.title }}
+                </el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
         <div class="main-area flex">
-            <div class="content-area white-bg flex3 flex column mg-r8" >
-                <div class="article-area flex column black-border">
-                    <!-- block b 能够撑开父级别元素 -->
-                    <div class="article-block-b  black-border">
-                        <!-- article content here -->
+            <div class="content-area flex3 flex column mg-r8">
+                <!-- block b 能够撑开父级别元素 -->
+                <div class="article-block-b white-bg black-border flex column">
+                    <!-- article content here -->
+                    <div class="article-title">
+                        <h2 class="font-setter">{{ article.title }}</h2>
+                        <hr>
+                    </div>
+                    <div class="author-time flex">
+                        <div class="author-little">
+                            <GitAvatarVue></GitAvatarVue>
+                            {{ article.author }}
+                        </div>
+                        <!-- vertical divider -->
+                        <div class="vertical-divider"></div>
+                        <div>
+                            <el-tag>{{ article.date }}</el-tag>
+                        </div>
+                    </div>
+                    <div class="content-render">
+                        <v-md-editor :model-value="article.content" mode="preview"></v-md-editor>
+                    </div>
+                    <div class="like-area">
+                        <el-button class="font-setter">
 
+                            <Liketag></Liketag>
+                            &nbsp;
+                            {{ article.likes }} likes
+                        </el-button>
+                        <el-button>
+                            <CommentTag></CommentTag>
+                            &nbsp;
+                            Comment
+                        </el-button>
                     </div>
                 </div>
-                <div class="comment-area">
-                        <!-- comment content here -->
-                        <div class="comment-block black-border mg-b8"></div>
-                        <div class="comment-block black-border mg-b8"></div>
-                        <div class="comment-block black-border mg-b8"></div>
-                        <div class="comment-block black-border mg-b8"></div>
-                        <div class="comment-block black-border mg-b8"></div>
+                <div class="banner-com font-setter">
+                    <h5>Your Comment</h5>
+                </div>
+                <div class="comment-block flex column">
+                    <v-md-editor v-model="markDownContent" height="300px"></v-md-editor>
+
+                    <el-button class="sub-comment " type="primary" @click="submitComment">
+                        <CommentSub></CommentSub>
+                        &nbsp;
+                        Submit
+                    </el-button>
+                </div>
+                <div class="banner-com font-setter">
+                    <h4>Comments</h4>
+                </div>
+                <div class="comment-area white-bg">
+                    <!-- comment content here -->
+                    <div class="comment-block">
+
+                    </div>
+                    <hr>
+                    <div class="comment-block flex"></div>
+
+
+                    <hr>
+                    <div class="comment-block "></div>
+                    <hr>
+                    <div class="comment-block "></div>
+                    <hr>
+                    <div class="comment-block"></div>
+                    <hr>
                 </div>
             </div>
-            <div class="recommend-area flex1 black-border flex column mg-r8">
-                <div class="tag-area black-border mg-b8" style="height:150px"></div>
-                <div class="passage-area black-border mg-t4" style="overflow: auto;"></div>
+
+            <div class="recommend-area flex1 flex column mg-r8">
+                <div class="tag-area black-border mg-b8">
+                    <div class="tag-title-area" style="display:inline-block">
+                        <h5 class="font-setter tag-banner">Tags for this question</h5>
+                    </div>
+                    <hr>
+
+                    <div class="tag-inner-area">
+                        <div v-for="(item, index) in user_tag_list.tags" :key="index">
+                            <span>
+                                <el-tag size="large" effect="light" class="small-tags"><b>{{ item }}</b>
+                                </el-tag>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="related-questions black-border">
+                    <div class="tag-title-area" style="display:inline-block">
+                        <h5 class="font-setter tag-banner">Related questions</h5>
+                    </div>
+
+                    <hr>
+                </div>
 
             </div>
         </div>
+
     </div>
-</template>]
+</template>
 <script setup>
 import NavBar from '../components/NavBar.vue'
-import useStore from '../stores/store.js'
-const store = useStore()
+import router from '../router';
+import GitAvatarVue from '../components/icons/GitAvatar.vue';
+import { getArticle, getUserTags } from '../http/api';
+import { reactive } from 'vue';
+import Liketag from '../components/icons/LikeTagB.vue';
+import CommentTag from '../components/icons/CommentTag.vue';
+import ComentSub from '../components/icons/CommentSub.vue';
+import { ref } from 'vue';
+// get the rounter string
+
+const articleId = router.currentRoute.value.params.id
+
+const commentComment = ref('')
+
+const data = reactive({
+    params: {
+        article_id: articleId
+    }
+})
+const article = reactive({
+    title: '',
+    content: '',
+    author: '',
+    date: '',
+    tags: [],
+    comments: [],
+    likes: 0
+})
+
+const comments = [
+    {
+
+        username: 'user1',
+        content: '### this is a comment',
+        date: '2021-01-01',
+
+    },
+
+]
+
+const user_tag_list = reactive({
+    tags: []
+})
+
+getUserTags().then((res) => {
+    user_tag_list.tags = res.data.tags
+})
+
+getArticle(data).then(res => {
+    console.log(res.data)
+    article.title = res.data.data.article.article_title
+    article.content = res.data.data.article.article_content
+    article.author = res.data.data.article.article_author
+    article.date = res.data.data.article.article_date
+    article.tags = res.data.data.article.tags
+    article.comments = res.data.data.article.comments
+    article.likes = 10
+    console.log(article)
+})
+
+
 
 </script>
 <style scoped>
+.related-questions {
+    margin-top: 10px;
+
+    min-height: 220px;
+    background-color: white;
+}
+
+.small-tags {
+    margin: 4px;
+    font-size: 13px;
+}
+
+.tag-inner-area {
+    padding: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+}
+
+.tag-manage-bottom {
+    position: relative;
+    left: 36%;
+}
+
+.tag-banner {
+    margin-top: 14px;
+    margin-left: 20px;
+}
+
+.tag-title-area {
+    height: 22px;
+    background-color: white;
+}
+
+.tag-area {
+    min-height: 220px;
+    background-color: white;
+}
+
+.sub-comment {
+    margin-top: 5px;
+    margin-left: 88%;
+    width: 12%;
+}
+
+.article-title {
+    /* 不能超过两行 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+
+
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 30px;
+    background-color: #F1EFEF;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.author-little {
+    margin-left: 10px;
+
+}
+
+.index-area {
+    height: 20px;
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+    margin-bottom: 35px;
+
+
+}
+
+.font-setter {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.body {
+    background-color: #F1EFEF;
+}
+
 .mg-b8 {
     margin-bottom: 8px;
 }
-.white-bg{
+
+.white-bg {
     background-color: white;
 }
+
 .mg-t4 {
     margin-top: 4px;
 }
@@ -63,20 +302,20 @@ const store = useStore()
 }
 
 .article-area {
+    min-height: 500px;
+    overflow: auto;
+}
+
+.comment-area {
+    margin-top: 10px;
     min-height: 100px;
     overflow: auto;
 }
-.comment-area{
-    margin-top: 30px;
-    min-height: 100px;
-    overflow: auto;
-}
+
 .main-area {
     /* 在宽屏时候，总是占据78%的空间,剧中显示 */
     width: 80%;
     margin: auto;
-    margin-top: 40px;
-    margin-bottom: 20px;
     /*高度随滚动增加  */
     min-height: 100vh;
 
@@ -92,17 +331,20 @@ const store = useStore()
 
 .content-area {
     /* 能够被撑大 */
-    min-height: 100px;
-    
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
 
 /* .recommend-area {} */
-.comment-block{
-    height: 50px;
+.comment-block {
+    min-height: 50px;
 }
 
 .article-block-b {
-    height: 300px;
+    min-height: 300px;
+    margin-bottom: 20px;
+    padding: 30px;
 }
 
 .white-bg {

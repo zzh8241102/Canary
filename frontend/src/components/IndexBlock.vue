@@ -5,18 +5,20 @@
             <div class="info-area flex">
                 <div class="like-area">
 
-                    <center><span >{{ i.likes }}</span></center>
-                    <center><span  style="display:block;">likes</span></center>
+                    <center><span>{{ i.likes }}</span></center>
+                    <center><span style="display:block;">likes</span></center>
 
                 </div>
                 <div class="comment-area">
                     <center><span>{{ i.comments }}</span></center>
-                    <center><span  style="display:block;">Ans</span></center>
+                    <center><span style="display:block;">Ans</span></center>
 
                 </div>
             </div>
             <div class="title-tag-area flex column">
-                <div class="title-area font-setter">
+                <div class="title-area font-setter" @click="
+                    router.push({ name: 'article', params: { id: i.id} })
+                    ">
                     <span>
                         <p class="no-more-than-oneline">{{ i.title }}</p>
                     </span>
@@ -32,7 +34,8 @@
 
                     <div class="author-data-area">
                         <GitAvatar></GitAvatar>
-                        <span style="margin-left:6px;margin-right: 10px;max-width: 65;overflow: hidden;">{{ i.author }}</span>
+                        <span style="margin-left:6px;margin-right: 10px;max-width: 65;overflow: hidden;">{{ i.author
+                        }}</span>
                         <span>{{ i.date }}</span>
                     </div>
                 </div>
@@ -48,7 +51,7 @@ import { computed, ref, onMounted, reactive } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { getArticlesList } from '../http/api';
 import GitAvatar from './icons/GitAvatar.vue'
-
+import router from '../router/index.js';
 /////////////////////////////////////////////////
 const articlesList = reactive({
     articles: []
@@ -58,6 +61,7 @@ getArticlesList().then(res => {
     articlesList.articles = res.data.data.articles
 })
 
+
 /////////////////////////////////////////////////
 
 </script>
@@ -66,7 +70,9 @@ getArticlesList().then(res => {
     width: 65%;
 }
 
-
+.title-area{
+    cursor: pointer;
+}
 
 .author-data-area {
     width: 35%;
@@ -85,13 +91,13 @@ getArticlesList().then(res => {
     padding: 8px;
     margin-left: 5%;
     width: 40%;
-    border:0.5px solid #9197F3;
+    border: 0.5px solid #9197F3;
     border-radius: 5px;
     margin-right: 5%;
-    
+
 }
 
-.small-font-setter{
+.small-font-setter {
     font-size: px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -100,10 +106,10 @@ getArticlesList().then(res => {
     padding: 8px;
     margin-right: 5%;
     width: 40%;
-    border:0.5px solid #9197F3;
+    border: 0.5px solid #9197F3;
     border-radius: 5px;
     margin-right: 5%;
-    
+
 }
 
 .title-tag-area {
@@ -149,7 +155,8 @@ getArticlesList().then(res => {
     /* shadow */
     /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12); */
     border-radius: 5px;
-    background-color: white;;
+    background-color: white;
+    ;
 }
 
 .article-block {
