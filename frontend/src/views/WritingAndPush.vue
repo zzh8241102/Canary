@@ -100,7 +100,7 @@ const postArticleInter = () => {
     width: 50%;
     background-color: #F1EFEF;
     margin-left:15%;
-    padding-top: 15px;
+    padding-top: 20px;
     margin-bottom: 0px;
     padding-bottom: 0px;
 }

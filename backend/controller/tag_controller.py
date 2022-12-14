@@ -1,4 +1,4 @@
-from models import Tags
+from models import Tags,Tags_Mid
 from extension import db
 
 def generate_basic_tags():
@@ -22,3 +22,24 @@ def generate_basic_tags():
 
     return True
 
+def find_article_by_tag_name(tag_id):
+    # tag and article is a many to many relation
+    # tag_mid stored the relation
+    # for a certain tag id, we can find all the article id
+    tags_mid = Tags_Mid()
+    article_id_list = tags_mid.query.filter_by(tag_id=tag_id).all()
+    # convert the article id list to a list
+    article_id_list = [article.article_id for article in article_id_list]
+    return article_id_list
+
+
+def find_article_tags(article_id):
+    # tag and article is a many to many relation
+    # tag_mid stored the relation
+    # for a certain article id, we can find all the tag id
+    tags_mid = Tags_Mid()
+    tag_id_list = tags_mid.query.filter_by(article_id=article_id).all()
+    # convert the tag_id lit to tag name list
+    tag_name_list = [Tags.getTagNamebyId(tag.tag_id) for tag in tag_id_list]
+    # convert the tag id list to a list
+    return tag_name_list

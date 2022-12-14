@@ -4,6 +4,7 @@
 from flask_restful import Resource, reqparse
 from flask import jsonify, make_response
 from models import Tags
+from controller.tag_controller import find_article_by_tag_name, find_article_tags
 
 # class TagApi(Resource):
 #     def get(self):
@@ -62,10 +63,11 @@ class AllTagsApi(Resource):
             
         return make_response(jsonify(self.response_obj_sample), 200)
 
-
+#////////////////////////// add new tag //////////////////////////
 new_tag_parser = reqparse.RequestParser()
 new_tag_parser.add_argument('tag_name', type=str, required=True, help='username is required')
 new_tag_parser.add_argument('tag_description', type=str, required=True, help='username is required')
+# ///////////////////////// add new tag //////////////////////////
 class AddNewTagApi(Resource):
     def __init__(self):
         self.response_obj = {
@@ -89,5 +91,26 @@ class AddNewTagApi(Resource):
             self.response_obj['message'] = "tag already exist"
             return make_response(jsonify(self.response_obj), 404)
         
+# ///////////////////////// find article's tag //////////////////////////
+find_article_tag_parser = reqparse.RequestParser()
+find_article_tag_parser.add_argument('article_id', type=str, required=True, help='username is required')
+# ///////////////////////// find article's tag //////////////////////////
 
-
+class FindArticleTagApi(Resource):
+    def __init__(self):
+        self.response_obj_sample = {
+            'tags': [
+             
+            ]
+        }
+        
+    def get(self):
+        # fetch all the tags from the database
+        data = find_article_tag_parser.parse_args()
+        tags = find_article_tags(data['article_id'])
+        for tagname in tags:
+                self.response_obj_sample['tags'].append({
+                'tag_name':tagname,
+            })
+            
+        return make_response(jsonify(self.response_obj_sample), 200)

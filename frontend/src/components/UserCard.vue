@@ -89,11 +89,11 @@
         </el-upload>
       </div>
       <div class="combo-area">
-        <div class="font-setter mb-4"><b>
+        <div class="font-setter mb-4" ><b>
             <center>log out</center>
           </b>
         </div>
-        <el-button round bg type="warning">log out</el-button>
+        <el-button round bg type="warning" @click="logOut">log out</el-button>
       </div>
     </div>
 
@@ -271,6 +271,12 @@ onMounted(() => {
 
 
 })
+
+const logOut =()=>{
+  console.log('log out')
+  sessionStorage.clear()
+  window.location.href = '/login'
+}
 
 ////////////////////////////////////////////////////////
 

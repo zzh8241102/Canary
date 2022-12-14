@@ -6,6 +6,7 @@ from flask_restful import Resource,reqparse
 from models import Article
 from flask import jsonify, make_response
 from controller.article_controller import find_article_tags
+from controller.like_controller import fetch_article_like_num
 #/////////////////////////////////////////////
 
 article_content_parser = reqparse.RequestParser()
@@ -42,7 +43,7 @@ class ArticleContentApi(Resource):
             self.response_obj['data']['article']['article_date'] = article.published_time 
             self.response_obj['data']['article']['article_tags'] = find_article_tags(data['article_id'])
             self.response_obj['data']['article']['article_comments'] = []
-            self.response_obj['data']['article']['article_likes'] = 10
+            self.response_obj['data']['article']['article_likes'] = fetch_article_like_num(data['article_id'])
             return make_response(jsonify(self.response_obj), 200)
         else:
             self.response_obj['success'] = "false"

@@ -101,7 +101,7 @@ class Comments(db.Model):
     def save(self):
         db.session.add(self)
         db.session.commit()
-        
+
 
 
 # An article can have many tags
@@ -160,6 +160,14 @@ class Likes(db.Model):
     article = db.relationship('Article', backref=db.backref('Likes'))
     # the author can be ref by like.author
     author = db.relationship('User', backref=db.backref('Likes'))
+
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod    
+    def find_by_article_id_and_user_name(cls, article_id, user_name):
+        return cls.query.filter_by(like_corr_article = article_id, like_corr_user = user_name).first()
 
 # many to many relation
 # a user can have many tags

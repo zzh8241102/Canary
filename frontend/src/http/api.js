@@ -37,9 +37,15 @@ export const getTags = (data) => $http.get('/api/alltags', data)
 // /api/post
 export const postArticle = (data) => $http.post('/api/post', data)
 
+// submit like by article
+export const submitLike = (data) => $http.post('/api/like', data)
+
 // /api/comment?article_id=article_id
 export const getComments = (data) => $http.get('/api/comment', data)
 // /api/postcomment
 export const postComment = (data) => $http.post('/api/postcomment', data)
 // /api/search?search=keyword
 export const search = (data) => $http.get('/api/search', data)
+
+// /api/findtag
+export const findArticleTag = (data) => $http.get('/api/findtag', data)

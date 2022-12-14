@@ -36,7 +36,7 @@
                         <v-md-editor :model-value="article.content" mode="preview"></v-md-editor>
                     </div>
                     <div class="like-area">
-                        <el-button class="font-setter">
+                        <el-button class="font-setter" @click="subLike">
 
                             <Liketag></Liketag>
                             &nbsp;
@@ -105,7 +105,7 @@
                     <hr>
 
                     <div class="tag-inner-area">
-                        <div v-for="(item, index) in user_tag_list.tags" :key="index">
+                        <div v-for="(item, index) in article_tag_list.tags" :key="index">
                             <span>
                                 <el-tag size="large" effect="light" class="small-tags"><b>{{ item }}</b>
                                 </el-tag>
@@ -135,17 +135,21 @@
 import NavBar from '../components/NavBar.vue'
 import router from '../router';
 import GitAvatarVue from '../components/icons/GitAvatar.vue';
-import { getArticle, getUserTags, postComment, getComments } from '../http/api';
+import { getArticle, getUserTags, postComment, getComments,submitLike,findArticleTag } from '../http/api';
 import { reactive, onMounted,ref } from 'vue';
 import Liketag from '../components/icons/LikeTagB.vue';
 import CommentTag from '../components/icons/CommentTag.vue';
 import ComentSub from '../components/icons/CommentSub.vue';
+import { ElMessage } from 'element-plus';
 
 // get the rounter string
 //////////////////////////////////////////////////////////////////
 
 const articleId = router.currentRoute.value.params.id
 
+const showCommentArea = () => {
+    document.getElementById('new-ans').style.display = document.getElementById('new-ans').style.display == 'block' ? 'none' : 'block'
+}
 
 const data = reactive({
     params: {
@@ -158,11 +162,10 @@ const article = reactive({
     author: '',
     date: '',
     tags: [],
-    // comments: [],
     likes: 0
 })
 
-
+//////////////////////////////////////////////////////////////////
 const currComment_content = reactive(
     {
         article_id: articleId,
@@ -183,48 +186,67 @@ const submitComment = () => {
     })
 }
 
+const dataLike = reactive({
 
+    article_id: articleId,
+    user_name: sessionStorage.getItem('user_name')
 
+})
+
+const subLike = () => {
+    submitLike(dataLike).then(res => {
+        console.log(res)
+        article.likes = article.likes + 1
+    }).catch(err => {
+        console.log(err)
+        ElMessage.error('You have already liked this article')
+    })
+
+}
+//////////////////////////////////////////////////////////////////
 
 const user_tag_list = reactive({
     tags: []
 })
 
-getUserTags().then((res) => {
-    user_tag_list.tags = res.data.tags
+
+const article_tag_list = reactive({
+    tags: []
 })
 
-getArticle(data).then(res => {
+
+//////////////////////////////////////////////////////////////////
+
+let comments = ref([])
+onMounted(() => {
+    getComments(data).then(res => {
+        comments.value = res.data.data
+    })
+    getArticle(data).then(res => {
     article.title = res.data.data.article.article_title
     article.content = res.data.data.article.article_content
     article.author = res.data.data.article.article_author
     article.date = res.data.data.article.article_date
-    article.tags = res.data.data.article.tags
-    // article.comments = res.data.data.article.comments
-    article.likes = 10
+    article.likes = res.data.data.article.article_likes
+})
+
+findArticleTag(data).then(res => {
+        for (let i = 0; i < res.data.tags.length; i++) {
+            console.log(res.data.tags[i].tag_name)
+            article_tag_list.tags.push(res.data.tags[i].tag_name)
+    }
+    }
+)
+
 
 })
 
 
 
-let comments = ref([])
-
-getComments(data).then(res => {
-    comments = res.data.data
-})
-
-const showCommentArea = () => {
-    // document.getElementById('new-ans').style.display = 'block'
-    // toggle
-    document.getElementById('new-ans').style.display = document.getElementById('new-ans').style.display == 'block' ? 'none' : 'block'
-}
-
+//////////////////////////////////////////////////////////////////
 </script>
+
 <style scoped>
-.comment-header{
-    
-    
-}
 #new-ans{
     display: none;
 }

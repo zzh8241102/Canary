@@ -185,6 +185,7 @@ getUserTags().then((res) => {
     margin-right: 3%;
     /* shallow shadow*/
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16), 0 2px 2px rgba(0, 0, 0, 0.12);
+    margin-bottom: 10px;
 }
 
 /* .recommend-area {}  */

@@ -11,6 +11,7 @@ from flask import request, make_response
 from flask import jsonify
 from importlib_metadata import pass_none
 from models import User,Article,Tags,Tags_Mid
+from controller.like_controller import fetch_article_comment_num,fetch_article_like_num
 
 def fetch_article_info():
 
@@ -168,7 +169,7 @@ class ArticlesListApi(Resource):
                 'author': article.article_author,
                 'tags': tags,
                 'date': p_time,
-                'comments':999,
-                'likes': 999,
+                'comments': fetch_article_comment_num(article.article_id),
+                'likes': fetch_article_like_num(article.article_id),
             })
         return make_response(jsonify(self.response_obj), 200)
