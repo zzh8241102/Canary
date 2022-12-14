@@ -42,37 +42,42 @@
                             &nbsp;
                             {{ article.likes }} likes
                         </el-button>
-                        <el-button>
+                        <el-button @click="showCommentArea">
                             <CommentTag></CommentTag>
                             &nbsp;
                             Comment
                         </el-button>
                     </div>
                 </div>
-                <div class="banner-com font-setter">
-                    <h5>Your Comment</h5>
-                </div>
-                <div class="comment-block flex column">
-                    <v-md-editor v-model="currComment_content.content" height="300px"></v-md-editor>
+                <div id="new-ans">
+                    <div class="banner-com font-setter">
+                        <h5>Your Comment</h5>
+                    </div>
+                    <div class="comment-block flex column">
+                        <v-md-editor v-model="currComment_content.content" height="300px"></v-md-editor>
 
-                    <el-button class="sub-comment " type="primary" @click="submitComment">
-                        <CommentSub></CommentSub>
-                        &nbsp;
-                        Submit
-                    </el-button>
-                    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                        <el-button class="sub-comment " type="primary" @click="submitComment">
+                            <CommentSub></CommentSub>
+                            &nbsp;
+                            Submit
+                        </el-button>
+                    </div>
                 </div>
                 <div class="banner-com font-setter">
                     <h4>Comments</h4>
                 </div>
-                <div class="comment-area white-bg">
+  
+                <div class="comment-area white-bg black-border">
+                    <div class="comment-header font-setter">
+                    <hr>
+                </div>
                     <div v-for="(comment, index) in comments" :key="index">
                         <div class="comment-block">
-                            <hr>
-                            <div class="comment-header flex">
+                            
+                            <div class="flex">
                                 <div class="comment-author">
                                     <GitAvatarVue></GitAvatarVue>
-                                    {{ comment.comment_author}}
+                                    {{ comment.comment_author }}
                                 </div>
                                 <div class="vertical-divider"></div>
                                 <div class="comment-date">
@@ -83,6 +88,7 @@
                             <div class="comment-content">
                                 <v-md-editor :model-value="comment.comment_content" mode="preview"></v-md-editor>
                             </div>
+                            <hr>
                         </div>
 
                     </div>
@@ -129,12 +135,12 @@
 import NavBar from '../components/NavBar.vue'
 import router from '../router';
 import GitAvatarVue from '../components/icons/GitAvatar.vue';
-import { getArticle, getUserTags, postComment,getComments } from '../http/api';
-import { reactive,onMounted } from 'vue';
+import { getArticle, getUserTags, postComment, getComments } from '../http/api';
+import { reactive, onMounted,ref } from 'vue';
 import Liketag from '../components/icons/LikeTagB.vue';
 import CommentTag from '../components/icons/CommentTag.vue';
 import ComentSub from '../components/icons/CommentSub.vue';
-import { ref } from 'vue';
+
 // get the rounter string
 //////////////////////////////////////////////////////////////////
 
@@ -170,7 +176,8 @@ currComment_content.commentor = sessionStorage.getItem('user_name')
 
 const submitComment = () => {
     postComment(currComment_content).then(res => {
-        console.log(res)
+        currComment_content.content = ''
+        window.location.reload()
     }).catch(err => {
         console.log(err)
     })
@@ -195,22 +202,32 @@ getArticle(data).then(res => {
     article.tags = res.data.data.article.tags
     // article.comments = res.data.data.article.comments
     article.likes = 10
-    
+
 })
+
 
 
 let comments = ref([])
 
-onMounted(() => {
-    
-    getComments(data).then(res => {
-        console.log(res.data.data)
-        comments = res.data.data
-    })
+getComments(data).then(res => {
+    comments = res.data.data
 })
+
+const showCommentArea = () => {
+    // document.getElementById('new-ans').style.display = 'block'
+    // toggle
+    document.getElementById('new-ans').style.display = document.getElementById('new-ans').style.display == 'block' ? 'none' : 'block'
+}
 
 </script>
 <style scoped>
+.comment-header{
+    
+    
+}
+#new-ans{
+    display: none;
+}
 .comment-author {
     margin-left: 10px;
 }
@@ -318,7 +335,12 @@ onMounted(() => {
 .black-border {
     /* border: 1px solid black; */
     /* shadow */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12); */
+    /* box-shadow: 0 0.1px  rgba(0, 0, 0, 0.16), 0 2px  rgba(0, 0, 0, 0.12); */
+    border :1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    
+    
 }
 
 .flex {
@@ -343,6 +365,10 @@ onMounted(() => {
     min-height: 100px;
     overflow: auto;
     padding: 30px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+    padding-left:15px;
+    padding-right: 15px;
 }
 
 .main-area {
@@ -372,6 +398,7 @@ onMounted(() => {
 /* .recommend-area {} */
 .comment-block {
     min-height: 50px;
+    margin-top: 5px;
 }
 
 .article-block-b {
