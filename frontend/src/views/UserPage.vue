@@ -50,12 +50,21 @@
                     </div>
                     <hr>
                 </div>
+                <h4 class="font-setter rec-banner">
+                    <RecentTag></RecentTag>
+                    Recent Activities
+                </h4>
                 <div class="recent-area">
-                    <RecentBlock></RecentBlock>
+
+                    <RecentBlock>
+
+                    </RecentBlock>
                 </div>
             </div>
         </div>
-
+<!-- 
+    Dialogs
+ -->
 
         <el-dialog v-model="dialogDeleteVisible" title="change your password" width="30%">
             <div style="display: flex;flex-direction: column;">
@@ -109,6 +118,7 @@ import useStore from '../stores/store.js'
 import { getUserInfo, changePassword,deleteAccount } from '../http/api'
 import { ref, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
+import RecentTag from '../components/icons/RecentTag.vue'
 
 // ////////////////////////////////////////////////////////////
 
@@ -177,8 +187,15 @@ const changePassWordSub = () => {
     })
 
 }
+
+////////////////////////////////////////////////////////////////////////////////////
 </script>
 <style scoped>
+.rec-banner{
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
 .delete-button {
     width: 53%;
 }
@@ -232,6 +249,7 @@ const changePassWordSub = () => {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     margin-left: 2.5%;
+    margin-bottom: 5px;
     width: 95%;
     height: 100%;
     overflow: auto;
@@ -283,7 +301,7 @@ const changePassWordSub = () => {
     width: 80%;
     margin: auto;
     margin-top: 0px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     /*高度随滚动增加  */
     min-height: 100vh;
 }

@@ -66,14 +66,14 @@
                 <div class="banner-com font-setter">
                     <h4>Comments</h4>
                 </div>
-  
+
                 <div class="comment-area white-bg black-border">
                     <div class="comment-header font-setter">
-                    <hr>
-                </div>
+                        <hr>
+                    </div>
                     <div v-for="(comment, index) in comments" :key="index">
                         <div class="comment-block">
-                            
+
                             <div class="flex">
                                 <div class="comment-author">
                                     <GitAvatarVue></GitAvatarVue>
@@ -135,8 +135,8 @@
 import NavBar from '../components/NavBar.vue'
 import router from '../router';
 import GitAvatarVue from '../components/icons/GitAvatar.vue';
-import { getArticle, getUserTags, postComment, getComments,submitLike,findArticleTag } from '../http/api';
-import { reactive, onMounted,ref } from 'vue';
+import { getArticle, getUserTags, postComment, getComments, submitLike, findArticleTag } from '../http/api';
+import { reactive, onMounted, ref } from 'vue';
 import Liketag from '../components/icons/LikeTagB.vue';
 import CommentTag from '../components/icons/CommentTag.vue';
 import ComentSub from '../components/icons/CommentSub.vue';
@@ -151,11 +151,7 @@ const showCommentArea = () => {
     document.getElementById('new-ans').style.display = document.getElementById('new-ans').style.display == 'block' ? 'none' : 'block'
 }
 
-const data = reactive({
-    params: {
-        article_id: articleId
-    }
-})
+
 const article = reactive({
     title: '',
     content: '',
@@ -214,29 +210,38 @@ const article_tag_list = reactive({
     tags: []
 })
 
-
+const data = reactive({
+    params: {
+        article_id: articleId
+    }
+})
 //////////////////////////////////////////////////////////////////
 
 let comments = ref([])
 onMounted(() => {
+    const data = reactive({
+        params: {
+            article_id: router.currentRoute.value.params.id
+        }
+    })
     getComments(data).then(res => {
         comments.value = res.data.data
     })
     getArticle(data).then(res => {
-    article.title = res.data.data.article.article_title
-    article.content = res.data.data.article.article_content
-    article.author = res.data.data.article.article_author
-    article.date = res.data.data.article.article_date
-    article.likes = res.data.data.article.article_likes
-})
+        article.title = res.data.data.article.article_title
+        article.content = res.data.data.article.article_content
+        article.author = res.data.data.article.article_author
+        article.date = res.data.data.article.article_date
+        article.likes = res.data.data.article.article_likes
+    })
 
-findArticleTag(data).then(res => {
+    findArticleTag(data).then(res => {
         for (let i = 0; i < res.data.tags.length; i++) {
             console.log(res.data.tags[i].tag_name)
             article_tag_list.tags.push(res.data.tags[i].tag_name)
+        }
     }
-    }
-)
+    )
 
 
 })
@@ -247,9 +252,10 @@ findArticleTag(data).then(res => {
 </script>
 
 <style scoped>
-#new-ans{
+#new-ans {
     display: none;
 }
+
 .comment-author {
     margin-left: 10px;
 }
@@ -359,10 +365,10 @@ findArticleTag(data).then(res => {
     /* shadow */
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12); */
     /* box-shadow: 0 0.1px  rgba(0, 0, 0, 0.16), 0 2px  rgba(0, 0, 0, 0.12); */
-    border :1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 0.25rem;
-    
-    
+
+
 }
 
 .flex {
@@ -389,7 +395,7 @@ findArticleTag(data).then(res => {
     padding: 30px;
     padding-top: 0px;
     margin-bottom: 20px;
-    padding-left:15px;
+    padding-left: 15px;
     padding-right: 15px;
 }
 

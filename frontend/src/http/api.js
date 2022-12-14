@@ -49,3 +49,7 @@ export const search = (data) => $http.get('/api/search', data)
 
 // /api/findtag
 export const findArticleTag = (data) => $http.get('/api/findtag', data)
+
+
+// /api/user/activity
+export const getUserActivity = (data) => $http.get('/api/user/activity', data)

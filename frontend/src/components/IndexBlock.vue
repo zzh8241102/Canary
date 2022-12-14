@@ -59,6 +59,7 @@ const articlesList = reactive({
 /////////////////////////////////////////////////
 getArticlesList().then(res => {
     articlesList.articles = res.data.data.articles
+    console.log(articlesList.articles)
 })
 
 

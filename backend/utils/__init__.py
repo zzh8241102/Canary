@@ -12,7 +12,7 @@ from api.user_info import ChangePasswordAPi,DeleteAccountApi
 from api.comments import GetCommentByArticleIdApi
 from api.posts import PostApi, PostCommentApi
 from api.upload import UploadAvatarApi, FindAvatarApi
-from api.user_info import ChangeUserInfoAPi
+from api.user_info import ChangeUserInfoAPi,UserActivityInfoApi
 from api.likes import ArticleLikeManageApi
 
 from api.auth import UserRegistrationApi, UserSignInApi
@@ -40,6 +40,7 @@ def add_apis():
     api.add_resource(GetCommentByArticleIdApi, '/api/comment')
     api.add_resource(ArticleLikeManageApi, '/api/like')
     api.add_resource(FindArticleTagApi, '/api/findtag')
+    api.add_resource(UserActivityInfoApi, '/api/user/activity')
 # //////////////////////// api ////////////////////////
     
 # //////////////////////// blueprints ////////////////////////
