@@ -51,3 +51,6 @@ export const findArticleTag = (data) => $http.get('/api/findtag', data)
 
 // /api/user/activity
 export const getUserActivity = (data) => $http.get('/api/user/activity', data)
+
+// /api/findtaginfo
+export const getTagInfo = (data) => $http.get('/api/findtaginfo', data)

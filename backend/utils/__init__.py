@@ -5,7 +5,7 @@ from api.tests import TestApi
 
 from api.article_content import ArticleContentApi
 from api.article_lists import ArticlesListApi,ArticleListByTagApi
-from api.tag_list import  TagUserApi,AllTagsApi,AddNewTagApi,FindArticleTagApi
+from api.tag_list import  TagUserApi,AllTagsApi,AddNewTagApi,FindArticleTagApi, FindTaginfoByTagNameAPi
 from api.search import SearchApi
 from api.user_info import UserInfoApi
 from api.user_info import ChangePasswordAPi,DeleteAccountApi
@@ -14,6 +14,7 @@ from api.posts import PostApi, PostCommentApi
 from api.upload import UploadAvatarApi, FindAvatarApi
 from api.user_info import ChangeUserInfoAPi,UserActivityInfoApi
 from api.likes import ArticleLikeManageApi
+
 
 from api.auth import UserRegistrationApi, UserSignInApi
 # //////////////////////// api ////////////////////////
@@ -42,6 +43,7 @@ def add_apis():
     api.add_resource(FindArticleTagApi, '/api/findtag')
     api.add_resource(UserActivityInfoApi, '/api/user/activity')
     api.add_resource(ArticleListByTagApi, '/api/articleslist/tag')
+    api.add_resource(FindTaginfoByTagNameAPi, '/api/findtaginfo')
 
 # //////////////////////// api ////////////////////////
     

@@ -1,45 +1,56 @@
 <template>
    <NavBar></NavBar>
    <div class="body">
-       <div class="banner-area">
-           <div class="left-title">
-               <QuestionTagVue></QuestionTagVue>
-               <h3 class="font-setter"></h3>
-           </div>
-           <div class="big-post">
-               <router-link to="/post">
-                   <el-button color="#626aef" size="large" style="margin-bottom:5px">
-                       Ask a question
-                   </el-button>
-               </router-link>
-           </div>
-       </div>
-       <div class="main-area flex">
-           <div class="content-area flex3 mg-r8">
-            <TagArticleListBlock>/</TagArticleListBlock>
-           </div>
-           <div class="recommend-area flex1 flex column mg-r8">
-               <div class="tag-area black-border mg-b8">
-                   <div class="tag-title-area" style="display:inline-block">
-                       <h5 class="font-setter tag-banner">You Tags</h5>
-                   </div>
-                   <div class="tag-manage-bottom" style="display:inline-block">
+      <div class="banner-area">
+         <div class="left-title">
+            <!-- <TagPageBannerVue></TagPageBannerVue> -->
+            <h3 class="font-setter"></h3>
+         </div>
 
-                   </div>
-                   <hr>
-                   <div class="tags-area">
-                       <div class="tag-inner-area">
-             
-
-                       </div>
-
-                   </div>
+      </div>
+      <div class="main-area flex">
+         <div class="content-area flex3 mg-r8">
+            <div class="up-down flex column">
+               <div class="new-banner-area flex">
+                  <div class="left-text-area flex column">
+                     <div class="title-area">
+                        <TagPageBannerVue></TagPageBannerVue>
+                        {{currentTagInfo.tag_name}}   
+                     </div>
+                     <div class="des-area-inner">
+                        {{currentTagInfo.tag_description}}
+                        
+                     </div>
+                     <div class="follow-area">
+                        <el-button size="large" type="info">Follow</el-button>   
+                     </div>
+                  </div>
+                  <div class="des-right-pic-area">
+                     <KnowledgeMapVue></KnowledgeMapVue>
+                  </div>
                </div>
+               <hr>
+               <TagArticleListBlock>/</TagArticleListBlock>
+            </div>
+         </div>
 
- 
+         <div class="recommend-area flex1 flex column mg-r8">
+            <div class="tag-area black-border mg-b8">
+               <div class="tag-title-area" style="display:inline-block">
+                  <h5 class="font-setter tag-banner">{{ currentTagInfo.tag_name }}</h5>
+               </div>
+               <hr>
+               <div class="tags-area">
+                  <div class="tag-inner-area">
+                     {{ currentTagInfo.tag_description }}
+                  </div>
 
-           </div>
-       </div>
+               </div>
+            </div>
+
+
+         </div>
+      </div>
    </div>
 </template>
 <script setup>
@@ -49,11 +60,13 @@ import IndexBlockVue from '../components/IndexBlock.vue';
 import BonfireRec from '../components/BonfireRec.vue'
 import useStore from '../stores/store.js'
 import { getUserTags } from '../http/api.js'
-import { ref, reactive } from 'vue'
+import { ref, reactive ,onMounted} from 'vue'
 import QuestionTagVue from '../components/icons/QuestionTag.vue';
 import router from '../router';
-import { getArticlesListByTag } from '../http/api.js';
+import { getArticlesListByTag,getTagInfo } from '../http/api.js';
 import TagArticleListBlock from '../components/TagArticleListBlock.vue';
+import TagPageBannerVue from '../components/icons/TagPageBanner.vue';
+import KnowledgeMapVue from '../components/icons/KnowledgeMap.vue';
 ////////////////////////////////////////////////  
 
 
@@ -67,25 +80,71 @@ const currentTagInfo = reactive({
 
 
 
-const currentId =  router.currentRoute.value.params.id
+const currentId = router.currentRoute.value.params.id
 
 const currentIdData = reactive({
-   params:{
+   params: {
       tag_id: currentId
    }
-   
+
 })
 
-getArticlesListByTag(currentIdData).then((res) => {
-   console.log("hhh")
-   console.log(res.data)
+onMounted(() => {
+   getTagInfo(currentIdData).then(res => {
+      console.log(res)
+      currentTagInfo.tag_name = res.data.tag_info.tag_name
+      currentTagInfo.tag_description = res.data.tag_info.tag_description
+      currentTagInfo.tag_id = res.data.tag_info.tag_id
+   })
 })
+
+
 
 
 ////////////////////////////////////////////////
 </script>
 <style scoped>
+.des-right-pic-area{
+   margin-top:6%;
+}
+.left-text-area{
+   padding: 15px;
+   padding-bottom: 0px;
+   width: 70%;
+}
+.follow-area{
+   
+   margin-left: 10px;
+}
+.des-area-inner{
+   /* 不能超过四排 */
+   
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical; 
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   width: 60%;
+   font-size: 17px;
+   margin-left: 10px;
+   border: 0.5px solid #9E8ACF dashed;  
+   padding: 5px;
+   margin-bottom: 10px;
+   border-radius: 3px;
 
+}
+.title-area{
+   font-size: 30px;
+   margin-bottom: 10px;
+   min-height: 40px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   margin-left: 10px;
+}
+.new-banner-area{
+   min-height: 150px;
+
+}
 .tag-inner-area {
    padding: 8px;
    display: flex;
@@ -130,10 +189,11 @@ getArticlesListByTag(currentIdData).then((res) => {
 
 .banner-area {
    display: flex;
-   min-height: 80px;
+   min-height: 20px;
    padding-top: 20px;
    margin-left: 10%;
    background-color: rgb(241, 239, 239);
+   width: 60%;
 }
 
 .left-title {
@@ -232,19 +292,19 @@ getArticlesListByTag(currentIdData).then((res) => {
 
 @media screen and (max-width: 1200px) {
    .main-area {
-       width: 100%;
+      width: 100%;
    }
 
    .main-area {
-       flex-direction: column;
-       width: 90%;
+      flex-direction: column;
+      width: 90%;
    }
 
    .article-block {
-       /* height: 90px; */
-       height: 90px;
-       word-wrap: break-word;
-       max-width: 90vw;
+      /* height: 90px; */
+      height: 90px;
+      word-wrap: break-word;
+      max-width: 90vw;
 
    }
 }
@@ -252,23 +312,23 @@ getArticlesListByTag(currentIdData).then((res) => {
 /* 屏幕宽度小于600时 */
 @media screen and (max-width: 600px) {
    .main-area {
-       width: 100%;
+      width: 100%;
    }
 
    .main-area {
-       flex-direction: column;
-       width: 100%;
+      flex-direction: column;
+      width: 100%;
    }
 
    .content-area {
-       margin: 0px;
+      margin: 0px;
    }
 
    .article-block {
-       /* height: 90px; */
-       height: 90px;
-       word-wrap: break-word;
-       max-width: 100vw;
+      /* height: 90px; */
+      height: 90px;
+      word-wrap: break-word;
+      max-width: 100vw;
 
    }
 }

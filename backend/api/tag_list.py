@@ -28,22 +28,13 @@ class TagUserApi(Resource):
     def get(self):
         return make_response(jsonify(self.response_obj_sample), 200)
 
-# api/addtag
-class AddTagApi(Resource):
-    def __init__(self):
-    #     self.response_obj_sample = {
-    #         'message': "successfully add the tag",
-    #         'code': 0,
-    #         'data': {
-    #             'tag': 'c++',
-    #         }
-    #     }
-        pass
 
         
-    # def post(self):
-    #     return make_response(jsonify(self.response_obj_sample), 200)
 
+
+# //////////////////////////////////////////////////////
+
+# ///////////////////////////////////////////////////////////////
 class AllTagsApi(Resource):
     def __init__(self):
         self.response_obj_sample = {
@@ -116,3 +107,29 @@ class FindArticleTagApi(Resource):
             
         return make_response(jsonify(self.response_obj_sample), 200)
 
+#//////////////////////////////////////////////////////////////////// 
+find_tag_two_parser = reqparse.RequestParser()
+find_tag_two_parser.add_argument('tag_id', type=str, required=True, help='username is required')
+#//////////////////////////////////////////////////////////////////// 
+class FindTaginfoByTagNameAPi(Resource):
+    def __init__(self):
+        self.response_obj_sample = {
+            'tag_info': {
+                'tag_id': 0,
+                'tag_name': '',
+                'tag_description': '',
+            }
+        }
+        
+    def get(self):
+        data = find_tag_two_parser.parse_args()
+        tag_id = data['tag_id']
+        # fetch all the tags from the database
+        tag = Tags.query.filter_by(tag_id=tag_id).first()
+        if(tag is not None):
+            self.response_obj_sample['tag_info']['tag_id'] = tag.tag_id
+            self.response_obj_sample['tag_info']['tag_name'] = tag.tag_name
+            self.response_obj_sample['tag_info']['tag_description'] = tag.tag_description
+            return make_response(jsonify(self.response_obj_sample), 200)
+        else:
+            return make_response(jsonify(self.response_obj_sample), 404)
