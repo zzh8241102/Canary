@@ -1,5 +1,6 @@
 # contains all the models and their fields
 from enum import unique
+from numpy import delete
 from sqlalchemy import Column
 from extension import db
 from datetime import datetime
@@ -45,6 +46,9 @@ class User(db.Model):
     @classmethod
     def find_by_username(cls, username):
         return cls.query.filter_by(user_name = username).first()
+    @classmethod
+    def getUserIdByName(cls, user_name):
+        return cls.query.filter_by(user_name = user_name).first().user_id
 
    
 
@@ -172,18 +176,27 @@ class Likes(db.Model):
 # many to many relation
 # a user can have many tags
 # a tag can be owned by many users
-# and a tag can used to ref the article
-# user_tags is a mid level table
-# notice the tags must be firtly added or exist in the tags table
+
+# user_tags is a mid level table like the table tag mid
 class UserTags(db.Model):
     # user tag id as primary key
     __tablename__ = 'UserTags'
-    user_tag_id = db.Column(db.Integer, primary_key=True)
-    # user tag name
-    user_tag_name = db.Column(db.String(20),nullable=False)
-    # user tag author, which is a foreign key, link to user table user_id
-    user_tag_owner = db.Column(db.Integer, db.ForeignKey('User.user_id'))
-    # the author can be ref by user_tag.author
-    author = db.relationship('User', backref=db.backref('User_tags'))
-  
-#tag 的入口要注意是全局唯一的
+    tag_id = db.Column(db.Integer, db.ForeignKey('Tags.tag_id'), primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('User.user_id'), primary_key=True)
+    # the user can be ref by user_tags.user
+    user = db.relationship('User', backref=db.backref('UserTags'))
+    # the tag can be ref by user_tags.tag
+    tag = db.relationship('Tags', backref=db.backref('UserTags'))
+    
+    def save(self):
+        try:
+            db.session.add(self)
+            db.session.commit()
+        except:
+            db.session.rollback()
+            db.session.flush()
+
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()

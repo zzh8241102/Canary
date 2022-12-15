@@ -8,4 +8,5 @@ class TestApi(Resource):
 
     """
     def get(self):
+        # generate_basic_tags()
         return {'message': 'Hello, World!'}

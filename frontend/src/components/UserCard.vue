@@ -16,19 +16,25 @@
       <div class="badge-area">
         <div class="little-badge">
           <center>
-            <div>5</div>
+            <div>
+              <slot name="tagNumber"></slot>
+            </div>
           </center>
           <center>Tags</center>
         </div>
         <div class="little-badge">
           <center>
-            <div>100</div>
+            <div>
+              <slot name="commentsNumber"></slot>
+            </div>
           </center>
           <center>comms</center>
         </div>
         <div class="little-badge">
           <center>
-            <div>50</div>
+            <div>
+              <slot name="articleNumber"></slot>
+            </div>
           </center>
           <center>articles</center>
         </div>

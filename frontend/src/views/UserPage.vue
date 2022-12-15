@@ -22,6 +22,16 @@
                     <template #location>
                         {{ userInfo.location }}
                     </template>
+                    <template #tagNumber>
+                        {{userNumInfo.likeNumber}}
+                    </template>
+                    <template #commentsNumber>
+                        {{userNumInfo.commentsNumber}}
+                     </template>
+
+                     <template #articleNumber>
+                        {{userNumInfo.articleNumber}}
+                    </template>
                 </UserCard>
             </div>
             <div class="setting-area flex column">
@@ -115,7 +125,7 @@ import UserCard from '../components/UserCard.vue'
 import RecentBlock from '../components/RecentBlock.vue'
 import PasswordPic from '../components/icons/PasswordPic.vue'
 import useStore from '../stores/store.js'
-import { getUserInfo, changePassword,deleteAccount } from '../http/api'
+import { getUserInfo, changePassword,deleteAccount, getUserInfoStats} from '../http/api'
 import { ref, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
 import RecentTag from '../components/icons/RecentTag.vue'
@@ -138,9 +148,22 @@ const userInfo = reactive({
     location: ''
 })
 
+const userNumInfo = reactive({
+    likeNumber: '',
+    commentsNumber: '',
+    articleNumber: ''
+})
+
 const userIndex = reactive({
     username: '',
 })
+
+const userStat = reactive({
+    tagNumber: '',
+    commentsNumber: '',
+    articleNumber: ''
+})
+
 
 userIndex.username = sessionStorage.getItem('user_name')
 passwordGroup.username = sessionStorage.getItem('user_name')
@@ -151,6 +174,15 @@ const data = reactive({
     params: {
         username: userIndex.username
     }
+})
+
+getUserInfoStats(data).then((res) => {
+    console.log(res.data.data)
+    userNumInfo.likeNumber = res.data.data.liked
+    userNumInfo.commentsNumber = res.data.data.commented
+    userNumInfo.articleNumber = res.data.data.published
+}).catch((err) => {
+    console.log(err)
 })
 
 getUserInfo(data).then((res) => {

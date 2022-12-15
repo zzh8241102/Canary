@@ -215,7 +215,6 @@ class UserActivityInfoApi(Resource):
                 article_found = Article.query.filter_by(article_id=like.like_corr_article).first()
                 if article_found not in articles and article_found is not None:
                     articles.append(article_found)   
-            print(articles)
             for article in articles:
                 tags = find_article_tags(article_id=article.article_id)
                 # find the tags for the article
@@ -257,7 +256,61 @@ class UserActivityInfoApi(Resource):
                 })
             return make_response(jsonify(self.response_obj), 200)
             
-           
+
+#///////////////////////// user info stats //////////////////////////
+user_info_stats_parser = reqparse.RequestParser()
+user_info_stats_parser.add_argument('username', type=str, required=True, help='username is required')
+#/////////////////////////// user info stats //////////////////////////
+
+class UserInfoStatsApi(Resource):
+    # get the user info stats
+    # count on how many does the user commented, published, liked
+    def __init__(self):
+        self.response_obj = {
+            'message': "successfully get the user info stats",
+            'code': 0,
+            'data':
+            {
+                'commented':0,
+                'published':0,
+                'liked':0
+            },
+        }
+    def get(self):
+        data = user_info_stats_parser.parse_args()
+        # if user exists
+        if not User.find_by_username(data['username']):
+            return make_response(jsonify({'message': 'user not found', 'code': 1}), 404)
+
+        # fetch the user info stats
+        # from the comment table,find the article id according to the user name
+        # and find the article info according to the article id
+        comments = Comments.query.filter_by(comment_author=data['username']).all()
+        # find the article info according to the article id in these comments
+        articles = []
+        for comment in comments:
+            article_found = Article.query.filter_by(article_id=comment.comment_article).first()
+            if article_found not in articles and article_found is not None:
+                articles.append(article_found)
+        self.response_obj['data']['commented'] = len(articles)
+        # fetch the user info stats
+        # from the like table,find the article id according to the user name
+        # and find the article info according to the article id
+        likes = Likes.query.filter_by(like_corr_user=data['username']).all()
+        # find the article info according to the article id in these comments
+        articles = []
+        for like in likes:
+            article_found = Article.query.filter_by(article_id=like.like_corr_article).first()
+            if article_found not in articles and article_found is not None:
+                articles.append(article_found)
+        self.response_obj['data']['liked'] = len(articles)
+        # fetch the user info stats
+        # from the article table,find the article id according to the user name
+        # and find the article info according to the article id
+        articles = Article.query.filter_by(article_author=data['username']).all()
+        self.response_obj['data']['published'] = len(articles)
+        return make_response(jsonify(self.response_obj), 200)
+
 
 
             

@@ -3,7 +3,7 @@
 # api/tags
 from flask_restful import Resource, reqparse
 from flask import jsonify, make_response
-from models import Tags
+from models import Tags,User,Article,UserTags
 from controller.tag_controller import find_article_by_tag_name, find_article_tags
 
 # class TagApi(Resource):
@@ -133,3 +133,84 @@ class FindTaginfoByTagNameAPi(Resource):
             return make_response(jsonify(self.response_obj_sample), 200)
         else:
             return make_response(jsonify(self.response_obj_sample), 404)
+
+
+#////////////////////////////////////////////////////////////////////
+user_follow_tag_parser = reqparse.RequestParser()
+user_follow_tag_parser.add_argument('user_name', type=str, required=True, help='username is required')
+user_follow_tag_parser.add_argument('tag_id', type=str, required=True, help='tag is required')
+#////////////////////////////////////////////////////////////////////
+class UserFollowTagApi(Resource):
+    def __init__(self):
+        self.response_obj = {
+            'success': "true",
+            'message': "",
+            'code': 0,
+        }
+        
+    def post(self):
+        data = user_follow_tag_parser.parse_args()
+        print(data)
+        # check if the tag already exist
+            # add the tag to the database
+        print([tag.tag_id for tag in Tags.query.all()])
+        if(int(data['tag_id']) not in [tag.tag_id for tag in Tags.query.all()]):
+            print("tag not exist")
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "tag not exist"
+            return make_response(jsonify(self.response_obj), 404)
+        elif(data['user_name'] not in [user.user_name for user in User.query.all()]):
+            print("user not exist")
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "user not exist"
+            return make_response(jsonify(self.response_obj), 404)
+        else:
+            # user tag is the mid level table for the many to many relationship
+            print(data['user_name'])
+            user_tag = UserTags(user_id=User.getUserIdByName(data['user_name']), tag_id=data['tag_id'])
+            user_tag.save()
+
+# ////////// user unfollow tag //////////
+user_unfollow_tag_parser = reqparse.RequestParser()
+user_unfollow_tag_parser.add_argument('user_name', type=str, required=True, help='username is required')
+user_unfollow_tag_parser.add_argument('tag_id', type=str, required=True, help='tag is required')
+# ////////// user unfollow tag //////////
+
+class UserUnFollowTagApi(Resource):
+    def __init__(self):
+        self.response_obj = {
+            'success': "true",
+            'message': "",
+            'code': 0,
+        }
+        
+    def post(self):
+        data = user_follow_tag_parser.parse_args()
+        print(data)
+        # check if the tag already exist
+            # add the tag to the database
+        print([tag.tag_id for tag in Tags.query.all()])
+        if(int(data['tag_id']) not in [tag.tag_id for tag in Tags.query.all()]):
+            print("tag not exist")
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "tag not exist"
+            return make_response(jsonify(self.response_obj), 404)
+        elif(data['user_name'] not in [user.user_name for user in User.query.all()]):
+            print("user not exist")
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "user not exist"
+            return make_response(jsonify(self.response_obj), 404)
+        else:
+            # user tag is the mid level table for the many to many relationship
+            print(data['user_name'])
+            user_tag = UserTags.query.filter_by(user_id=User.getUserIdByName(data['user_name']), tag_id=data['tag_id']).first()
+            if(user_tag is not None):
+                user_tag.delete()
+                self.response_obj['success'] = "true"
+                self.response_obj['message'] = "user unfollow the tag"
+                return make_response(jsonify(self.response_obj), 200)
+            else:
+                self.response_obj['success'] = "false"
+                self.response_obj['message'] = "user not follow the tag"
+                return make_response(jsonify(self.response_obj), 404)
+

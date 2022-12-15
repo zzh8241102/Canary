@@ -327,6 +327,8 @@ a {
   top: 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), 0 2px 1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
+  // 支持Safari
+  -webkit-backdrop-filter: blur(10px);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   z-index: 10;
 

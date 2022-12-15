@@ -54,3 +54,9 @@ export const getUserActivity = (data) => $http.get('/api/user/activity', data)
 
 // /api/findtaginfo
 export const getTagInfo = (data) => $http.get('/api/findtaginfo', data)
+
+// UserInfoStatsApi UserInfoStatsApi
+export const getUserInfoStats = (data) => $http.get('/api/user/stats', data)
+
+// /api/user/followtag
+export const followTag = (data) => $http.post('/api/user/followtag', data)

@@ -15,14 +15,14 @@
                   <div class="left-text-area flex column">
                      <div class="title-area">
                         <TagPageBannerVue></TagPageBannerVue>
-                        {{currentTagInfo.tag_name}}   
+                        {{ currentTagInfo.tag_name }}
                      </div>
                      <div class="des-area-inner">
-                        {{currentTagInfo.tag_description}}
-                        
+                        {{ currentTagInfo.tag_description }}
+
                      </div>
                      <div class="follow-area">
-                        <el-button size="large" type="info">Follow</el-button>   
+                        <el-button size="large" type="info" @click="subFollow">Follow</el-button>
                      </div>
                   </div>
                   <div class="des-right-pic-area">
@@ -37,15 +37,31 @@
          <div class="recommend-area flex1 flex column mg-r8">
             <div class="tag-area black-border mg-b8">
                <div class="tag-title-area" style="display:inline-block">
-                  <h5 class="font-setter tag-banner">{{ currentTagInfo.tag_name }}</h5>
+                  <h5 class="font-setter tag-banner">Users Followed the tag</h5>
                </div>
                <hr>
                <div class="tags-area">
                   <div class="tag-inner-area">
-                     {{ currentTagInfo.tag_description }}
+                     <hr>
                   </div>
 
                </div>
+
+            </div>
+            <br>
+            <br>
+            <div class="tag-area black-border mg-b8">
+               <div class="tags-area">
+                  <div class="tag-inner-area">
+                     <img class="small-img" src="../assets/cfp2.png">
+                  </div>
+                  <div class="tag-title-area-b" style="display:inline-block">
+                     <h5 class="font-setter tag-banner">Call For Post!</h5>
+                  </div>
+                  <hr>
+
+               </div>
+
             </div>
 
 
@@ -59,11 +75,11 @@ import NavBar from '../components/NavBar.vue'
 import IndexBlockVue from '../components/IndexBlock.vue';
 import BonfireRec from '../components/BonfireRec.vue'
 import useStore from '../stores/store.js'
-import { getUserTags } from '../http/api.js'
-import { ref, reactive ,onMounted} from 'vue'
+import { followTag, getUserTags } from '../http/api.js'
+import { ref, reactive, onMounted } from 'vue'
 import QuestionTagVue from '../components/icons/QuestionTag.vue';
 import router from '../router';
-import { getArticlesListByTag,getTagInfo } from '../http/api.js';
+import { getArticlesListByTag, getTagInfo, getUserActivity } from '../http/api.js';
 import TagArticleListBlock from '../components/TagArticleListBlock.vue';
 import TagPageBannerVue from '../components/icons/TagPageBanner.vue';
 import KnowledgeMapVue from '../components/icons/KnowledgeMap.vue';
@@ -77,6 +93,7 @@ const currentTagInfo = reactive({
    tag_id: ''
 })
 // 拿到路由最后参数
+//  vue 3 assests 下图片
 
 
 
@@ -89,6 +106,26 @@ const currentIdData = reactive({
 
 })
 
+
+const followInfo = reactive({
+   user_name: sessionStorage.getItem('user_name'),
+   tag_id: currentId,
+})
+
+
+const subFollow = () => {
+   followTag(followInfo).then(res => {
+      console.log(res)
+      
+      
+   }).catch(err => {
+      console.log(err)
+   })
+
+}
+
+
+
 onMounted(() => {
    getTagInfo(currentIdData).then(res => {
       console.log(res)
@@ -96,6 +133,7 @@ onMounted(() => {
       currentTagInfo.tag_description = res.data.tag_info.tag_description
       currentTagInfo.tag_id = res.data.tag_info.tag_id
    })
+
 })
 
 
@@ -104,47 +142,59 @@ onMounted(() => {
 ////////////////////////////////////////////////
 </script>
 <style scoped>
-.des-right-pic-area{
-   margin-top:6%;
+.small-img {
+   width: 100%;
+   height: 100%;
+   display: block;
 }
-.left-text-area{
+
+.des-right-pic-area {
+   margin-top: 6%;
+}
+
+.left-text-area {
    padding: 15px;
    padding-bottom: 0px;
    width: 70%;
 }
-.follow-area{
-   
+
+.follow-area {
+
    margin-left: 10px;
 }
-.des-area-inner{
+
+.des-area-inner {
    /* 不能超过四排 */
-   
+
    overflow: hidden;
    text-overflow: ellipsis;
    display: -webkit-box;
    -webkit-line-clamp: 3;
-   -webkit-box-orient: vertical; 
+   -webkit-box-orient: vertical;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    width: 60%;
    font-size: 17px;
    margin-left: 10px;
-   border: 0.5px solid #9E8ACF dashed;  
+   border: 0.5px solid #9E8ACF dashed;
    padding: 5px;
    margin-bottom: 10px;
    border-radius: 3px;
 
 }
-.title-area{
+
+.title-area {
    font-size: 30px;
    margin-bottom: 10px;
    min-height: 40px;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    margin-left: 10px;
 }
-.new-banner-area{
+
+.new-banner-area {
    min-height: 150px;
 
 }
+
 .tag-inner-area {
    padding: 8px;
    display: flex;
