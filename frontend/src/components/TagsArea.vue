@@ -2,7 +2,12 @@
 <div v-for="(item, index) in allTags" :key="index">
   <el-card class="box-card">
       <template #header>
-          <span><el-tag size="large" class="font-setter-big"  effect="light" >{{ item.tag_name }}</el-tag></span>
+          <span>
+            
+            <el-tag size="large" class="font-setter-big tag tag-title-area"  effect="light" @click
+            ="jumpTo(item.tag_id)">
+            {{ item.tag_name }}</el-tag>
+          </span>
       </template>
       <div>
         <p class="card-body">
@@ -21,6 +26,7 @@
   import { getTags } from '../http/api';
   import { all } from 'axios';
   import AddTagVue from './icons/AddTag.vue';
+  import router from '../router';
 
   const allTags = ref([])
 
@@ -36,9 +42,16 @@
     console.log(err)
   })
 
+  const jumpTo = (id) => {
+    router.push({ name: 'taggedpage', params: { id: id} })
+  }
   </script>
 
 <style scoped>
+
+.tag-title-area{
+  cursor: pointer;
+}
 .card-body{
   /* 最多显示四排字 */
   min-height: 102px;

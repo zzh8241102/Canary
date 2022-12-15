@@ -84,6 +84,8 @@ import LikeTagBVue from './icons/LikeTagB.vue';
 import CommentTagBVue from './icons/CommentTag.vue';
 import BookTag from './icons/BookTag.vue';
 import router from '../router';
+// 引入Math.random
+
 // import { isDark } from '~/composables/dark'
 // import PublishTagBVue from './icons/PublishTag.vue'; 
 

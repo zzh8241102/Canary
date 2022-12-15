@@ -55,7 +55,7 @@ const router = createRouter({
       component: () => import('../views/Article.vue')
     },
     {
-      path: '/tag/:id',
+      path: '/tags/:id',
       name: 'taggedpage',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route

@@ -57,6 +57,7 @@ class AllTagsApi(Resource):
         tags = Tags.query.all()
         for tag in tags:
             self.response_obj_sample['tags'].append({
+                'tag_id':tag.tag_id,
                 'tag_name':tag.tag_name,
                 'tag_description':tag.tag_description,
             })
@@ -114,3 +115,4 @@ class FindArticleTagApi(Resource):
             })
             
         return make_response(jsonify(self.response_obj_sample), 200)
+

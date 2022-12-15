@@ -4,7 +4,7 @@ from api import api_bp,api
 from api.tests import TestApi
 
 from api.article_content import ArticleContentApi
-from api.article_lists import ArticlesListApi
+from api.article_lists import ArticlesListApi,ArticleListByTagApi
 from api.tag_list import  TagUserApi,AllTagsApi,AddNewTagApi,FindArticleTagApi
 from api.search import SearchApi
 from api.user_info import UserInfoApi
@@ -41,6 +41,8 @@ def add_apis():
     api.add_resource(ArticleLikeManageApi, '/api/like')
     api.add_resource(FindArticleTagApi, '/api/findtag')
     api.add_resource(UserActivityInfoApi, '/api/user/activity')
+    api.add_resource(ArticleListByTagApi, '/api/articleslist/tag')
+
 # //////////////////////// api ////////////////////////
     
 # //////////////////////// blueprints ////////////////////////

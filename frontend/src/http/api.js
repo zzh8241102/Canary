@@ -26,9 +26,7 @@ export const getUserTags = (data) => $http.get('/api/tags', data)
 // /api/user/change/password
 export const changePassword = (data) => $http.post('/api/user/change/password', data)
 // /api/articleslist?tag=tagname
-export const getArticlesListByTag = (data) => $http.get('/api/articleslist', data)
-// /api/articleslist?user=username
-export const getArticlesListByUser = (data) => $http.get('/api/articleslist', data)
+export const getArticlesListByTag = (data) => $http.get('/api/articleslist/tag', data)
 // /api/article?article_id=article_id
 export const getArticle = (data) => $http.get('/api/article', data)
 // api/tags

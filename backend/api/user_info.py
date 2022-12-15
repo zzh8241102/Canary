@@ -175,12 +175,10 @@ class UserActivityInfoApi(Resource):
     def get(self):
 
         data = user_activity_parser.parse_args()
-        print(data)
         if data['is_commented'] == 'true' and data['is_liked'] == 'false' and data['is_published'] == 'false':
             # fetch the articles commented by the user
             # from the comment table,find the article id according to the user name
             # and find the article info according to the article id
-            print(data['user_name'])
             comments = Comments.query.filter_by(comment_author=data['user_name']).all()
             # find the article info according to the article id in these comments
             articles = []
@@ -188,7 +186,7 @@ class UserActivityInfoApi(Resource):
                 article_found = Article.query.filter_by(article_id=comment.comment_article).first()
                 if article_found not in articles and article_found is not None:
                     articles.append(article_found)   
-            print(articles)
+    
             for article in articles:
                 tags = find_article_tags(article_id=article.article_id)
                 # find the tags for the article

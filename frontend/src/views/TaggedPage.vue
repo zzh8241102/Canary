@@ -1,71 +1,153 @@
-<!-- Almost same as homepage however different with the right side bar -->
 <template>
-    <NavBar></NavBar>
-   <div>
+   <NavBar></NavBar>
+   <div class="body">
+       <div class="banner-area">
+           <div class="left-title">
+               <QuestionTagVue></QuestionTagVue>
+               <h3 class="font-setter"></h3>
+           </div>
+           <div class="big-post">
+               <router-link to="/post">
+                   <el-button color="#626aef" size="large" style="margin-bottom:5px">
+                       Ask a question
+                   </el-button>
+               </router-link>
+           </div>
+       </div>
        <div class="main-area flex">
            <div class="content-area flex3 mg-r8">
-               <div class="article-block black-border mg-b8 mg-t4">
-                   <div class="text-area">
-                       <p>
-                         
-                       </p>
+            <TagArticleListBlock>/</TagArticleListBlock>
+           </div>
+           <div class="recommend-area flex1 flex column mg-r8">
+               <div class="tag-area black-border mg-b8">
+                   <div class="tag-title-area" style="display:inline-block">
+                       <h5 class="font-setter tag-banner">You Tags</h5>
+                   </div>
+                   <div class="tag-manage-bottom" style="display:inline-block">
+
+                   </div>
+                   <hr>
+                   <div class="tags-area">
+                       <div class="tag-inner-area">
+             
+
+                       </div>
+
                    </div>
                </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 mg-t4">
-               </div>
-               <div class="article-block black-border mg-b8 ">
 
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-               <div class="article-block black-border mg-b8 ">
-               </div>
-           </div>
-           <div class="recommend-area flex1 black-border flex column mg-r8">
-               <div class="tag-area black-border mg-b8" style="height:150px"></div>
-               <div class="passage-area black-border mg-t4" style="overflow: auto;"></div>
+ 
 
            </div>
        </div>
    </div>
 </template>
 <script setup>
+////////////////////////////////////////////////
 import NavBar from '../components/NavBar.vue'
+import IndexBlockVue from '../components/IndexBlock.vue';
+import BonfireRec from '../components/BonfireRec.vue'
 import useStore from '../stores/store.js'
-const store = useStore()
+import { getUserTags } from '../http/api.js'
+import { ref, reactive } from 'vue'
+import QuestionTagVue from '../components/icons/QuestionTag.vue';
+import router from '../router';
+import { getArticlesListByTag } from '../http/api.js';
+import TagArticleListBlock from '../components/TagArticleListBlock.vue';
+////////////////////////////////////////////////  
 
+
+
+const currentTagInfo = reactive({
+   tag_name: '',
+   tag_description: '',
+   tag_id: ''
+})
+// 拿到路由最后参数
+
+
+
+const currentId =  router.currentRoute.value.params.id
+
+const currentIdData = reactive({
+   params:{
+      tag_id: currentId
+   }
+   
+})
+
+getArticlesListByTag(currentIdData).then((res) => {
+   console.log("hhh")
+   console.log(res.data)
+})
+
+
+////////////////////////////////////////////////
 </script>
 <style scoped>
+
+.tag-inner-area {
+   padding: 8px;
+   display: flex;
+   flex-wrap: wrap;
+   place-content: center;
+}
+
+.small-tags {
+   margin: 4px;
+   font-size: 13px;
+}
+
+
+.tag-manage-bottom {
+   position: relative;
+   left: 36%;
+}
+
+.tag-banner {
+   margin-top: 14px;
+   margin-left: 20px;
+}
+
+.tag-title-area {
+   height: 22px;
+   background-color: white;
+}
+
+.tag-area {
+   min-height: 220px;
+   background-color: white;
+}
+
+.font-setter {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body {
+   background-color: rgb(241, 239, 239);
+   z-index: -1;
+}
+
+.banner-area {
+   display: flex;
+   min-height: 80px;
+   padding-top: 20px;
+   margin-left: 10%;
+   background-color: rgb(241, 239, 239);
+}
+
+.left-title {
+   display: flex !important;
+   width: 20%;
+   display: inline-block;
+}
+
+.big-post {
+   width: 15%;
+   display: inline-block;
+   margin-left: 30%;
+}
+
 .mg-b8 {
    margin-bottom: 8px;
 }
@@ -77,7 +159,8 @@ const store = useStore()
 .black-border {
    /* border: 1px solid black; */
    /* shadow */
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
+   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16), 0 2px 2px rgba(0, 0, 0, 0.12);
+   background-color: white;
 }
 
 .flex {
@@ -96,23 +179,29 @@ const store = useStore()
    /* 在宽屏时候，总是占据78%的空间,剧中显示 */
    width: 80%;
    margin: auto;
-   margin-top: 40px;
-   margin-bottom: 20px;
    /*高度随滚动增加  */
    min-height: 100vh;
+
 
 }
 
 .flex3 {
-   flex: 2.8;
+   flex: 2.6;
 }
 
-.mg-r8{
+.mg-r8 {
    margin-right: 8px;
 }
-/* .content-area {}
 
-.recommend-area {} */
+.content-area {
+   background-color: white;
+   margin-right: 3%;
+   /* shallow shadow*/
+   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16), 0 2px 2px rgba(0, 0, 0, 0.12);
+   margin-bottom: 10px;
+}
+
+/* .recommend-area {}  */
 
 .article-block {
    /* height: 90px; */
@@ -126,7 +215,7 @@ const store = useStore()
    background-color: white;
 }
 
-.text-area{
+.text-area {
    width: 80%;
    background-color: aqua;
    height: 50%;
@@ -145,36 +234,42 @@ const store = useStore()
    .main-area {
        width: 100%;
    }
-   .main-area{
+
+   .main-area {
        flex-direction: column;
        width: 90%;
    }
-   .article-block {
-   /* height: 90px; */
-   height: 90px;
-   word-wrap: break-word;
-   max-width: 90vw;
 
+   .article-block {
+       /* height: 90px; */
+       height: 90px;
+       word-wrap: break-word;
+       max-width: 90vw;
+
+   }
 }
-}
+
 /* 屏幕宽度小于600时 */
 @media screen and (max-width: 600px) {
    .main-area {
        width: 100%;
    }
-   .main-area{
+
+   .main-area {
        flex-direction: column;
        width: 100%;
    }
-   .content-area{
+
+   .content-area {
        margin: 0px;
    }
-   .article-block {
-   /* height: 90px; */
-   height: 90px;
-   word-wrap: break-word;
-   max-width: 100vw;
 
-}
+   .article-block {
+       /* height: 90px; */
+       height: 90px;
+       word-wrap: break-word;
+       max-width: 100vw;
+
+   }
 }
 </style>
