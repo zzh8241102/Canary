@@ -45,17 +45,17 @@
 
                      <div class="single_user_info flex" v-for="(item, index) in followerList" :key="index">
                         &nbsp;&nbsp;
-                        <GitAvatar></GitAvatar>
+                        <Netrovue></Netrovue>
                         &nbsp;&nbsp;
-                        <div class="user_name"><b>{{ item.user_name }}</b></div>
+                        <div class="user_name">{{ item.user_name }}</div>
                         
                         &nbsp;&nbsp;
-                        <el-tag>{{item.user_reg_time}}</el-tag>
+                        <el-tag class="user_name_b">{{item.user_reg_time}}</el-tag>
                         <hr>
                      </div>
                      
                   </div>
-                  <hr>
+                  
                </div>
 
             </div>
@@ -96,6 +96,7 @@ import TagPageBannerVue from '../components/icons/TagPageBanner.vue';
 import KnowledgeMapVue from '../components/icons/KnowledgeMap.vue';
 import { ElMessage } from 'element-plus';
 import GitAvatar from '../components/icons/GitAvatar.vue';
+import Netrovue from '../components/icons/Netro.vue';
 ////////////////////////////////////////////////  
 
 
@@ -172,7 +173,14 @@ onMounted(() => {
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
+   height: 50px;
+   padding-top: 5px;
+}
 
+.user_name_b{
+   margin-top: 10px;
+   padding-top:10px;
+   padding-bottom: 10px;
 }
 .single_user_info {
    width: 100%;

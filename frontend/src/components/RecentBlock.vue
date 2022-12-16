@@ -64,7 +64,8 @@
                     </div>
 
                     <div class="author-data-area">
-                        <GitAvatar></GitAvatar>
+                        <!-- <GitAvatar></GitAvatar> -->
+                        <AdminBannerVue></AdminBannerVue>
                         <span style="margin-left:6px;margin-right: 10px;max-width: 65;overflow: hidden;">{{ i.author }}</span>
                         <span>{{ i.date }}</span>
                     </div>
@@ -76,7 +77,7 @@
 </div>
 </template>
 <script setup>
-
+import AdminBannerVue from './icons/AdminBanner.vue';
 import { computed, ref, onMounted, reactive } from 'vue'
 import { getArticlesList,getUserActivity } from '../http/api';
 import GitAvatar from './icons/GitAvatar.vue'

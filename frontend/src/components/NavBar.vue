@@ -24,10 +24,12 @@
         <router-link to="/post" class="item -link">
           <el-button color="#626aef" style="margin-bottom:5px">Post</el-button>
         </router-link>
+        
 
 
         <router-link to="/user/userpage" class="margin-left">
-          <GithubIcon></GithubIcon>
+          <el-avatar :size="35" :src="circleUrl" :key="circleUrl" id="avatar-image"
+           style="margin-top: 10px;"/>
         </router-link>
       </nav>
       <!-- Button to toggle the display menu  -->
@@ -50,7 +52,7 @@
     <div style="overflow: scroll;max-height: 300px;">
       <div v-if="searchResList.length != 0">
         <div class="search-res" v-for="(item, index) in searchResList" :key="index">
-          <div shadow="always" class="res-card">
+          <div shadow="always" class="res-card" @click="router.push({ name: 'article', params: { id: item.article_id} })" >
 
             <h6 class="font-setter-d">{{ item.article_name }}</h6>
             <center>
@@ -99,10 +101,11 @@ import SearchIcon from './icons/SearchIcon.vue'
 import router from '../router/index.js'
 import { ref, onMounted, reactive } from 'vue'
 import { searchCon } from '../http/api'
+import axios from 'axios'
 //////////////////////////////////////////////////////
 
 const dialogVisible = ref(false);
-
+const circleUrl = ref('')
 const dialogWidthComputed = ref('55%');
 
 // 按下command+j toggle search dialog
@@ -113,6 +116,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 let searchResList = reactive([]);
+
 
 
 onMounted(() => {
@@ -145,6 +149,7 @@ const subSearchContent = () => {
   searchCon(searchContent).then(res => {
     console.log(res.data)
     searchResList = res.data.article
+    console.log(searchResList)
     // 刷新对话框内容
     dialogVisible.value = false;
     setTimeout(() => {
@@ -153,6 +158,26 @@ const subSearchContent = () => {
 
   })
 }
+
+const instance = axios.create({
+  baseURL: 'http://127.0.0.1:8000/',
+  timeout: 1000,
+  responseType: 'blob'
+});
+
+
+instance.get('api/find/avatar', {
+    params: {
+      username: sessionStorage.getItem('user_name')
+    }
+  }).then((res) => {
+    console.log(res)
+    let blob = new Blob([res.data], { type: 'image/png' })
+    let url = window.URL.createObjectURL(blob)
+    circleUrl.value = url
+  }).catch((err) => {
+    console.log(err)
+  });
 
 //////////////////////////////////////////////////////
 (function () {
@@ -290,6 +315,7 @@ a {
 
 .search-res {
   // 四周阴影
+  cursor: pointer;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   margin-left: 5%;
   width: 90%;
