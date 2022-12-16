@@ -63,3 +63,6 @@ export const followTag = (data) => $http.post('/api/user/followtag', data)
 
 // /api/tag/follower'
 export const getTagFollower = (data) => $http.get('/api/tag/follower', data)
+
+// /api/user/unfollowtag
+export const unFollowTag = (data) => $http.post('/api/user/unfollowtag', data)

@@ -118,7 +118,7 @@ class Tags(db.Model):
     __tablename__ = 'Tags'
     tag_id = db.Column(db.Integer, primary_key=True)
     # tag name
-    tag_name = db.Column(db.String(20),nullable=False)
+    tag_name = db.Column(db.String(20),nullable=False) # unique=True out!!
     # tag description
     tag_description = db.Column(db.String(100),nullable=True)
     # tag article, which is a foreign key, link to article table article_id

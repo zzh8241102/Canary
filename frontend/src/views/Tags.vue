@@ -3,11 +3,15 @@
     <div class="body">
         <div class="info-area">
 
-            <h3 class="font-setter tag-banner">
+            <h4 class="font-setter tag-banner flex">
                 <div style="display: inline-block;">
-                    <TagdecVue></TagdecVue> &nbsp;
-                </div>Tags
-            </h3>
+                    <TagdecVue></TagdecVue>
+                     &nbsp;
+                </div>
+                <div style="display: inline-block;margin-top: ;">
+                    <h2 style="display: inline-block;margin-right: 3px;color: lightsteelblue;">Tags</h2> are the clubs for homogeneous pepole and content.
+                </div>
+            </h4>
             <div class="slogan">
                 <p class="font-setter">
                     Explore your interests by tags.

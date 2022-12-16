@@ -140,16 +140,18 @@ const subFollow = () => {
 
 }
 
+getTagFollower(currentIdData).then(res => {
+      followerList.push(...res.data.followers)
+      console.log(followerList)
+   })
+
 onMounted(() => {
    getTagInfo(currentIdData).then(res => {
       currentTagInfo.tag_name = res.data.tag_info.tag_name
       currentTagInfo.tag_description = res.data.tag_info.tag_description
       currentTagInfo.tag_id = res.data.tag_info.tag_id
    })
-   getTagFollower(currentIdData).then(res => {
-      followerList.push(...res.data.followers)
-      console.log(followerList)
-   })
+
 
 
 })

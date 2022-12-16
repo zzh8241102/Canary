@@ -20,7 +20,7 @@
               <slot name="tagNumber"></slot>
             </div>
           </center>
-          <center>Tags</center>
+          <center>likes</center>
         </div>
         <div class="little-badge">
           <center>

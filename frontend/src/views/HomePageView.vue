@@ -24,7 +24,7 @@
                         <h5 class="font-setter tag-banner">You Tags</h5>
                     </div>
                     <div class="tag-manage-bottom" style="display:inline-block">
-                        <el-button color="#626aef" size="small">
+                        <el-button color="#626aef" size="small" @click="manageUserTag">
                             manage
                         </el-button>
                     </div>
@@ -50,18 +50,44 @@
             </div>
         </div>
     </div>
+    <el-dialog v-model="dialogTagManVisible" title="Unfollow the tags you no longer interested" width="30%" draggable>
+        <center>
+            <h5 class="font-setter">Select your tags for Unfollowing</h5>
+        </center>
+        <br>
+        <center>
+            <el-select v-model="tag_selected" placeholder="Select" style="width: 300px"
+                @change="getSelectedTags">
+                <el-option v-for="item in tag_options" :value="item" :label="item" :key="item" />
+            </el-select>
+        </center>
+        <template #footer>
+            <span class="dialog-footer">
+                <el-button @click="dialogTagManVisible = false">Cancel</el-button>
+                <el-button type="primary" @click="userUnFollSub">
+                    Confirm
+                </el-button>
+            </span>
+        </template>
+    </el-dialog>
 </template>
 <script setup>
 ////////////////////////////////////////////////
 import NavBar from '../components/NavBar.vue'
 import IndexBlockVue from '../components/IndexBlock.vue';
 import BonfireRec from '../components/BonfireRec.vue'
-import useStore from '../stores/store.js'
-import { getUserTags } from '../http/api.js'
+import { getUserTags, getTags, unFollowTag } from '../http/api.js'
 import { ref, reactive } from 'vue'
 import QuestionTagVue from '../components/icons/QuestionTag.vue';
-const store = useStore()
-////////////////////////////////////////////////  
+import { ElMessage } from 'element-plus';
+
+////////////////////////////////////////////////
+let tag_options = reactive([])
+
+const tag_selected = ref('')
+
+const dialogTagManVisible = ref(false)
+
 const user_tag_list = reactive({
     tags: []
 })
@@ -72,16 +98,57 @@ const data_user = reactive({
     }
 })
 
+const manageUserTag = () => {
+    dialogTagManVisible.value = true
+}
+
+
 getUserTags(data_user).then((res) => {
-    console.log(res.data.tags)
+    tag_options = res.data.tags
     user_tag_list.tags = res.data.tags
 })
+
+const data_unfollow = reactive({
+    user_name: sessionStorage.getItem('user_name'),
+    tag_name: tag_selected
+})
+
+
+
+const userUnFollSub = () => {
+    dialogTagManVisible.value = false
+    unFollowTag(data_unfollow).then((res) => {
+        console.log(res)
+        ElMessage({
+            message: 'Unfollowed',
+            type: 'success'
+        })
+        // 0.5s后刷新页面
+        setTimeout(() => {
+            window.location.reload()
+        }, 800)
+    }).catch((err) => {
+        console.log(err)
+        ElMessage({
+            message: 'Unfollow failed',
+            type: 'error'
+        })
+    })
+}
+
+
+const getSelectedTags = (item) => {
+    console.log(item)
+    return item
+}
+
 ////////////////////////////////////////////////
 </script>
 <style scoped>
-.bonfire{
+.bonfire {
     margin-top: 30px;
 }
+
 .tag-inner-area {
     padding: 8px;
     display: flex;

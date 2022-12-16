@@ -19,7 +19,7 @@
           </span>
         </button>
         <router-link to="/" class="item -link margin-bottom">Home</router-link>
-        <router-link to="/tags" class="item -link margin-bottom">tags</router-link>
+        <router-link to="/tags" class="item -link margin-bottom">Tags</router-link>
 
         <router-link to="/post" class="item -link">
           <el-button color="#626aef" style="margin-bottom:5px">Post</el-button>
@@ -55,13 +55,14 @@
             <h6 class="font-setter-d">{{ item.article_name }}</h6>
             <center>
               <div class="author-area" type="success">
-                <el-tag>{{ item.article_author }}</el-tag>
+                <el-tag type="success">{{ item.article_author }}</el-tag>
               </div>
             </center>
             <div class="tag-area">
               <div class="" v-for="(it, index) in item.article_tags" :key="index">
                 <center>
-                  <el-tag>{{ it.tag_name }}</el-tag>
+                  <el-tag >{{ it.tag_name }}</el-tag>
+                  &nbsp;
                 </center>
               </div>
             </div>

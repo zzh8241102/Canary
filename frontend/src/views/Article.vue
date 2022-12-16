@@ -116,14 +116,19 @@
 
 
                 </div>
-                <div class="related-questions black-border">
-                    <div class="tag-title-area" style="display:inline-block">
-                        <h5 class="font-setter tag-banner">Related questions</h5>
-                    </div>
+                <div class="tag-area black-border mg-b8">
+               <div class="tags-area">
+                  <div class="tag-inner-area">
+                     <img class="small-img" src="../assets/cfp2.png">
+                  </div>
+                  <div class="tag-title-area-b" style="display:inline-block">
+                     <router-link to="/post"><h5 class="font-setter tag-banner">Call For Post!</h5></router-link>
+                  </div>
+                  <hr>
 
-                    <hr>
-                </div>
+               </div>
 
+            </div>
             </div>
         </div>
 
@@ -252,6 +257,12 @@ onMounted(() => {
 </script>
 
 <style scoped>
+
+.small-img{
+    width: 100%;
+   height: 100%;
+   display: block;
+}
 #new-ans {
     display: none;
 }
@@ -277,6 +288,7 @@ onMounted(() => {
     display: flex;
     flex-wrap: wrap;
     place-content: center;
+
 }
 
 .tag-manage-bottom {
@@ -295,7 +307,7 @@ onMounted(() => {
 }
 
 .tag-area {
-    min-height: 220px;
+    min-height: 160px;
     background-color: white;
 }
 
