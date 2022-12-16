@@ -68,6 +68,7 @@ getArticlesList().then(res => {
 </script>
 <style scoped>
 .tag-area {
+    margin-top: 2px;
     width: 65%;
 }
 
@@ -170,7 +171,7 @@ getArticlesList().then(res => {
 
 .no-more-than-oneline {
     padding: 10px;
-    padding-top: 15px;
+    padding-top: 8px;
     padding-left: 0px;
     /* 只显示一排文字 */
     overflow: hidden;
@@ -178,7 +179,7 @@ getArticlesList().then(res => {
     text-overflow: ellipsis;
     /* 文字超出部分用省略号代替 */
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     height: 80%;
     margin-bottom: auto;

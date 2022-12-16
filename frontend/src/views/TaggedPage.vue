@@ -133,6 +133,10 @@ const subFollow = () => {
    followTag(followInfo).then(res => {
       console.log(res)
       ElMessage.success('Follow Success!')
+      // 0.5s后刷新页面
+      setTimeout(() => {
+         window.location.reload()
+      }, 500)
    }).catch(err => {
       console.log(err)
       ElMessage.error('You have followed this tag!')

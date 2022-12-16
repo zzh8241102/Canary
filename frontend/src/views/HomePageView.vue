@@ -123,7 +123,6 @@ const userUnFollSub = () => {
             message: 'Unfollowed',
             type: 'success'
         })
-        // 0.5s后刷新页面
         setTimeout(() => {
             window.location.reload()
         }, 800)

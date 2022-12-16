@@ -77,11 +77,16 @@ const postArticleInter = () => {
     
     postArticle(article_info).then((res) => {
         console.log(res)
-        window.location.reload()
+        
         ElMessage({
             message: 'Post Success',
             type: 'success'
         })
+        
+        // 0.3s jump to home page
+        setTimeout(() => {
+            router.push({path: '/'})
+        }, 300)
         // redirect to the article page
         // router.push({path: '/article/' + res.data.article_id})
         // redirect to the home page after 0.8s

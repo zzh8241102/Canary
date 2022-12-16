@@ -6,10 +6,6 @@ from flask import jsonify, make_response
 from models import Tags, User, Article, UserTags
 from controller.tag_controller import find_article_by_tag_name, find_article_tags
 
-# class TagApi(Resource):
-#     def get(self):
-#         pass
-# /api/tags?user=username
 
 # ///////////////////////////////////////////////////////////////
 tag_user_api_parser = reqparse.RequestParser()

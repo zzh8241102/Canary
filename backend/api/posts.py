@@ -22,6 +22,9 @@ class PostApi(Resource):
             'success': "true",
             'message': "",
             'code': 0,
+            'data': {
+                'article_id': 0,
+            }
         }
         
     def post(self):
@@ -52,6 +55,7 @@ class PostApi(Resource):
                     tag_mid.save()
         
             self.response_obj['message'] = "Article posted."
+            self.response_obj['data']['article_id'] = article.article_id
             return make_response(jsonify(self.response_obj), 200)
 
         else:

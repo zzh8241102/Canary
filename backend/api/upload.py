@@ -1,9 +1,11 @@
 import imp
+from urllib import response
 from flask_restful import Resource, reqparse
 from flask import request,make_response
 from flask import jsonify,Response
 import os
 import time
+from controller.upload_controller import find_user_avatar_by_user_name
 from models import User
 import cv2
 # accept user uploaded avatar
@@ -45,29 +47,29 @@ class UploadAvatarApi(Resource):
         return make_response(jsonify(self.response_obj), 200)
         
 
-class FindAvatarApi(Resource):
-    # /api/find/avatar?=username
-    # return the blob of the avatar
 
-    # this interface will read the username, and find the avatar url in the database
-    # then return the blob of the avatar
+# ///// user_name_for_avatar ////////////////////////
+# /api/find/avatar
+user_find_avatar_parser = reqparse.RequestParser()
+user_find_avatar_parser.add_argument('username', type=str, required=True, help='username is required')
+# ////////////////////////////////////////////////
+class FindAvatarApi(Resource):
     def get(self):
-        # get the username from the request
+        # reading the user_name from the request
         # transform the ImmutableMultiDict to dict
-        request.args = request.args.to_dict()
-        user_name = request.args.get('username')
-        # find the avatar url in the database
-        user = User.query.filter_by(user_name=user_name).first()
-        url_stored = user.user_avatar
-        # read the img by base64
-        # return the blob of the avatar ,which can be rendered by el-avatar
-        mdict = {
-        'jpeg': "image/joeg",
-        'jpg' : 'image/jpg',
-        'png' : 'image/png',
-        }
-        mine = mdict[url_stored.split('.')[-1]]
-        return Response(url_stored, mimetype=mine)
+        data = user_find_avatar_parser.parse_args()
+        user_name = data['username']
+        # find the avatar url
+        avatar_url = find_user_avatar_by_user_name(user_name)
+        # read the image
+        image_data = open(avatar_url, "rb").read()
+        response = make_response(image_data)
+        # header 支持jpg和png两种类型
+        response.headers['Content-Type'] = 'image/jpg'
+        response.headers['Content-Type'] = 'image/png'
+        return response
+
+
         
 
         
