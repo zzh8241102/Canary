@@ -2,10 +2,9 @@
 
 from api import api_bp,api
 from api.tests import TestApi
-
 from api.article_content import ArticleContentApi
 from api.article_lists import ArticlesListApi,ArticleListByTagApi
-from api.tag_list import  TagUserApi,AllTagsApi,AddNewTagApi,FindArticleTagApi, FindTaginfoByTagNameAPi,UserFollowTagApi
+from api.tag_list import  TagUserApi,AllTagsApi,AddNewTagApi,FindArticleTagApi, FindTaginfoByTagNameAPi,UserFollowTagApi,TagFollowerApi
 from api.search import SearchApi
 from api.user_info import UserInfoApi
 from api.user_info import ChangePasswordAPi,DeleteAccountApi
@@ -46,6 +45,7 @@ def add_apis():
     api.add_resource(FindTaginfoByTagNameAPi, '/api/findtaginfo')
     api.add_resource(UserInfoStatsApi, '/api/user/stats')
     api.add_resource(UserFollowTagApi, '/api/user/followtag')
+    api.add_resource(TagFollowerApi, '/api/tag/follower')
 
 # //////////////////////// api ////////////////////////
     

@@ -43,7 +43,7 @@ export const getComments = (data) => $http.get('/api/comment', data)
 // /api/postcomment
 export const postComment = (data) => $http.post('/api/postcomment', data)
 // /api/search?search=keyword
-export const search = (data) => $http.get('/api/search', data)
+export const searchCon = (data) => $http.get('/api/search', data)
 
 // /api/findtag
 export const findArticleTag = (data) => $http.get('/api/findtag', data)
@@ -60,3 +60,6 @@ export const getUserInfoStats = (data) => $http.get('/api/user/stats', data)
 
 // /api/user/followtag
 export const followTag = (data) => $http.post('/api/user/followtag', data)
+
+// /api/tag/follower'
+export const getTagFollower = (data) => $http.get('/api/tag/follower', data)

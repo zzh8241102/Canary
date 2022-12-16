@@ -20,8 +20,10 @@
         </button>
         <router-link to="/" class="item -link margin-bottom">Home</router-link>
         <router-link to="/tags" class="item -link margin-bottom">tags</router-link>
-        
-          <router-link to="/post" class="item -link" ><el-button color="#626aef" style="margin-bottom:5px">Post</el-button></router-link>
+
+        <router-link to="/post" class="item -link">
+          <el-button color="#626aef" style="margin-bottom:5px">Post</el-button>
+        </router-link>
 
 
         <router-link to="/user/userpage" class="margin-left">
@@ -36,18 +38,50 @@
     </div>
   </div>
 
-  <el-dialog v-model="dialogVisible" title="Mixed Search" :width="dialogWidthComputed" draggable style="background-color:#FAFAFA; "
-    class="search-dialog">
+  <el-dialog v-model="dialogVisible" title="Mixed Search" :width="dialogWidthComputed" draggable
+    style="background-color:#FAFAFA; " class="search-dialog">
     <center>
       <h5>
         <p class="font-setter-normal">Search</p>
       </h5>
     </center>
-    <el-input v-model="searchContent" class="w-80 m-2" placeholder="Search around the site"/>
-    <el-card shadow="always" class="res-card" style="margin:8px;"> Result </el-card>
-    <el-card shadow="always" class="res-card" style="margin:8px;"> Result </el-card>
-    <el-card shadow="always" class="res-card" style="margin:8px;"> Result </el-card>
+    <el-input v-model="searchText" class="search-bar" placeholder="Search around the site" type="search" />
+    <el-button :inline="true" @click="subSearchContent">search</el-button>
+    <div style="overflow: scroll;max-height: 300px;">
+      <div v-if="searchResList.length != 0">
+        <div class="search-res" v-for="(item, index) in searchResList" :key="index">
+          <div shadow="always" class="res-card">
 
+            <h6 class="font-setter-d">{{ item.article_name }}</h6>
+            <center>
+              <div class="author-area" type="success">
+                <el-tag>{{ item.article_author }}</el-tag>
+              </div>
+            </center>
+            <div class="tag-area">
+              <div class="" v-for="(it, index) in item.article_tags" :key="index">
+                <center>
+                  <el-tag>{{ it.tag_name }}</el-tag>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div v-if="searchResList.length == 0">
+      <div class="flex-area" style="display: flex;">
+        <img src="../assets/mf-trans.webp" class="small-img-search">
+        <div class="indicate-group">
+          <h5 class="font-setter-b" style="display: inline-block;">Aggregate Search</h5>
+          <center>
+            <h6 class="font-setter no-id">no content yet</h6>
+          </center>
+        </div>
+      </div>
+    </div>
     <div class="footer dialog-footer">
       <div class="kb_inner">⌘</div>
       <div class="kb_inner">J</div>
@@ -62,12 +96,12 @@
 import GithubIcon from './icons/GithubIcon.vue'
 import SearchIcon from './icons/SearchIcon.vue'
 import router from '../router/index.js'
-import { ref,onMounted} from 'vue'
+import { ref, onMounted, reactive } from 'vue'
+import { searchCon } from '../http/api'
 //////////////////////////////////////////////////////
 
-const id = ref(0);
 const dialogVisible = ref(false);
-const searchContent = ref('');
+
 const dialogWidthComputed = ref('55%');
 
 // 按下command+j toggle search dialog
@@ -77,24 +111,47 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+let searchResList = reactive([]);
+
 
 onMounted(() => {
-
-  if(window.innerWidth <= 800){
-      dialogWidthComputed.value = '80%';
-  } else if(window.innerWidth>800){
-      dialogWidthComputed.value = '55%';
+  console.log(searchResList.values.length)
+  if (window.innerWidth <= 800) {
+    dialogWidthComputed.value = '80%';
+  } else if (window.innerWidth > 800) {
+    dialogWidthComputed.value = '55%';
   }
 
 
-  window.onresize = () =>{
-    if(window.innerWidth <= 800){
+  window.onresize = () => {
+    if (window.innerWidth <= 800) {
       dialogWidthComputed.value = '80%';
-  } else if(window.innerWidth>800){
+    } else if (window.innerWidth > 800) {
       dialogWidthComputed.value = '55%';
+    }
   }
-  }  
-}),
+})
+
+let searchText = ref('');
+
+const searchContent = reactive({
+  params: {
+    search_content: searchText
+  }
+});
+
+const subSearchContent = () => {
+  searchCon(searchContent).then(res => {
+    console.log(res.data)
+    searchResList = res.data.article
+    // 刷新对话框内容
+    dialogVisible.value = false;
+    setTimeout(() => {
+      dialogVisible.value = true;
+    }, 1);
+
+  })
+}
 
 //////////////////////////////////////////////////////
 (function () {
@@ -132,6 +189,8 @@ onMounted(() => {
   document.addEventListener('click', collapseClickHandler, false);
 
 })(document, window);
+
+
 
 </script>
 <style lang="less" scoped>
@@ -173,6 +232,15 @@ a {
     width: 1140px;
   }
 }
+.tag-area{
+  display: flex;
+  // 每行最多2个
+  flex-wrap: wrap;
+  margin-top: 25px;
+  flex-direction: column;
+    
+  }
+  
 
 // Navigation component
 // ----------
@@ -192,11 +260,25 @@ a {
 @navbar-item-active-border: #673ab7;
 
 .res-card {
-  margin: 8px;
+  margin-top: 10px;
+  height: 70px;
+  display: flex;
+  margin-bottom: 10px;
+  overflow: scroll;
+}
+
+.res-title {
+  display: flex;
 }
 
 .res-card:hover {
   background-color: rgb(165, 165, 231);
+}
+
+.author-area {
+  margin-right: 40px;
+  margin-top: 27px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .fter-instruct {
@@ -205,10 +287,23 @@ a {
   left: 5px;
 }
 
+.search-res {
+  // 四周阴影
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  margin-left: 5%;
+  width: 90%;
+  padding: 0px;
+}
+
 .fter-instruct-open {
   position: relative;
   top: 5px;
   left: 4px;
+}
+
+.indicate-group {
+  display: flex;
+  flex-direction: column;
 }
 
 .dialog-footer {
@@ -221,6 +316,7 @@ a {
   height: 30px;
   width: 100%;
 }
+
 
 .white-banner {
   background-color: #FAFAFA;
@@ -320,6 +416,15 @@ a {
   display: inline-block;
 }
 
+.tags-area {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 // Component skeleton
 .navbar-component {
   // 永远在顶部
@@ -341,23 +446,56 @@ a {
   }
 }
 
-
+.small-img-search {
+  margin-top: 20px;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 15%;
+}
 
 .small-img {
   width: 131px;
   height: 44px;
 }
 
+.font-setter-d {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 25px;
+  width: 30%;
+  margin-left: 3%;
+  margin-right: 8%;
+  min-width: 95px;
+  // // 横向超出的部分省略号
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.font-setter-b {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 25px;
+  width: 100%;
+  margin-left: 20%;
+}
+
+.flex-area {
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+}
+
 // Component
 .navbar {
 
   // Brand
-  &>.brand {
-    display: block;
-    font-size: 16px;
-    color: #777;
-    margin: round(((@navbar-height - 20)/2), 2); //左右没 
-  }
+  // &>.brand {
+  //   display: block;
+  //   font-size: 16px;
+  //   color: #777;
+  //   margin: round(((@navbar-height - 20)/2), 2); //左右没 
+  // }
 
   // Toggle button
   &>.toggle {
@@ -376,7 +514,7 @@ a {
     user-select: none;
     padding: round(((@navbar-height - 20/2)/2), 2);
 
-    @media (min-width: @navbar-collapse-breakpoint) {
+    @media (min-width: 768px) {
       display: none;
     }
 
@@ -436,25 +574,25 @@ a {
       display: flex;
     }
 
-    @media (max-width: @navbar-collapse-breakpoint) {
+    @media (max-width: 750px) {
       position: fixed;
       top: @navbar-height+30px;
       left: 1vw;
       width: 98%;
       // backdrop-filter: blur(10px);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
-
       overflow-y: hidden;
       overflow-x: auto;
       border-top: 1px solid @navbar-border;
       background-color: white;
-      z-index:11;
+      z-index: 11;
       flex-direction: column;
+      padding-bottom: 10px;
     }
 
     &.-on {
       display: flex;
-      z-index:11;
+      z-index: 11;
     }
   }
 
@@ -485,5 +623,11 @@ a {
 
 .search-dialog {
   border-radius: 0px;
+}
+
+.search-bar {
+  width: 60%;
+  margin-left: 16%;
+  margin-right: 2%;
 }
 </style>

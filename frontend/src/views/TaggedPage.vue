@@ -42,9 +42,20 @@
                <hr>
                <div class="tags-area">
                   <div class="tag-inner-area">
-                     <hr>
-                  </div>
 
+                     <div class="single_user_info flex" v-for="(item, index) in followerList" :key="index">
+                        &nbsp;&nbsp;
+                        <GitAvatar></GitAvatar>
+                        &nbsp;&nbsp;
+                        <div class="user_name"><b>{{ item.user_name }}</b></div>
+                        
+                        &nbsp;&nbsp;
+                        <el-tag>{{item.user_reg_time}}</el-tag>
+                        <hr>
+                     </div>
+                     
+                  </div>
+                  <hr>
                </div>
 
             </div>
@@ -56,7 +67,7 @@
                      <img class="small-img" src="../assets/cfp2.png">
                   </div>
                   <div class="tag-title-area-b" style="display:inline-block">
-                     <h5 class="font-setter tag-banner">Call For Post!</h5>
+                     <router-link to="/post"><h5 class="font-setter tag-banner">Call For Post!</h5></router-link>
                   </div>
                   <hr>
 
@@ -79,10 +90,12 @@ import { followTag, getUserTags } from '../http/api.js'
 import { ref, reactive, onMounted } from 'vue'
 import QuestionTagVue from '../components/icons/QuestionTag.vue';
 import router from '../router';
-import { getArticlesListByTag, getTagInfo, getUserActivity } from '../http/api.js';
+import { getArticlesListByTag, getTagInfo, getUserActivity, getTagFollower } from '../http/api.js';
 import TagArticleListBlock from '../components/TagArticleListBlock.vue';
 import TagPageBannerVue from '../components/icons/TagPageBanner.vue';
 import KnowledgeMapVue from '../components/icons/KnowledgeMap.vue';
+import { ElMessage } from 'element-plus';
+import GitAvatar from '../components/icons/GitAvatar.vue';
 ////////////////////////////////////////////////  
 
 
@@ -112,27 +125,32 @@ const followInfo = reactive({
    tag_id: currentId,
 })
 
+const followerList = reactive([
+
+])
 
 const subFollow = () => {
    followTag(followInfo).then(res => {
       console.log(res)
-      
-      
+      ElMessage.success('Follow Success!')
    }).catch(err => {
       console.log(err)
+      ElMessage.error('You have followed this tag!')
    })
 
 }
 
-
-
 onMounted(() => {
    getTagInfo(currentIdData).then(res => {
-      console.log(res)
       currentTagInfo.tag_name = res.data.tag_info.tag_name
       currentTagInfo.tag_description = res.data.tag_info.tag_description
       currentTagInfo.tag_id = res.data.tag_info.tag_id
    })
+   getTagFollower(currentIdData).then(res => {
+      followerList.push(...res.data.followers)
+      console.log(followerList)
+   })
+
 
 })
 
@@ -142,6 +160,19 @@ onMounted(() => {
 ////////////////////////////////////////////////
 </script>
 <style scoped>
+.user_name{
+   width: 60px;
+   /* 超出的部分省略号 */
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+
+}
+.single_user_info {
+   width: 100%;
+   flex-direction: row;
+}
+
 .small-img {
    width: 100%;
    height: 100%;
@@ -200,6 +231,7 @@ onMounted(() => {
    display: flex;
    flex-wrap: wrap;
    place-content: center;
+   flex-direction: column;
 }
 
 .small-tags {
@@ -224,7 +256,7 @@ onMounted(() => {
 }
 
 .tag-area {
-   min-height: 220px;
+   min-height: 160px;
    background-color: white;
 }
 

@@ -66,13 +66,22 @@ const user_tag_list = reactive({
     tags: []
 })
 
-getUserTags().then((res) => {
+const data_user = reactive({
+    params: {
+        username: sessionStorage.getItem('user_name')
+    }
+})
+
+getUserTags(data_user).then((res) => {
+    console.log(res.data.tags)
     user_tag_list.tags = res.data.tags
 })
 ////////////////////////////////////////////////
 </script>
 <style scoped>
-
+.bonfire{
+    margin-top: 30px;
+}
 .tag-inner-area {
     padding: 8px;
     display: flex;
@@ -102,7 +111,7 @@ getUserTags().then((res) => {
 }
 
 .tag-area {
-    min-height: 220px;
+    min-height: 160px;
     background-color: white;
 }
 

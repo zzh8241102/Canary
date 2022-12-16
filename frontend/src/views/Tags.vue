@@ -16,9 +16,6 @@
                 </p>
             </div>
             <div class="search-add-area flex">
-                <div class="tag-box">
-                    <el-input v-model="tagInputted"  placeholder="Search your tag"/>
-                </div>
                 <div class="add">
                     <el-button @click="dialogVisible = true"><AddTagVue></AddTagVue>Add a new tag</el-button>
                 </div>
@@ -150,7 +147,6 @@ const newTagPair = reactive({
     width: 80%;
     margin: auto;
     margin-top: 5px;
-    margin-bottom: 20px;
     /*高度随滚动增加  */
     min-height: 100vh;
 

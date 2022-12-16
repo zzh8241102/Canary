@@ -49,6 +49,9 @@ class User(db.Model):
     @classmethod
     def getUserIdByName(cls, user_name):
         return cls.query.filter_by(user_name = user_name).first().user_id
+    @classmethod
+    def getUserNameById(cls, user_id):
+        return cls.query.filter_by(user_id=user_id).first().user_name
 
    
 
