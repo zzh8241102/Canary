@@ -8,7 +8,7 @@
             </div>
             <div class="big-post">
                 <router-link to="/post">
-                    <el-button color="#626aef" size="large" style="margin-bottom:5px">
+                    <el-button color="#626aef" size="large" style="margin-bottom:5px" st>
                         Ask a question
                     </el-button>
                 </router-link>
@@ -300,6 +300,7 @@ const getSelectedTags = (item) => {
     .main-area {
         flex-direction: column;
         width: 90%;
+        margin-left: 6.41%;
     }
 
     .article-block {
@@ -309,29 +310,64 @@ const getSelectedTags = (item) => {
         max-width: 90vw;
 
     }
+    .tag-area {
+        width: 98%;
+    }
+    .tag-manage-bottom {
+        position: relative;
+        left: 70%;
+    }
+    .left-title {
+        margin-right: 17%;
+    }  
+    .tag-banner{
+        margin-left: 0px;
+        position: relative;
+        left: 70%;
+    }
+    
 }
 
-/* 屏幕宽度小于600时 */
-@media screen and (max-width: 600px) {
+/* 屏幕宽度小于790时 */
+@media screen and (max-width: 790px) {
     .main-area {
         width: 100%;
+        margin: 0%;
     }
 
-    .main-area {
-        flex-direction: column;
-        width: 100%;
-    }
 
     .content-area {
+        width: 100%;
+    }
+
+    .tag-area{
+        width: 100%;
         margin: 0px;
     }
-
-    .article-block {
-        /* height: 90px; */
-        height: 90px;
-        word-wrap: break-word;
-        max-width: 100vw;
-
+    .recommend-area{
+        width: 100%;
+        margin: 0px;
     }
+    .tag-manage-bottom {
+        position: relative;
+        left: 68%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 490px)
+{
+    .tag-manage-bottom {
+        position: relative;
+        left: 58%;
+    }
+    .big-post {
+    width: 15%;
+    display: inline-block;
+    margin-left: 23%;
+}
+
 }
 </style>

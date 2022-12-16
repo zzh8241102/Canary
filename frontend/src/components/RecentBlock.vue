@@ -1,7 +1,7 @@
 <template >
-
+    <center>
     <div class="choose-area flex">
-
+        
         <div class="left-choose-area flex">
             <div class="liked" @click="subLikeAct">
                 <el-button id="fr-bt">
@@ -29,6 +29,7 @@
         </div>
       
     </div>
+    </center>
     <div class="container">
     <!-- v for in article list -->
     <div v-for=" i in articlesList.articles">
@@ -358,13 +359,73 @@ onMounted(() => {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1400px) {
     .article-block {
         /* height: 90px; */
         height: 90px;
         word-wrap: break-word;
         max-width: 100vw;
 
+    }
+
+    .info-area {
+        flex-direction: column;
+    }
+
+    .like-area {
+        height: 65%;
+        display: flex;
+        width: 90%;
+        display: flex;
+        /* around */
+        justify-content: space-around;
+    }
+
+    .comment-area {
+        margin-top: 4px;
+        height: 65%;
+        display: flex;
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        /* around */
+        justify-content: space-around;
+    }
+
+    .author-data-area {
+        display: flex;
+        flex-direction: column;
+
+        height: 30%;
+
+    }
+
+    .author-data-area-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 40px;
+        position: relative;
+        bottom: 100%;
+    }
+
+    .title-box {
+        max-width: 20%;
+    }
+
+    .no-more-than-oneline {
+
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .title-area{
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+    }
+    .author-data-area-inner{
+        align-items: center;
     }
 }
 </style>

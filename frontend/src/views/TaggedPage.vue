@@ -390,7 +390,10 @@ onMounted(() => {
    .main-area {
       width: 100%;
    }
+   .content-area{
+      width: 99.25%;
 
+   }
    .main-area {
       flex-direction: column;
       width: 90%;
@@ -418,6 +421,7 @@ onMounted(() => {
 
    .content-area {
       margin: 0px;
+      margin-bottom: 20px;
    }
 
    .article-block {

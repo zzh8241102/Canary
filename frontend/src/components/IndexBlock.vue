@@ -5,10 +5,17 @@
             <div class="info-area flex">
                 <div class="like-area">
 
-                    <center><span>{{ i.likes }}</span></center>
+                    <center><span>
+                            {{ i.likes }}
+
+                        </span>
+                    </center>
+
                     <center><span style="display:block;">likes</span></center>
 
                 </div>
+                <!-- vif -->
+
                 <div class="comment-area">
                     <center><span>{{ i.comments }}</span></center>
                     <center><span style="display:block;">Ans</span></center>
@@ -17,11 +24,15 @@
             </div>
             <div class="title-tag-area flex column">
                 <div class="title-area font-setter" @click="
-                    router.push({ name: 'article', params: { id: i.id} })
-                    ">
-                    <span>
-                        <p class="no-more-than-oneline">{{ i.title }}</p>
-                    </span>
+                    router.push({ name: 'article', params: { id: i.id } })
+                ">
+                   
+                        <span>
+
+                            <p class="no-more-than-oneline">{{ i.title }}</p>
+
+                        </span>
+                   
                 </div>
                 <div class="tag-author-area flex">
                     <div class="flex tag-area">
@@ -35,10 +46,14 @@
                     <div class="author-data-area">
                         <!-- <GitAvatar></GitAvatar>
                          -->
-                         <AdminBannerVue></AdminBannerVue>
-                        <span style="margin-left:6px;margin-right: 10px;max-width: 65;overflow: hidden;">{{ i.author
-                        }}</span>
-                        <span>{{ i.date }}</span>
+
+
+                        <div class="author-data-area-inner">
+                            <AdminBannerVue></AdminBannerVue>
+                            <span style="margin-left:6px;margin-right: 10px;max-width: 65;overflow: hidden;">{{ i.author
+                            }}</span>
+                            <span>{{ i.date }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -55,6 +70,7 @@ import { getArticlesList } from '../http/api';
 import GitAvatar from './icons/GitAvatar.vue'
 import AdminBannerVue from './icons/AdminBanner.vue';
 import router from '../router/index.js';
+import { watch } from 'vue';
 /////////////////////////////////////////////////
 const articlesList = reactive({
     articles: []
@@ -64,6 +80,14 @@ getArticlesList().then(res => {
     articlesList.articles = res.data.data.articles
     console.log(articlesList.articles)
 })
+const cond = ref(false)
+
+// 窗口宽度小于 768px 时
+// if(window.innerWidth < 768) {
+//     cond.value = true
+// } else{
+//     cond.value = false
+// }
 
 
 /////////////////////////////////////////////////
@@ -75,7 +99,7 @@ getArticlesList().then(res => {
     width: 65%;
 }
 
-.title-area{
+.title-area {
     cursor: pointer;
 }
 
@@ -206,13 +230,73 @@ getArticlesList().then(res => {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .article-block {
         /* height: 90px; */
         height: 90px;
         word-wrap: break-word;
         max-width: 100vw;
 
+    }
+
+    .info-area {
+        flex-direction: column;
+    }
+
+    .like-area {
+        height: 65%;
+        display: flex;
+        width: 90%;
+        display: flex;
+        /* around */
+        justify-content: space-around;
+    }
+
+    .comment-area {
+        margin-top: 4px;
+        height: 65%;
+        display: flex;
+        width: 90%;
+        margin-left: 5%;
+        display: flex;
+        /* around */
+        justify-content: space-around;
+    }
+
+    .author-data-area {
+        display: flex;
+        flex-direction: column;
+
+        height: 30%;
+
+    }
+
+    .author-data-area-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 40px;
+        position: relative;
+        bottom: 100%;
+    }
+
+    .title-box {
+        max-width: 20%;
+    }
+
+    .no-more-than-oneline {
+
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+
+    .title-area{
+        display: flex;
+        flex-direction: row;
+        width: 40%;
+    }
+    .author-data-area-inner{
+        align-items: center;
     }
 }
 </style>

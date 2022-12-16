@@ -281,7 +281,7 @@ const changePassWordSub = () => {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     margin-left: 2.5%;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     width: 95%;
     height: 100%;
     overflow: auto;
@@ -293,7 +293,7 @@ const changePassWordSub = () => {
     display: flex;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
     background-color: white;
-    height: 300px;
+    min-height: 300px;
     width: 95%;
     margin-top: 10px;
     margin-left: 2.5%;
@@ -377,6 +377,12 @@ const changePassWordSub = () => {
 
 /* 当宽度小于1150的时候 */
 @media screen and (max-width: 1100px) {
+    .change-button{
+        width: 65%;
+    }
+    .delete-button{
+        width: 80%;
+    }
     .main-area {
         width: 100%;
         flex-direction: column;
@@ -394,8 +400,9 @@ const changePassWordSub = () => {
     }
 
     .recent-area {
-        margin-left: 0;
-        width: 100%;
+        
+        width: 95%;
+        margin: auto;
     }
 
     .article-block {
@@ -408,4 +415,6 @@ const changePassWordSub = () => {
     }
 
 }
+
+
 </style>

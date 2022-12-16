@@ -390,4 +390,11 @@ const logOut = () => {
     width: 320px;
     height: 500px;
   } */
+
+@media screen and (max-width: 490px) {
+  .little-badge {
+    width:70px;
+    margin-right: 5px;    
+  }
+  }
 </style>

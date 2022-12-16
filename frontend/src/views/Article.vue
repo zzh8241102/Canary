@@ -459,7 +459,10 @@ onMounted(() => {
 
     .main-area {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
+    }
+    .recommend-area {
+        width: 100%;
     }
 
 
