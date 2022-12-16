@@ -1,4 +1,5 @@
 import $http from "./index.js";
+import $img from "./index.js";
 
 // export const getFakeData = $http.get('https://jsonplaceholder.typicode.com/todos/1')
 
@@ -66,3 +67,7 @@ export const getTagFollower = (data) => $http.get('/api/tag/follower', data)
 
 // /api/user/unfollowtag
 export const unFollowTag = (data) => $http.post('/api/user/unfollowtag', data)
+
+// /api/find/avatar
+export const getAvatar = (data) => $http.get('/api/find/avatar', data) 
+

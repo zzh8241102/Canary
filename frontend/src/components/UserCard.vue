@@ -95,7 +95,7 @@
         </el-upload>
       </div>
       <div class="combo-area">
-        <div class="font-setter mb-4" ><b>
+        <div class="font-setter mb-4"><b>
             <center>log out</center>
           </b>
         </div>
@@ -151,16 +151,16 @@ import AdminBanner from './icons/AdminBanner.vue';
 import { UploadFilled } from '@element-plus/icons-vue'
 import useStore from '../stores/store.js'
 import type { UploadProps } from 'element-plus'
-import { Plus } from '@element-plus/icons-vue'
+
 import axios from 'axios'
-import { getUserInfo,changeUserInfo } from '../http/api';
+import { getUserInfo, changeUserInfo, getAvatar } from '../http/api';
 import { userInfo } from 'os';
 
 ////////////////////////////////////////////////////////
 // Props
 ////////////////////////////////////////////////////////
 
-
+const circleUrl = ref('')
 let dialogVisible = ref(false)
 let imageUrl = ref('')
 const boxStyleObj = ref({
@@ -170,7 +170,7 @@ const boxStyleObj = ref({
 })
 
 // replace with server url latter
-let circleUrl = ref('https://avatars.githubusercontent.com/u/227713?s=200&v=3')
+
 // set username
 
 
@@ -203,7 +203,7 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
   return true
 }
 const userIndex = reactive({
-  username: '',
+  username: sessionStorage.getItem('user_name')!,
 })
 userIndex.username = sessionStorage.getItem('user_name')!;
 const uploadFile = (param) => {
@@ -258,8 +258,43 @@ const submitForm = () => {
     ElMessage.error('Change failed!')
   })
 }
+
+
+
+const data_for_img = reactive({
+  params: {
+    username: sessionStorage.getItem('user_name')!
+  }
+})
+
+
+
+const instance = axios.create({
+  baseURL: 'http://127.0.0.1:8000/',
+  timeout: 1000,
+  responseType: 'blob'
+});
+
+
+instance.get('api/find/avatar', {
+    params: {
+      username: sessionStorage.getItem('user_name')!
+    }
+  }).then((res) => {
+    console.log(res)
+    let blob = new Blob([res.data], { type: 'image/png' })
+    let url = window.URL.createObjectURL(blob)
+    circleUrl.value = url
+  }).catch((err) => {
+    console.log(err)
+  })
+
 ////////////////////////////////////////////////////////
 onMounted(() => {
+  // circleUrl.value = 'https://avatars.githubusercontent.com/u/227713?s=200&v=3'
+  // findUserAvatar(data_for_img)
+
+
   if (window.innerWidth <= 1100) {
     // 将box-card类的宽度设置为100%
     boxStyleObj.value.width = '90%'
@@ -278,7 +313,7 @@ onMounted(() => {
 
 })
 
-const logOut =()=>{
+const logOut = () => {
   console.log('log out')
   sessionStorage.clear()
   window.location.href = '/login'

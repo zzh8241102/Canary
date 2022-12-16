@@ -67,7 +67,8 @@ class FindAvatarApi(Resource):
         # header 支持jpg和png两种类型
         response.headers['Content-Type'] = 'image/jpg'
         response.headers['Content-Type'] = 'image/png'
-        return response
+        
+        return make_response(response, 200)
 
 
         
