@@ -94,7 +94,6 @@ import { getArticlesListByTag, getTagInfo, getUserActivity, getTagFollower } fro
 import TagArticleListBlock from '../components/TagArticleListBlock.vue';
 import TagPageBannerVue from '../components/icons/TagPageBanner.vue';
 import KnowledgeMapVue from '../components/icons/KnowledgeMap.vue';
-import { ElMessage } from 'element-plus';
 import GitAvatar from '../components/icons/GitAvatar.vue';
 import Netrovue from '../components/icons/Netro.vue';
 ////////////////////////////////////////////////  
@@ -139,11 +138,14 @@ const followerList = reactive([
 const subFollow = () => {
    followTag(followInfo).then(res => {
       console.log(res)
-      ElMessage.success('Follow Success!')
+      
       // 0.5s后刷新页面
-      setTimeout(() => {
-         window.location.reload()
-      }, 500)
+
+      ElNotification({
+         title: 'Success',
+         message: 'Followed Successfully!',
+         type: 'success'
+      })
    }).catch(err => {
       console.log(err)
       ElMessage.error('You have followed this tag!')

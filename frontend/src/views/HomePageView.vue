@@ -89,8 +89,9 @@ import BonfireRec from '../components/BonfireRec.vue'
 import { getUserTags, getTags, unFollowTag } from '../http/api.js'
 import { ref, reactive, onMounted } from 'vue'
 import QuestionTagVue from '../components/icons/QuestionTag.vue';
-import { ElMessage } from 'element-plus';
+// import { ElMessage, ElNotification } from 'element-plus';
 import cookievue from '../components/icons/Cookie.vue'
+import { ElNotification } from 'element-plus';
 ////////////////////////////////////////////////
 const dialogWidthComputed = ref('55%');
 const getUserByLocalOrSession = () => {
@@ -138,7 +139,7 @@ const userUnFollSub = () => {
     dialogTagManVisible.value = false
     unFollowTag(data_unfollow).then((res) => {
         console.log(res)
-        ElMessage({
+        ElNotification({
             message: 'Unfollowed',
             type: 'success'
         })
@@ -171,21 +172,23 @@ const setCookieUser = () => {
     document.cookie = user_name + '=' + user_name + ';expires=' + date.toGMTString()
 
     cookieArea.style.display = 'none'
+    ElNotification({
+        title: 'Success',
+        message: 'Cookie set. Enjoy your experience!',
+        type: 'success'
+    })
 }
 
 const popCookieWindow = () => {
     // check if the user has cookie
     // if cookie value = user_name, then do nothing
-    // else, pop the cookie window
-    const user_name = getUserByLocalOrSession()
-    let cookie_name = user_name
-    let cookie_value = user_name
+    let cookie_name = getUserByLocalOrSession()
     let cookie = document.cookie
-    let cookie_array = cookie.split(';')
+    let cookie_list = cookie.split(';')
     let cookie_flag = false
-    for (let i = 0; i < cookie_array.length; i++) {
-        let cookie_item = cookie_array[i].split('=')
-        if (cookie_item[0].trim() == cookie_name && cookie_item[1].trim() == cookie_value) {
+    for (let i = 0; i < cookie_list.length; i++) {
+        let cookie_item = cookie_list[i].split('=')
+        if (cookie_item[0].trim() == cookie_name) {
             cookie_flag = true
         }
     }
@@ -196,8 +199,6 @@ const popCookieWindow = () => {
     }
     // id="cookie-area"
     const cookieArea = document.getElementById('cookie-area')
-    // cookieArea.style.display = 'none'
-    // 渐变动画出现，持续1s
     cookieArea.style.opacity = 0
     let op = 0
     let timer = setInterval(() => {

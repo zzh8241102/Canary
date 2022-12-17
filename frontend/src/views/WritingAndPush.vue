@@ -30,7 +30,6 @@ import { ref,reactive,onMounted } from 'vue'
 import NavBar from '../components/NavBar.vue'
 import TagSelector from '../components/TagSelector.vue';
 import { getTags,postArticle } from '../http/api';
-import { ElNotification } from 'element-plus';
 import router from '../router';
 
 /////////////////////////////////////////////
@@ -86,23 +85,24 @@ const postArticleInter = () => {
     
     postArticle(article_info).then((res) => {
         console.log(res)
-        
-       
-        
         // 0.3s jump to home page
-        router.push({path: '/'})
+        // router.push({path: '/'})
         
-        // 0.3s 后弹出提示
-        setTimeout(() => {
+        
             ElNotification({
                 title: 'Success',
                 message: 'Your article is posted successfully',
                 type: 'success'
             })
-        }, 300)
+        
         // redirect to the article page
         // router.push({path: '/article/' + res.data.article_id})
         // redirect to the home page after 0.8s
+        // clear the input
+        articleTitle.value = ''
+        markDownContent.value = ''
+        tag_selected.value = ''
+        
     }).catch((err) => {
         console.log(err)
     })
