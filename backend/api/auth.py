@@ -10,8 +10,7 @@ from werkzeug.datastructures import ImmutableMultiDict
 from werkzeug.security import check_password_hash, generate_password_hash
 from controller.auth_controller import generate_token
 from utils.decors import login_required
-
-
+from extension import logger
         
 #//////////////////// init ////////////////////////
 reg_parser = reqparse.RequestParser()
@@ -36,7 +35,7 @@ class UserRegistrationApi(Resource):
                                 'refresh_token':'',
                             }
                             }
-    @login_required
+    
     def post(self):
         # get the post data
         data = reg_parser.parse_args()
@@ -44,12 +43,19 @@ class UserRegistrationApi(Resource):
         if(form.validate()==False):
             self.response_obj['message'] = 'Invalid form data.'
             self.response_obj['success'] = "false"
+
+            logger.warning('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(request.remote_addr,request.method,request.path,400,'Invalid form data entered when reg.'))
+
             return make_response(jsonify(self.response_obj), 401)
         if User.find_by_username(data['username']):
             self.response_obj['message'] = 'User already exists. Please Log in.'
             self.response_obj['code'] = 2
             self.response_obj['success'] = "false"
+
+            logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(request.remote_addr,request.method,request.path,400,'User already exists. Failed to Reg.'))
+
             return make_response(jsonify(self.response_obj), 400)
+
         new_user = User(user_email=data['email'],user_name=data['username'])
         password_encrypted = generate_password_hash(data['password'])
         new_user.user_password = password_encrypted
@@ -62,16 +68,22 @@ class UserRegistrationApi(Resource):
             self.response_obj['session'] = data['username']
             access_token = generate_token(data['username'])
             self.response_obj['token']['access_token'] = access_token
+
+            logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}'.format(request.remote_addr,request.method,request.path,201,data['username'],'created successfully.'))
+            
             return make_response(jsonify(self.response_obj), 201)
         except:
             self.response_obj['message'] = 'Cannot Create User. Please try again later.'
             self.response_obj['success'] = "false"
+
+            logger.error('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(request.remote_addr,request.method,request.path,400,'Cannot Create User Due to internal rollback since invalid input.'))
             return make_response(jsonify(self.response_obj), 401)
 
-
+# ////////////////////////////////////////////////////////////////////////////////////////
 login_parser = reqparse.RequestParser()
 login_parser.add_argument('username', type=str, required=True, help='username is required')
 login_parser.add_argument('password', type=str, required=True, help='password is required')
+# ////////////////////////////////////////////////////////////////////////////////////////
 class UserSignInApi(Resource):
     # impl usre registration
     # POST /api/signin      
@@ -91,7 +103,7 @@ class UserSignInApi(Resource):
                             },
                             'session':''
                             }
-    @login_required
+
     def post(self):
         # get the post data
         data = login_parser.parse_args()
@@ -99,10 +111,17 @@ class UserSignInApi(Resource):
         if(form.validate()==False):
             self.response_obj['message'] = 'Invalid form data.'
             self.response_obj['success'] = "false"
+
+            logger.warning('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(request.remote_addr,request.method,request.path,400,'Invalid form data entered when login.'))
+
             return make_response(jsonify(self.response_obj), 401)
         if not User.find_by_username(data['username']):
             self.response_obj['message'] = 'User does not exist.'
             self.response_obj['success'] = "false"
+
+
+            logger.warning('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(request.remote_addr,request.method,request.path,400,'User does not exist.'))
+
             return make_response(jsonify(self.response_obj), 400)
         user = User.find_by_username(data['username'])
         if check_password_hash(user.user_password,data['password']):
@@ -115,8 +134,14 @@ class UserSignInApi(Resource):
             self.response_obj['session'] = data['username']
             access_token = generate_token(data['username'])
             self.response_obj['token']['access_token'] = access_token
+
+            logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}'.format(request.remote_addr,request.method,request.path,200,data['username'],'signed in successfully.'))
+
             return make_response(jsonify(self.response_obj), 200)
         else:
             self.response_obj['message'] = 'Password is wrong.'
             self.response_obj['success'] = "false"
+
+            logger.warning('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}'.format(request.remote_addr,request.method,request.path,400,data['username'],' entered a wrong password.'))
+
             return make_response(jsonify(self.response_obj), 400)

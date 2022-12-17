@@ -4,6 +4,7 @@
 # 2. /api/articleslist?tag=tagname
 # 3. /api/articleslist?user=username
 
+from extension import logger
 from cgi import print_form
 from flask_restful import Resource, reqparse
 from flask import request, make_response
@@ -21,117 +22,6 @@ class ArticlesListApi(Resource):
         # the return sample should be a list of articles, and for each article
         # each article have the 1. id 2. title 3. author 4. tags 5. date 6. number of comments
         # 7. number of likes
-        self.response_obj_sample = {
-            'message': "successfully get the articles list",
-            'code': 0,
-            'data':
-            {
-                'articles':
-                [
-                    {
-                        'id': 1,
-                        'title': 'How to learn sklearn',
-                        'author': 'jackie',
-                        'tags': ['machine learning', 'python', 'data science'],
-                        'date':'2022-11-11',
-                        'comments':5,
-                        'likes':10
-                    },
-                    {
-                        'id': 2,
-                        'title': 'How to resolve the problem of overfitting',
-                        'author': 'yuheng',
-                        'tags': ['machine learning', 'python', 'deep learning'],
-                        'date':'2022-12-9',
-                        'comments':5,
-                        'likes':11
-                    },
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'black',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    },                                         
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'MarioSpr',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    },
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'MarioSpr',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    },                                               
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'MarioSpr',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    },                                               
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'MarioSpr',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    },                                               
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'MarioSpr',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    }, 
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'MarioSpr',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    },                                               
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'MarioSpr',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    },                                        
-                    {
-                        'id': 2,
-                        'title': 'How can use GDB',
-                        'author': 'author',
-                        'tags': ['GDB', 'c'],
-                        'date':'2022-12-9',
-                        'comments':15,
-                        'likes':110
-                    },
-
-                ]
-            }
-
-        }
         self.response_obj = {
             'message': "successfully get the articles list",
             'code': 0,
@@ -169,6 +59,7 @@ class ArticlesListApi(Resource):
                 'comments': fetch_article_comment_num(article.article_id),
                 'likes': fetch_article_like_num(article.article_id),
             })
+            logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(request.remote_addr, request.method, request.path, 200, 'successfully get the articles list'))
         return make_response(jsonify(self.response_obj), 200)
 
 
@@ -235,6 +126,7 @@ class ArticleListByTagApi(Resource):
                         'comments': fetch_article_comment_num(article.article_id),
                         'likes': fetch_article_like_num(article.article_id),
                     })
+                    logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(request.remote_addr, request.method, request.path, 200, 'successfully get the articles list'))
                 return make_response(jsonify(self.response_obj), 200)
                 
 
