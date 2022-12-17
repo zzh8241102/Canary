@@ -1,6 +1,7 @@
 from flask_restful import Resource
 from controller.tag_controller import generate_basic_tags
 from utils.decors import login_required
+from extension import logger
 
 class TestApi(Resource):
     """
@@ -10,7 +11,5 @@ class TestApi(Resource):
     """
     @login_required
     def get(self):
-         
         # generate_basic_tags()
-
         return {'message': 'Hello, World!'}

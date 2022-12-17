@@ -1,14 +1,13 @@
 import imp
-from urllib import response
 from flask_restful import Resource, reqparse
-from flask import request,make_response
-from flask import jsonify,Response
+from flask import request,make_response,jsonify
+from extension import logger
 import os
 import time
 from controller.upload_controller import find_user_avatar_by_user_name
 from models import User
-import cv2
 from utils.decors import login_required
+
 # accept user uploaded avatar
 
 # /api/upload/avatar
@@ -45,6 +44,7 @@ class UploadAvatarApi(Resource):
         user.save()
         # 返回url
         self.response_obj['data']['avatar'] = url_stored
+        logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}').format(request.remote_addr,request.method,request.path,200,"User avatar uploaded successfully, user name is ",user_name)
         return make_response(jsonify(self.response_obj), 200)
         
 
@@ -60,7 +60,16 @@ class FindAvatarApi(Resource):
         # reading the user_name from the request
         # transform the ImmutableMultiDict to dict
         data = user_find_avatar_parser.parse_args()
+
+
         user_name = data['username']
+
+        if(User.find_by_username(user_name) is None):
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "User not found"
+            self.response_obj['code'] = 1
+            logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}').format(request.remote_addr,request.method,request.path,404,"User not found when updating the avatar, user name is ",user_name)
+            return make_response(jsonify(self.response_obj), 404)
         # find the avatar url
         avatar_url = find_user_avatar_by_user_name(user_name)
         # read the image
@@ -70,6 +79,8 @@ class FindAvatarApi(Resource):
         response.headers['Content-Type'] = 'image/jpg'
         response.headers['Content-Type'] = 'image/png'
         
+        logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}').format(request.remote_addr,request.method,request.path,200,"User avatar found successfully, user name is ",user_name)
+
         return make_response(response, 200)
 
 

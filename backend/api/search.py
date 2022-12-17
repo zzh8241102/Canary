@@ -3,8 +3,9 @@
 # can index by tag or article name
 from flask_restful import Resource,reqparse
 from models import Article, Tags, User, Tags_Mid, UserTags
-from flask import jsonify, make_response
+from flask import jsonify, make_response,request
 from utils.decors import login_required
+from extension import logger
 # ///////////////////////////////////////////////
 search_api_parser = reqparse.RequestParser()
 search_api_parser.add_argument('search_content', type=str, required=True, help='search keyword is required')
@@ -70,6 +71,7 @@ class SearchApi(Resource):
                     self.response_obj['article'][-1]['article_tags'].append({
                         'tag_name': tag.tag_name
                     })
+        logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}'.format(request.remote_addr, request.method, request.path, 200, 'search success,content,', search_content))
         return make_response(jsonify(self.response_obj), 200)
 
         

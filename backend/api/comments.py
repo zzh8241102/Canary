@@ -1,10 +1,10 @@
 from flask_restful import Resource,reqparse
-from flask import jsonify, make_response
+from flask import jsonify, make_response,request
 from numpy import array
 from models import Article,User,Tags,Tags_Mid,Comments
 # api for posting the article and comment
 from utils.decors import login_required
-
+from extension import logger
 # //////////////////////////////////////////////////////////////////////////
 article_comment_parser = reqparse.RequestParser()
 article_comment_parser.add_argument('article_id', type=str, required=True, help='title is required')
@@ -37,10 +37,17 @@ class GetCommentByArticleIdApi(Resource):
                     'comment_article_id': comment.comment_article,
                 }
                 comments_list.append(comment_obj)
+            logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(
+                request.remote_addr,request.method,request.path,200,"Comments found."
+            ))
             self.response_obj['message'] = "Comments found."
             self.response_obj['data'] = comments_list
             return make_response(jsonify(self.response_obj), 200)
         else:
             self.response_obj['success'] = "false"
             self.response_obj['message'] = "Comments not found."
+            logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(
+                request.remote_addr,request.method,request.path,404,"Comments not found."
+            ))
+            
             return make_response(jsonify(self.response_obj), 404)

@@ -8,6 +8,7 @@ db = SQLAlchemy()
 logger = logging.getLogger('Canary')
 # info level 的也可见
 logger.setLevel(logging.INFO)
+
 handler = RotatingFileHandler('canary.log',backupCount=500)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
