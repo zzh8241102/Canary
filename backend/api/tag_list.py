@@ -5,8 +5,7 @@ from flask_restful import Resource, reqparse
 from flask import jsonify, make_response
 from models import Tags, User, Article, UserTags
 from controller.tag_controller import find_article_by_tag_name, find_article_tags
-
-
+from utils.decors import login_required
 # ///////////////////////////////////////////////////////////////
 tag_user_api_parser = reqparse.RequestParser()
 tag_user_api_parser.add_argument(
@@ -21,6 +20,7 @@ class TagUserApi(Resource):
 
             ]
         }
+    @login_required
     def get(self):
         # find the user's all tags by the usertag mid level table
         data = tag_user_api_parser.parse_args()
@@ -47,6 +47,7 @@ class AllTagsApi(Resource):
 
             ]
         }
+    @login_required
     def get(self):
         # fetch all the tags from the database
         tags = Tags.query.all()
@@ -76,6 +77,7 @@ class AddNewTagApi(Resource):
             'message': "",
             'code': 0,
         }
+    @login_required
     def post(self):
         print("add new tag")
         data = new_tag_parser.parse_args()
@@ -107,6 +109,7 @@ class FindArticleTagApi(Resource):
 
             ]
         }
+    @login_required
     def get(self):
         # fetch all the tags from the database
         data = find_article_tag_parser.parse_args()
@@ -135,6 +138,7 @@ class FindTaginfoByTagNameAPi(Resource):
                 'tag_description': '',
             }
         }
+    @login_required
     def get(self):
         data = find_tag_two_parser.parse_args()
         tag_id = data['tag_id']
@@ -165,6 +169,7 @@ class UserFollowTagApi(Resource):
             'message': "",
             'code': 0,
         }
+    @login_required
     def post(self):
         data = user_follow_tag_parser.parse_args()
         print(data)
@@ -206,6 +211,7 @@ class TagFollowerApi(Resource):
 
             ]
         }
+    @login_required
     def get(self):
         data = tag_follower_list_parser.parse_args()
         tag_id = data['tag_id']
@@ -239,6 +245,7 @@ class UserUnfollowTagApi(Resource):
             'message': "",
             'code': 0,
         }
+    @login_required
     def post(self):
         data = user_unfollow_tag_parser.parse_args()
         # check if the tag already exist

@@ -3,7 +3,7 @@ from flask import jsonify, make_response
 from numpy import array
 from models import Article,User,Tags,Tags_Mid,Comments
 # api for posting the article and comment
-
+from utils.decors import login_required
 
 # //////////////////////////////////////////////////////////////////////////
 article_comment_parser = reqparse.RequestParser()
@@ -17,6 +17,7 @@ class GetCommentByArticleIdApi(Resource):
             'code': 0,
             'data': [],
         }
+    @login_required
     def get(self):
         # get the article_id
         # get the comment info from db

@@ -187,7 +187,7 @@ class ArticleListByTagApi(Resource):
                 'articles':[]
             },
         }
-    # @login_required
+    @login_required
     def get(self):
         data = article_list_tag_parser.parse_args()
         tag_id = data['tag_id']

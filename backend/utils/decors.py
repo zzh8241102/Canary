@@ -18,7 +18,6 @@ def login_required(func):
             try:
                 res = jwt.decode(token_str, SECRET_KEY)
                 data = res['data']
-                print(data)
                 user = User.query.filter_by(user_name=data).first()
                 if user is None:
                     return make_response(jsonify({'msg': 'login in requried'}), 401)

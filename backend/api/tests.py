@@ -8,7 +8,7 @@ class TestApi(Resource):
     /api/test
 
     """
-
+    @login_required
     def get(self):
          
         # generate_basic_tags()

@@ -3,7 +3,7 @@ from flask import jsonify, make_response
 from numpy import array
 from models import Article,User,Tags,Tags_Mid,Comments,Likes
 
-
+from utils.decors import login_required
 
 #/////////////////////////////////////////////////////////////////
 article_like_parser = reqparse.RequestParser()
@@ -18,6 +18,7 @@ class ArticleLikeManageApi(Resource):
             'message': "",
             'code': 0,
         }
+    @login_required
     def post(self):
         # check whether the user have already like the article
         # like is a mid level table for many to many relationship

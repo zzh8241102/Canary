@@ -10,6 +10,8 @@ from forms import UserBasicInfoForm
 from werkzeug.datastructures import ImmutableMultiDict
 from werkzeug.security import check_password_hash, generate_password_hash
 
+from utils.decors import login_required
+
 # ////////////////////////////////////////////////////////////////////////
 # ///////////// init /////////////
 user_parser = reqparse.RequestParser()
@@ -31,6 +33,7 @@ class UserInfoApi(Resource):
                 },
             }
         }
+    @login_required
     def get(self):
         data = user_parser.parse_args()
         if(User.find_by_username(data['username'])):
@@ -70,7 +73,7 @@ class ChangeUserInfoAPi(Resource):
                 },
             }
         }
-    
+    @login_required
     def post(self):
         data = user_chang_parser.parse_args()
         form = UserBasicInfoForm(ImmutableMultiDict(data))
@@ -109,7 +112,7 @@ class ChangePasswordAPi(Resource):
             'message': "",
             'code': 0,
             }
-      
+    @login_required
     def post(self):
         data = change_password_user_parser.parse_args()
         if(User.find_by_username(data['username'])):
@@ -140,7 +143,7 @@ class DeleteAccountApi(Resource):
             'message': "",
             'code': 0,
             }
-    
+    @login_required
     def post(self):
         data = delete_user_parser.parse_args()
         if(User.find_by_username(data['username'])):
@@ -167,6 +170,7 @@ class UserActivityInfoApi(Resource):
     # fetch user activity info
     # return the user activity info according to the request
     # and 
+    @login_required
     def __init__(self):
         self.response_obj = {
             'message': "successfully get the articles list",
@@ -280,6 +284,7 @@ class UserInfoStatsApi(Resource):
                 'liked':0
             },
         }
+    @login_required
     def get(self):
         data = user_info_stats_parser.parse_args()
         # if user exists

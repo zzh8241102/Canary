@@ -9,7 +9,7 @@ from werkzeug.datastructures import ImmutableMultiDict
 # hash 密码加密
 from werkzeug.security import check_password_hash, generate_password_hash
 from controller.auth_controller import generate_token
-
+from utils.decors import login_required
 
 
         
@@ -36,6 +36,7 @@ class UserRegistrationApi(Resource):
                                 'refresh_token':'',
                             }
                             }
+    @login_required
     def post(self):
         # get the post data
         data = reg_parser.parse_args()
@@ -90,6 +91,7 @@ class UserSignInApi(Resource):
                             },
                             'session':''
                             }
+    @login_required
     def post(self):
         # get the post data
         data = login_parser.parse_args()

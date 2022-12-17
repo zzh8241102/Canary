@@ -4,7 +4,7 @@
 from flask_restful import Resource,reqparse
 from models import Article, Tags, User, Tags_Mid, UserTags
 from flask import jsonify, make_response
-
+from utils.decors import login_required
 # ///////////////////////////////////////////////
 search_api_parser = reqparse.RequestParser()
 search_api_parser.add_argument('search_content', type=str, required=True, help='search keyword is required')
@@ -18,6 +18,7 @@ class SearchApi(Resource):
 
             ]
         }
+    @login_required
     def get(self):
         data = search_api_parser.parse_args()
         # search will back the article info like:

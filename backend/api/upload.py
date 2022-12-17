@@ -8,6 +8,7 @@ import time
 from controller.upload_controller import find_user_avatar_by_user_name
 from models import User
 import cv2
+from utils.decors import login_required
 # accept user uploaded avatar
 
 # /api/upload/avatar
@@ -21,6 +22,7 @@ class UploadAvatarApi(Resource):
                 'avatar':"",
             }
         }
+    @login_required
     def post(self):
         # file0 = request.form.get('fileToUpload') # request.form outputs ImmutableMultiDict([]); request.form.get('fileToUpload') outputs None
         file = request.files.getlist('fileToUpload')[0] # the type of file is FileStorage
@@ -54,6 +56,7 @@ user_find_avatar_parser = reqparse.RequestParser()
 user_find_avatar_parser.add_argument('username', type=str, required=True, help='username is required')
 # ////////////////////////////////////////////////
 class FindAvatarApi(Resource):
+    @login_required
     def get(self):
         # reading the user_name from the request
         # transform the ImmutableMultiDict to dict

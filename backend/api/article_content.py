@@ -8,7 +8,7 @@ from flask import jsonify, make_response
 from controller.article_controller import find_article_tags
 from controller.like_controller import fetch_article_like_num
 #/////////////////////////////////////////////
-
+from utils.decors import login_required
 article_content_parser = reqparse.RequestParser()
 article_content_parser.add_argument('article_id', type=str, required=True, help='article_id is required')
 
@@ -32,6 +32,7 @@ class ArticleContentApi(Resource):
                 },
             }
         }
+    @login_required
     def get(self):
         data = article_content_parser.parse_args()
         if(Article.find_by_article_id(data['article_id'])):
