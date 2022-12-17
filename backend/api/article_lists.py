@@ -200,13 +200,13 @@ class ArticleListByTagApi(Resource):
         tags_mid = Tags_Mid().query.all()
 
         for tag in all_tags:
-            print(int(tag_id))
+            
             if int(tag_id) == tag.tag_id:
-                print(tag_id)
+            
                 # tag_ = Tags_Mid.query.filter_by(tag_id=tag_id).all()
                 # find all the tag_mid with the tag_id
                 tag_ = Tags_Mid.query.filter_by(tag_id=tag_id).all()
-                print(tag_)
+            
                 # return the corresponding article id as a list
                 article_id_list = []
                 for tag_mid in tag_:

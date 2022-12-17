@@ -24,7 +24,7 @@ class GetCommentByArticleIdApi(Resource):
         # return the comment info
     
         data = article_comment_parser.parse_args()
-        print(data)
+        
         comments = Comments.query.filter_by(comment_article=data['article_id']).all()
         if comments:
             comments_list = []

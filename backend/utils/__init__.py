@@ -50,8 +50,6 @@ def add_apis():
     api.add_resource(UserUnfollowTagApi, '/api/user/unfollowtag')
     # /api/refreshtoken
     
-
-
 # //////////////////////// api ////////////////////////
     
 # //////////////////////// blueprints ////////////////////////

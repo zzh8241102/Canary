@@ -38,7 +38,6 @@ class UploadAvatarApi(Resource):
         # 转换file storage 为图片
         file.save(os.getcwd()+'/upload/avatar/'+filename)
         url_stored = os.getcwd()+'/upload/avatar/'+filename
-        print(url_stored)
         # 存到User model里的 avatar_url
         # 找到对应user_name的user
         user = User.query.filter_by(user_name=user_name).first()

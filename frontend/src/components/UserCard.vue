@@ -354,7 +354,6 @@ onMounted(() => {
 })
 
 const logOut = () => {
-  console.log('log out')
   sessionStorage.clear()
   localStorage.clear()
   window.location.href = '/login'

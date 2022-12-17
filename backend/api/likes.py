@@ -24,7 +24,7 @@ class ArticleLikeManageApi(Resource):
         # like is a mid level table for many to many relationship
 
         data = article_like_parser.parse_args()
-        print(data)
+
         if(Likes.find_by_article_id_and_user_name(data['article_id'],data['user_name'])):
             self.response_obj['success'] = "false"
             self.response_obj['message'] = "You have already liked this article."
