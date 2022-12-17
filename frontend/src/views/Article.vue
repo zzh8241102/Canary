@@ -348,8 +348,6 @@ onMounted(() => {
     margin: auto;
     padding-top: 20px;
     margin-bottom: 50px;
-
-
 }
 
 .font-setter {

@@ -18,6 +18,7 @@
             <div class="kb">J</div>
           </span>
         </button>
+        
         <router-link to="/" class="item -link margin-bottom">Home</router-link>
         <router-link to="/tags" class="item -link margin-bottom">Tags</router-link>
 
@@ -177,7 +178,10 @@ instance.get('api/find/avatar', {
     circleUrl.value = url
   }).catch((err) => {
     console.log(err)
+
   });
+
+
 
 //////////////////////////////////////////////////////
 (function () {
@@ -196,6 +200,7 @@ instance.get('api/find/avatar', {
 
   // A handler for click on toggle button
   var collapseClickHandler = function (event) {
+
     var triggerEl = getTriggerElement(event.target);
     // If trigger element does not exist
     if (triggerEl === undefined) {
@@ -212,9 +217,53 @@ instance.get('api/find/avatar', {
   };
 
   // Delegated event
+
+  
   document.addEventListener('click', collapseClickHandler, false);
 
 })(document, window);
+
+// 上面的代码在跳转页面后就失效了，所以每次跳转都重新绑定
+router.afterEach((to, from) => {
+  (function () {
+
+    // Definition of caller element
+    var getTriggerElement = function (el) {
+      var isCollapse = el.getAttribute('data-collapse');
+      if (isCollapse !== null) {
+        return el;
+      } else {
+        var isParentCollapse = el.parentElement.getAttribute('data-collapse');
+        return (isParentCollapse !== null) ? el.parentElement : undefined;
+      }
+      return el;
+    };
+
+    // A handler for click on toggle button
+    var collapseClickHandler = function (event) {
+
+      var triggerEl = getTriggerElement(event.target);
+      // If trigger element does not exist
+      if (triggerEl === undefined) {
+        event.preventDefault();
+        return false;
+      }
+
+      // If the target element exists
+      var targetEl = document.querySelector(triggerEl.getAttribute('data-target'));
+      if (targetEl) {
+        triggerEl.classList.toggle('-active');
+        targetEl.classList.toggle('-on');
+      }
+    };
+
+    // Delegated event
+
+    
+    document.addEventListener('click', collapseClickHandler, false);
+
+  })(document, window);
+})
 
 
 
