@@ -109,7 +109,13 @@ const currentTagInfo = reactive({
 // 拿到路由最后参数
 //  vue 3 assests 下图片
 
-
+const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  } 
+}
 
 const currentId = router.currentRoute.value.params.id
 
@@ -122,7 +128,7 @@ const currentIdData = reactive({
 
 
 const followInfo = reactive({
-   user_name: sessionStorage.getItem('user_name'),
+   user_name: getUserByLocalOrSession(),
    tag_id: currentId,
 })
 

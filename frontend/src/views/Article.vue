@@ -166,6 +166,13 @@ const article = reactive({
     likes: 0
 })
 
+const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  } 
+}
 //////////////////////////////////////////////////////////////////
 const currComment_content = reactive(
     {
@@ -175,7 +182,7 @@ const currComment_content = reactive(
     }
 )
 
-currComment_content.commentor = sessionStorage.getItem('user_name')
+currComment_content.commentor = getUserByLocalOrSession()
 
 
 const submitComment = () => {
@@ -190,7 +197,7 @@ const submitComment = () => {
 const dataLike = reactive({
 
     article_id: articleId,
-    user_name: sessionStorage.getItem('user_name')
+    user_name: getUserByLocalOrSession()
 
 })
 

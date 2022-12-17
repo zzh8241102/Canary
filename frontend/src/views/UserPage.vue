@@ -76,7 +76,7 @@
     Dialogs
  -->
 
-        <el-dialog v-model="dialogDeleteVisible" title="change your password" width="30%">
+        <el-dialog v-model="dialogDeleteVisible" title="change your password" :width="dialogWidthOfForm">
             <div style="display: flex;flex-direction: column;">
                 <h6>Once you delete your account, it is irreverseable.<b>Please be careful.</b></h6>
 
@@ -92,7 +92,7 @@
         </el-dialog>
 
 
-        <el-dialog v-model="dialogPasswordVisible" title="change your password" width="30%">
+        <el-dialog v-model="dialogPasswordVisible" title="change your password" :width="dialogWidthOfForm">
             <div style="display: flex;flex-direction: column;">
                 <span class="font-setter">
                     <h6>Your old password</h6>
@@ -126,7 +126,7 @@ import RecentBlock from '../components/RecentBlock.vue'
 import PasswordPic from '../components/icons/PasswordPic.vue'
 import useStore from '../stores/store.js'
 import { getUserInfo, changePassword,deleteAccount, getUserInfoStats} from '../http/api'
-import { ref, reactive } from 'vue'
+import { ref, reactive,onMounted } from 'vue'
 import { ElMessage } from 'element-plus'
 import RecentTag from '../components/icons/RecentTag.vue'
 
@@ -140,6 +140,9 @@ const passwordGroup = reactive({
     oldPassword: '',
     newPassword: ''
 })
+
+
+const dialogWidthOfForm = ref('30%')
 
 const userInfo = reactive({
     username: '',
@@ -163,10 +166,16 @@ const userStat = reactive({
     commentsNumber: '',
     articleNumber: ''
 })
+const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  } 
+}
 
-
-userIndex.username = sessionStorage.getItem('user_name')
-passwordGroup.username = sessionStorage.getItem('user_name')
+userIndex.username = getUserByLocalOrSession()
+passwordGroup.username = getUserByLocalOrSession()
 ////////////////////////////////////////////////////////////
 console.log(userIndex)
 
@@ -220,6 +229,23 @@ const changePassWordSub = () => {
 
 }
 
+onMounted(() => {
+    if (window.innerWidth <= 800) {
+    dialogWidthOfForm.value = '80%';
+  } else if (window.innerWidth > 800) {
+    dialogWidthOfForm.value = '55%';
+  }
+
+
+  window.onresize = () => {
+    if (window.innerWidth <= 800) {
+      dialogWidthOfForm.value = '80%';
+    } else if (window.innerWidth > 800) {
+      dialogWidthOfForm.value = '55%';
+    }
+  }
+
+})
 ////////////////////////////////////////////////////////////////////////////////////
 </script>
 <style scoped>

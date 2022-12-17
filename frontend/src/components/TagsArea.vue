@@ -27,12 +27,18 @@
   import { all } from 'axios';
   import AddTagVue from './icons/AddTag.vue';
   import router from '../router';
-
+  const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  } 
+}
   const allTags = ref([])
 
   const data = reactive({
     params: {
-      username: sessionStorage.getItem('user_name')
+      username: getUserByLocalOrSession()
     }
   })
 

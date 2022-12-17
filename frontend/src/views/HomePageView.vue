@@ -50,7 +50,7 @@
             </div>
         </div>
     </div>
-    <el-dialog v-model="dialogTagManVisible" title="Unfollow the tags you no longer interested" width="30%" draggable>
+    <el-dialog v-model="dialogTagManVisible" title="Unfollow the tags you no longer interested" :width="dialogWidthComputed" draggable>
         <center>
             <h5 class="font-setter">Select your tags for Unfollowing</h5>
         </center>
@@ -77,11 +77,20 @@ import NavBar from '../components/NavBar.vue'
 import IndexBlockVue from '../components/IndexBlock.vue';
 import BonfireRec from '../components/BonfireRec.vue'
 import { getUserTags, getTags, unFollowTag } from '../http/api.js'
-import { ref, reactive } from 'vue'
+import { ref, reactive,onMounted } from 'vue'
 import QuestionTagVue from '../components/icons/QuestionTag.vue';
 import { ElMessage } from 'element-plus';
 
 ////////////////////////////////////////////////
+const dialogWidthComputed = ref('55%');
+const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  } 
+}
+
 let tag_options = reactive([])
 
 const tag_selected = ref('')
@@ -94,7 +103,7 @@ const user_tag_list = reactive({
 
 const data_user = reactive({
     params: {
-        username: sessionStorage.getItem('user_name')
+        username: getUserByLocalOrSession()
     }
 })
 
@@ -109,7 +118,7 @@ getUserTags(data_user).then((res) => {
 })
 
 const data_unfollow = reactive({
-    user_name: sessionStorage.getItem('user_name'),
+    user_name: getUserByLocalOrSession(),
     tag_name: tag_selected
 })
 
@@ -140,6 +149,32 @@ const getSelectedTags = (item) => {
     console.log(item)
     return item
 }
+
+
+
+
+const popCookieWindow = () => {
+
+}
+
+
+onMounted(() => {
+    if (window.innerWidth <= 800) {
+    dialogWidthComputed.value = '80%';
+  } else if (window.innerWidth > 800) {
+    dialogWidthComputed.value = '55%';
+  }
+
+
+  window.onresize = () => {
+    if (window.innerWidth <= 800) {
+      dialogWidthComputed.value = '80%';
+    } else if (window.innerWidth > 800) {
+      dialogWidthComputed.value = '55%';
+    }
+  }
+})
+
 
 ////////////////////////////////////////////////
 </script>

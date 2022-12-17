@@ -35,11 +35,11 @@ router.beforeEach((to, from, next) => {
         next()
         
     }else{
-        if (sessionStorage.getItem('user_name')!=null){
+        if (sessionStorage.getItem('user_name')!=null||localStorage.getItem('user_name')!=null){
             next()
         } else {
             next("/login")
-            store.loggedError= true
+            // store.loggedError= true
         }
     }
 })

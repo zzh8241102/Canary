@@ -89,7 +89,7 @@
           </div>
           <template #tip>
             <div class="el-upload__tip">
-              jpg/png files with a size less than 500kb
+              jpg/png files with a size less than 2MB
             </div>
           </template>
         </el-upload>
@@ -106,7 +106,7 @@
 
   </el-card>
 
-  <el-dialog v-model="dialogVisible" title="Change your personal info" width="30%">
+  <el-dialog v-model="dialogVisible" title="Change your personal info" :width="dialogWidthOfForm">
     <hr>
     <div style="display: flex;flex-direction: column;">
 
@@ -143,7 +143,8 @@
 </template>
   
 <script setup lang="ts">
-import required from 'vue'
+////////////////////////////////////////////////////////
+
 import { defineProps } from 'vue'
 import { ref, onMounted, reactive } from 'vue'
 import { ElMessage } from 'element-plus'
@@ -151,15 +152,14 @@ import AdminBanner from './icons/AdminBanner.vue';
 import { UploadFilled } from '@element-plus/icons-vue'
 import useStore from '../stores/store.js'
 import type { UploadProps } from 'element-plus'
-
 import axios from 'axios'
 import { getUserInfo, changeUserInfo, getAvatar } from '../http/api';
-import { userInfo } from 'os';
+
 
 ////////////////////////////////////////////////////////
-// Props
-////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////
+const dialogWidthOfForm = ref('50%')
 const circleUrl = ref('')
 let dialogVisible = ref(false)
 let imageUrl = ref('')
@@ -188,6 +188,13 @@ const userInfo = reactive({
 
 ////////////////////////////////////////////////////////
 
+const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  }
+}
 // verify the file type and size
 
 const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
@@ -203,9 +210,9 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
   return true
 }
 const userIndex = reactive({
-  username: sessionStorage.getItem('user_name')!,
+  username: getUserByLocalOrSession()!
 })
-userIndex.username = sessionStorage.getItem('user_name')!;
+userIndex.username = getUserByLocalOrSession()!
 const uploadFile = (param) => {
   let fileObj = param.file
   let form = new FormData()
@@ -226,6 +233,8 @@ const uploadFile = (param) => {
   ElMessage.success('Avatar picture uploaded successfully!')
 
 }
+
+
 
 ////////////////////////////////////////////////////////
 
@@ -263,7 +272,7 @@ const submitForm = () => {
 
 const data_for_img = reactive({
   params: {
-    username: sessionStorage.getItem('user_name')!
+    username: getUserByLocalOrSession()!
   }
 })
 
@@ -277,17 +286,17 @@ const instance = axios.create({
 
 
 instance.get('api/find/avatar', {
-    params: {
-      username: sessionStorage.getItem('user_name')!
-    }
-  }).then((res) => {
-    console.log(res)
-    let blob = new Blob([res.data], { type: 'image/png' })
-    let url = window.URL.createObjectURL(blob)
-    circleUrl.value = url
-  }).catch((err) => {
-    console.log(err)
-  })
+  params: {
+    username: getUserByLocalOrSession()!
+  }
+}).then((res) => {
+  console.log(res)
+  let blob = new Blob([res.data], { type: 'image/png' })
+  let url = window.URL.createObjectURL(blob)
+  circleUrl.value = url
+}).catch((err) => {
+  console.log(err)
+})
 
 ////////////////////////////////////////////////////////
 onMounted(() => {
@@ -311,11 +320,27 @@ onMounted(() => {
   }
 
 
+  if (window.innerWidth <= 800) {
+    dialogWidthOfForm.value = '80%';
+  } else if (window.innerWidth > 800) {
+    dialogWidthOfForm.value = '55%';
+  }
+
+
+  window.onresize = () => {
+    if (window.innerWidth <= 800) {
+      dialogWidthOfForm.value = '80%';
+    } else if (window.innerWidth > 800) {
+      dialogWidthOfForm.value = '55%';
+    }
+  }
+
 })
 
 const logOut = () => {
   console.log('log out')
   sessionStorage.clear()
+  localStorage.clear()
   window.location.href = '/login'
 }
 
@@ -393,8 +418,8 @@ const logOut = () => {
 
 @media screen and (max-width: 490px) {
   .little-badge {
-    width:70px;
-    margin-right: 5px;    
+    width: 70px;
+    margin-right: 5px;
   }
-  }
+}
 </style>

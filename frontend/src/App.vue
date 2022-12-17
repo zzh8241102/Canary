@@ -1,6 +1,7 @@
 <template>
     
     <router-view :key="$route.fullPath"></router-view>
+    <el-backtop :right="100" :bottom="100" />
     
 </template>
 

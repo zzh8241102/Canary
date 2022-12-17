@@ -121,7 +121,7 @@ let searchResList = reactive([]);
 
 
 onMounted(() => {
-  console.log(searchResList.values.length)
+
   if (window.innerWidth <= 800) {
     dialogWidthComputed.value = '80%';
   } else if (window.innerWidth > 800) {
@@ -166,10 +166,18 @@ const instance = axios.create({
   responseType: 'blob'
 });
 
+const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  } 
+}
 
 instance.get('api/find/avatar', {
     params: {
-      username: sessionStorage.getItem('user_name')
+      // username: sessionStorage.getItem('user_name')
+      username: getUserByLocalOrSession()
     }
   }).then((res) => {
     console.log(res)

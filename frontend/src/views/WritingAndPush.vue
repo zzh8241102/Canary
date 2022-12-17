@@ -62,6 +62,13 @@ const article_info = reactive({
     author: ''
 })
 
+const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  } 
+}
 
 const postArticleInter = () => {
     
@@ -73,7 +80,7 @@ const postArticleInter = () => {
     
         
     
-    article_info.author = sessionStorage.getItem('user_name')
+    article_info.author = getUserByLocalOrSession()
     
     console.log(article_info)
     

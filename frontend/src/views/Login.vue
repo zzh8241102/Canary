@@ -1,7 +1,7 @@
 <template>
     <section class="h-100">
         <div class="container h-100">
-            <div class="row justify-content-sm-center h-100" >
+            <div class="row justify-content-sm-center h-100">
                 <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
                     <div class="text-center my-4" id="bottom-space">
                         <img class="small-img" src="../assets/mf-trans.webp">
@@ -17,11 +17,12 @@
                                         <el-input placeholder="Enter your username" v-model="loginData.username" />
                                     </el-form-item>
                                     <el-form-item label="password">
-                                        <el-input show-password type="password" placeholder="Enter your password" v-model="loginData.password" />
+                                        <el-input show-password type="password" placeholder="Enter your password"
+                                            v-model="loginData.password" />
                                     </el-form-item>
                                     <el-form-item style="display:inline-block">
-                                    
-                                        <el-checkbox v-model="remeber" label="remeber me" size="default"  />
+
+                                        <el-checkbox v-model="remeber" label="remeber me" size="default" />
                                     </el-form-item>
                                     <el-form-item style="display:inline-block">
                                         <el-button type="primary" @click="submitForm">Submit</el-button>
@@ -47,10 +48,10 @@
 <script setup>
 ////////////  resolve imports //////////// 
 import { ElContainer, ElMessage } from 'element-plus';
-import { reactive, ref,onMounted } from 'vue'
+import { reactive, ref, onMounted } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import router from "../router/index.js"
-import {login} from '../http/api.js'
+import { login } from '../http/api.js'
 import useStore from '../stores/store.js'
 ////////////  resolve imports //////////// 
 
@@ -63,14 +64,14 @@ const loginData = reactive({
 })
 const remeber = ref(false)
 ////////////////////////////////// 
-store.loggedError= false
+// store.loggedError= false
 const submitForm = () => {
-    if(!loginData.username || !loginData.password){
+    if (!loginData.username || !loginData.password) {
         ElMessage.error("Please fill in all the fields")
         return
     }
     // ensure the username and password is valid string length less than 20
-    if(loginData.username.length > 20 || loginData.password.length > 20){
+    if (loginData.username.length > 20 || loginData.password.length > 20) {
         // reset the loginData
         loginData.username = ''
         loginData.password = ''
@@ -80,17 +81,21 @@ const submitForm = () => {
     }
     console.log(loginData)
     login(loginData).
-    then(res => {
-        if(res.data.success == "true"){
-            ElMessage.success("Login success")
-            // store user data into sessionStorag         
-            // redirect to home page
-            sessionStorage.setItem('user_name', res.data.session)
-            router.push({path: "/"})
-        }
-    }).catch(err => {
-        ElMessage.error(err.response.data.message)
-    })
+        then(res => {
+            if (res.data.success == "true") {
+                ElMessage.success("Login success")
+                // store user data into sessionStorag         
+                // redirect to home page
+                if (!remeber) { sessionStorage.setItem('user_name', res.data.session) }
+                else {
+                    sessionStorage.setItem('user_name', res.data.session)
+                    localStorage.setItem('user_name', res.data.session)
+                }
+                router.push({ path: "/" })
+            }
+        }).catch(err => {
+            ElMessage.error(err.response.data.message)
+        })
 
 }
 
@@ -98,8 +103,8 @@ const submitForm = () => {
 onMounted(() => {
     // set the bottom-space css 
     document.getElementById("bottom-space").style.setProperty("margin-bottom", "30px")
-    
-    if(store.loggedError){
+
+    if (store.loggedError) {
         ElMessage.error("You must sign in first to experience canary")
     }
 })
@@ -113,15 +118,16 @@ onMounted(() => {
     margin: 20px;
     display: inline-block;
 }
-.font-setter{
+
+.font-setter {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.small-img{
+
+.small-img {
     width: 60px;
     height: 60px;
     display: inline-block;
     margin-bottom: 20px;
-    margin-right: 10px ;
+    margin-right: 10px;
 }
-
 </style>

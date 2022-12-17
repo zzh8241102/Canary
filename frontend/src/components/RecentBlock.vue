@@ -109,6 +109,13 @@ const dataToSubmit = reactive({
     }
 })
 
+const getUserByLocalOrSession = () => {
+  if (sessionStorage.getItem('user_name') != null) {
+    return sessionStorage.getItem('user_name')
+  } else if (localStorage.getItem('user_name') != null) {
+    return localStorage.getItem('user_name')
+  } 
+}
 
 const subLikeAct = () => {
     // set color
@@ -125,7 +132,7 @@ const subLikeAct = () => {
     endbt.style.color = "gray";
 
 
-    dataToSubmit.params.user_name = sessionStorage.getItem('user_name')
+    dataToSubmit.params.user_name = getUserByLocalOrSession()
     dataToSubmit.params.is_liked = true;
     dataToSubmit.params.is_commented = false;
     dataToSubmit.params.is_published = false;
@@ -146,7 +153,7 @@ const subCommentAct = () => {
     endbt.style.backgroundColor = "white";
     endbt.style.color = "gray";
 
-    dataToSubmit.params.user_name = sessionStorage.getItem('user_name')
+    dataToSubmit.params.user_name = getUserByLocalOrSession()
     dataToSubmit.params.is_commented = true;
     dataToSubmit.params.is_liked = false;
     dataToSubmit.params.is_published = false;
@@ -166,7 +173,7 @@ const subPubAct = () => {
     midbt.style.backgroundColor = "white";
     midbt.style.color = "gray";
 
-    dataToSubmit.params.user_name = sessionStorage.getItem('user_name')
+    dataToSubmit.params.user_name = getUserByLocalOrSession()
     dataToSubmit.params.is_published = true;
     dataToSubmit.params.is_commented = false;
     dataToSubmit.params.is_liked = false;
@@ -175,7 +182,7 @@ const subPubAct = () => {
     })
 }
 onMounted(() => {
-    dataToSubmit.params.user_name = sessionStorage.getItem('user_name')
+    dataToSubmit.params.user_name = getUserByLocalOrSession()
     dataToSubmit.params.is_commented = true;
     dataToSubmit.params.is_liked = false;
     dataToSubmit.params.is_published = false;
