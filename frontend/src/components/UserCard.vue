@@ -219,7 +219,17 @@ const uploadFile = (param) => {
 
   form.append("fileToUpload", fileObj)
   form.append("username", userIndex.username)
-  axios.post("http://127.0.0.1:8000/api/upload/avatar", form, {
+  const AvAinstance = axios.create({
+    baseURL: 'http://127.0.0.1:8000/',
+    timeout: 1000,
+  });
+  AvAinstance.interceptors.request.use(function (config) {
+    config.headers!.Authorization = localStorage.getItem('access_token')
+    return config;
+  }, function (error) {
+    return Promise.reject(error);
+  });
+  AvAinstance.post("http://127.0.0.1:8000/api/upload/avatar", form, {
     headers: { 'content-type': 'multipart/form-data' }
   }).then(res => {
     imageUrl = res.data.avatar
@@ -284,6 +294,12 @@ const instance = axios.create({
   responseType: 'blob'
 });
 
+instance.interceptors.request.use(function (config) {
+  config.headers!.Authorization = localStorage.getItem('access_token')
+  return config;
+}, function (error) {
+  return Promise.reject(error);
+});
 
 instance.get('api/find/avatar', {
   params: {

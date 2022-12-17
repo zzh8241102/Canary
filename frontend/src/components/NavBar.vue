@@ -166,6 +166,14 @@ const instance = axios.create({
   responseType: 'blob'
 });
 
+instance.interceptors.request.use(function (config) {
+  config.headers.Authorization = localStorage.getItem('access_token')
+  return config;
+}, function (error) {
+  return Promise.reject(error);
+});
+
+
 const getUserByLocalOrSession = () => {
   if (sessionStorage.getItem('user_name') != null) {
     return sessionStorage.getItem('user_name')
