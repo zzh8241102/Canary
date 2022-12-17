@@ -24,7 +24,7 @@
   import {ref,reactive} from 'vue'
   import { ElMessage } from 'element-plus'
   import { getTags } from '../http/api';
-  import { all } from 'axios';
+
   import AddTagVue from './icons/AddTag.vue';
   import router from '../router';
   const getUserByLocalOrSession = () => {

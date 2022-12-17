@@ -1,3 +1,4 @@
+from os import access
 from flask_restful import Resource, reqparse
 from flask import request,make_response
 from flask import jsonify
@@ -7,6 +8,8 @@ from forms import RegisterForm,LoginForm
 from werkzeug.datastructures import ImmutableMultiDict
 # hash 密码加密
 from werkzeug.security import check_password_hash, generate_password_hash
+from controller.auth_controller import generate_token
+
 
 
         
@@ -26,7 +29,12 @@ class UserRegistrationApi(Resource):
                             'message':{},
                             'code':0,
                             'data':{},
-                            'session':''
+                            'session':'',
+                            'token':
+                            {
+                                'access_token':'',
+                                'refresh_token':'',
+                            }
                             }
     def post(self):
         # get the post data
@@ -51,6 +59,8 @@ class UserRegistrationApi(Resource):
             self.response_obj['data'] = data['username']
             # get user id by username
             self.response_obj['session'] = data['username']
+            access_token = generate_token(data['username'])
+            self.response_obj['token']['access_token'] = access_token
             return make_response(jsonify(self.response_obj), 201)
         except:
             self.response_obj['message'] = 'Cannot Create User. Please try again later.'
@@ -74,7 +84,10 @@ class UserSignInApi(Resource):
                             'message': "",
                             'code': 0, 
                             'data': {}, 
-                            'token':{},
+                            'token':{
+                                'access_token':'',
+                                'refresh_token':'',
+                            },
                             'session':''
                             }
     def post(self):
@@ -98,6 +111,8 @@ class UserSignInApi(Resource):
             self.response_obj['success'] = "true"
             self.response_obj['data'] = data['username']
             self.response_obj['session'] = data['username']
+            access_token = generate_token(data['username'])
+            self.response_obj['token']['access_token'] = access_token
             return make_response(jsonify(self.response_obj), 200)
         else:
             self.response_obj['message'] = 'Password is wrong.'

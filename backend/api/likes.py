@@ -18,7 +18,6 @@ class ArticleLikeManageApi(Resource):
             'message': "",
             'code': 0,
         }
-        
     def post(self):
         # check whether the user have already like the article
         # like is a mid level table for many to many relationship

@@ -13,6 +13,7 @@ from api.posts import PostApi, PostCommentApi
 from api.upload import UploadAvatarApi, FindAvatarApi
 from api.user_info import ChangeUserInfoAPi,UserActivityInfoApi,UserInfoStatsApi
 from api.likes import ArticleLikeManageApi
+# from api.token import TokenRefreshApi
 
 
 from api.auth import UserRegistrationApi, UserSignInApi
@@ -47,6 +48,9 @@ def add_apis():
     api.add_resource(UserFollowTagApi, '/api/user/followtag')
     api.add_resource(TagFollowerApi, '/api/tag/follower')
     api.add_resource(UserUnfollowTagApi, '/api/user/unfollowtag')
+    # /api/refreshtoken
+    
+
 
 # //////////////////////// api ////////////////////////
     

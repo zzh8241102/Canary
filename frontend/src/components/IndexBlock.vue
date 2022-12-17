@@ -11,7 +11,7 @@
                         </span>
                     </center>
 
-                    <center><span style="display:block;">likes</span></center>
+                    <center><span style="display:block;">like</span></center>
 
                 </div>
                 <!-- vif -->
@@ -76,10 +76,16 @@ const articlesList = reactive({
     articles: []
 })
 /////////////////////////////////////////////////
-getArticlesList().then(res => {
-    articlesList.articles = res.data.data.articles
-    console.log(articlesList.articles)
+onMounted(() => {
+    console.log(localStorage.getItem('access_token'))
+    getArticlesList().then(res => {
+        articlesList.articles = res.data.data.articles
+        console.log(articlesList.articles)
+    }).catch(err => {
+        // window.location.reload()
+    })
 })
+
 const cond = ref(false)
 
 // 窗口宽度小于 768px 时

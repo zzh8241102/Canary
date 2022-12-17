@@ -9,6 +9,7 @@ from controller.tag_controller import find_article_by_tag_name,find_article_tags
 from forms import UserBasicInfoForm
 from werkzeug.datastructures import ImmutableMultiDict
 from werkzeug.security import check_password_hash, generate_password_hash
+
 # ////////////////////////////////////////////////////////////////////////
 # ///////////// init /////////////
 user_parser = reqparse.RequestParser()
@@ -69,6 +70,7 @@ class ChangeUserInfoAPi(Resource):
                 },
             }
         }
+    
     def post(self):
         data = user_chang_parser.parse_args()
         form = UserBasicInfoForm(ImmutableMultiDict(data))
@@ -107,6 +109,7 @@ class ChangePasswordAPi(Resource):
             'message': "",
             'code': 0,
             }
+      
     def post(self):
         data = change_password_user_parser.parse_args()
         if(User.find_by_username(data['username'])):
@@ -137,6 +140,7 @@ class DeleteAccountApi(Resource):
             'message': "",
             'code': 0,
             }
+    
     def post(self):
         data = delete_user_parser.parse_args()
         if(User.find_by_username(data['username'])):

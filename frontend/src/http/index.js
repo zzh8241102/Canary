@@ -8,6 +8,8 @@ const $http = axios.create({
 
 // before request
 $http.interceptors.request.use(function (config) {
+    config.headers.Authorization = localStorage.getItem('access_token')
+    console.log(localStorage.getItem('access_token'))
     return config;
   }, function (error) {
     // error handling
@@ -23,7 +25,7 @@ axios.interceptors.response.use(function (response) {
     return Promise.reject(error);
   });
 
-// 输出做了拦截的实例
+
 
 
 

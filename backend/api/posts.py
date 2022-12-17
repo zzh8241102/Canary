@@ -2,6 +2,7 @@ from flask_restful import Resource,reqparse
 from flask import jsonify, make_response
 from numpy import array
 from models import Article,User,Tags,Tags_Mid,Comments
+
 # api for posting the article and comment
 # /api/post
 # /api/comment
@@ -26,7 +27,6 @@ class PostApi(Resource):
                 'article_id': 0,
             }
         }
-        
     def post(self):
         data = article_parser.parse_args()
         #  store the article info into db 

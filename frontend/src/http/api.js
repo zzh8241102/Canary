@@ -71,3 +71,4 @@ export const unFollowTag = (data) => $http.post('/api/user/unfollowtag', data)
 // /api/find/avatar
 export const getAvatar = (data) => $http.get('/api/find/avatar', data) 
 
+

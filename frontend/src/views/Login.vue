@@ -82,15 +82,20 @@ const submitForm = () => {
     console.log(loginData)
     login(loginData).
         then(res => {
+
             if (res.data.success == "true") {
                 ElMessage.success("Login success")
                 // store user data into sessionStorag         
                 // redirect to home page
+                //  store access_token in local storage
+                localStorage.setItem('access_token', res.data.token.access_token)
+                localStorage.setItem('refresh_token', res.data.token.refresh_token)
                 if (!remeber) { sessionStorage.setItem('user_name', res.data.session) }
                 else {
                     sessionStorage.setItem('user_name', res.data.session)
                     localStorage.setItem('user_name', res.data.session)
                 }
+                console.log(res.data.token.access_token)
                 router.push({ path: "/" })
             }
         }).catch(err => {

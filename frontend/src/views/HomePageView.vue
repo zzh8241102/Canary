@@ -86,12 +86,13 @@
 import NavBar from '../components/NavBar.vue'
 import IndexBlockVue from '../components/IndexBlock.vue';
 import BonfireRec from '../components/BonfireRec.vue'
-import { getUserTags, getTags, unFollowTag } from '../http/api.js'
+import { getUserTags, getTags, unFollowTag} from '../http/api.js'
 import { ref, reactive, onMounted } from 'vue'
 import QuestionTagVue from '../components/icons/QuestionTag.vue';
 // import { ElMessage, ElNotification } from 'element-plus';
 import cookievue from '../components/icons/Cookie.vue'
 import { ElNotification } from 'element-plus';
+import axios from 'axios';
 ////////////////////////////////////////////////
 const dialogWidthComputed = ref('55%');
 const getUserByLocalOrSession = () => {
@@ -164,7 +165,7 @@ const getSelectedTags = (item) => {
 
 const setCookieUser = () => {
     // use cookie to store the user name
-     const cookieArea = document.getElementById('cookie-area')
+    const cookieArea = document.getElementById('cookie-area')
     const user_name = getUserByLocalOrSession()
     let date = new Date()
     date.setTime(date.getTime() + 30 * 24 * 60 * 60 * 1000)
@@ -192,7 +193,7 @@ const popCookieWindow = () => {
             cookie_flag = true
         }
     }
-    if(cookie_flag){
+    if (cookie_flag) {
         const cookieArea = document.getElementById('cookie-area')
         cookieArea.style.display = 'none'
         return
@@ -215,6 +216,7 @@ const popCookieWindow = () => {
 
 
 onMounted(() => {
+    
     popCookieWindow()
     if (window.innerWidth <= 800) {
         dialogWidthComputed.value = '80%';
@@ -230,7 +232,10 @@ onMounted(() => {
             dialogWidthComputed.value = '55%';
         }
     }
+
 })
+
+
 
 
 ////////////////////////////////////////////////

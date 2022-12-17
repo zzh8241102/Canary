@@ -12,13 +12,8 @@ from importlib_metadata import pass_none
 from models import User,Article,Tags,Tags_Mid
 from controller.tag_controller import find_article_by_tag_name, find_article_tags
 from controller.like_controller import fetch_article_comment_num,fetch_article_like_num
+from utils.decors import login_required
 
-def fetch_article_info():
-
-    # fetch all the articles from the database,where the id, title author and date are fetched
-    pass
-
-    
 
 
 class ArticlesListApi(Resource):
@@ -145,7 +140,9 @@ class ArticlesListApi(Resource):
                 'articles':[]
             },
         }
+    @login_required
     def get(self):
+        
         articles = Article.query.all()
         # fetch all the tags from the database, notice the tag_mid is the model for many to many
         # relationship between tags and articles
@@ -180,6 +177,7 @@ article_list_tag_parser = reqparse.RequestParser()
 article_list_tag_parser.add_argument('tag_id', type=str, required=True, help='tag is required')
 #////////////////////////////////////////////////////////////////////////////////////////
 class ArticleListByTagApi(Resource):
+    
     def __init__(self):
         self.response_obj = {
             'message': "successfully get the articles list",
@@ -189,6 +187,7 @@ class ArticleListByTagApi(Resource):
                 'articles':[]
             },
         }
+    # @login_required
     def get(self):
         data = article_list_tag_parser.parse_args()
         tag_id = data['tag_id']

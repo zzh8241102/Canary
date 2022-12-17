@@ -17,7 +17,6 @@ class GetCommentByArticleIdApi(Resource):
             'code': 0,
             'data': [],
         }
-        
     def get(self):
         # get the article_id
         # get the comment info from db

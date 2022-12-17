@@ -21,7 +21,6 @@ class TagUserApi(Resource):
 
             ]
         }
-
     def get(self):
         # find the user's all tags by the usertag mid level table
         data = tag_user_api_parser.parse_args()
@@ -48,7 +47,6 @@ class AllTagsApi(Resource):
 
             ]
         }
-
     def get(self):
         # fetch all the tags from the database
         tags = Tags.query.all()
@@ -78,7 +76,6 @@ class AddNewTagApi(Resource):
             'message': "",
             'code': 0,
         }
-
     def post(self):
         print("add new tag")
         data = new_tag_parser.parse_args()
@@ -110,7 +107,6 @@ class FindArticleTagApi(Resource):
 
             ]
         }
-
     def get(self):
         # fetch all the tags from the database
         data = find_article_tag_parser.parse_args()
@@ -139,7 +135,6 @@ class FindTaginfoByTagNameAPi(Resource):
                 'tag_description': '',
             }
         }
-
     def get(self):
         data = find_tag_two_parser.parse_args()
         tag_id = data['tag_id']
@@ -170,7 +165,6 @@ class UserFollowTagApi(Resource):
             'message': "",
             'code': 0,
         }
-
     def post(self):
         data = user_follow_tag_parser.parse_args()
         print(data)
@@ -212,7 +206,6 @@ class TagFollowerApi(Resource):
 
             ]
         }
-
     def get(self):
         data = tag_follower_list_parser.parse_args()
         tag_id = data['tag_id']
@@ -246,7 +239,6 @@ class UserUnfollowTagApi(Resource):
             'message': "",
             'code': 0,
         }
-
     def post(self):
         data = user_unfollow_tag_parser.parse_args()
         # check if the tag already exist
