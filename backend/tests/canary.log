@@ -1,0 +1,1266 @@
+2022-12-18 17:02:33,730 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:05:35,990 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:05:36,033 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:22:58,363 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:22:58,404 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:22:58,450 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:23:54,619 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:23:54,647 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:23:54,708 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:24:16,861 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:24:16,862 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:24:16,884 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:24:16,927 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:24:44,468 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:24:44,495 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:24:44,555 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:25:00,980 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:25:01,041 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:25:18,406 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:25:18,407 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:25:18,431 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:25:18,474 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:26:04,338 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:26:04,400 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:26:17,873 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:26:17,935 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:29:42,401 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:29:42,402 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:29:42,426 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:29:42,469 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:30:07,524 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:30:07,525 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:30:07,547 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:30:07,591 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:32:34,044 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:32:34,047 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:32:34,074 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:32:34,119 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:32:53,122 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:32:53,131 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:32:53,160 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:32:53,205 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:33:03,557 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:33:03,558 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:33:03,582 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:33:03,626 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:33:57,920 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:33:57,921 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:33:57,949 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:33:57,993 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:34:04,294 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:34:04,295 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:34:04,315 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:34:04,359 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:37:35,910 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:37:35,911 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:37:35,935 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:37:35,978 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:41:00,403 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:00,428 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:41:00,429 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:00,431 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:00,432 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:41:00,474 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:41:28,064 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:28,066 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:28,067 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:28,067 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:28,102 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:41:28,144 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:41:49,567 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:49,568 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:49,569 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:49,570 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:41:49,599 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:41:49,646 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:43:39,791 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:43:39,793 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:43:39,793 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:43:39,794 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:43:39,818 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:43:39,861 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:48:53,451 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:48:53,452 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:48:53,453 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:48:53,453 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:48:53,472 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:48:53,513 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:50:36,724 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:50:36,725 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:50:36,726 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:50:36,726 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:50:36,745 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:50:36,788 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 17:50:36,831 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:54:57,649 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:54:57,650 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:54:57,651 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:54:57,651 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:54:57,652 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:54:57,675 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:54:57,736 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 17:54:57,780 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:55:19,774 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:55:19,776 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:55:19,776 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:55:19,777 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:55:19,777 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:55:19,795 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:55:19,839 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 17:55:19,902 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:59:52,963 - Canary - INFO - Testing Login API
+2022-12-18 17:59:52,963 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,965 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:59:52,965 - Canary - INFO - tearDown
+2022-12-18 17:59:52,965 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 17:59:52,965 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,965 - Canary - INFO - Testing Login API
+2022-12-18 17:59:52,965 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,966 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:59:52,966 - Canary - INFO - tearDown
+2022-12-18 17:59:52,966 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 17:59:52,966 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,966 - Canary - INFO - Testing Login API
+2022-12-18 17:59:52,966 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,967 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:59:52,967 - Canary - INFO - tearDown
+2022-12-18 17:59:52,967 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 17:59:52,967 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,967 - Canary - INFO - Testing Login API
+2022-12-18 17:59:52,967 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,968 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:59:52,968 - Canary - INFO - tearDown
+2022-12-18 17:59:52,968 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 17:59:52,968 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,968 - Canary - INFO - Testing Login API
+2022-12-18 17:59:52,968 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,968 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:59:52,968 - Canary - INFO - tearDown
+2022-12-18 17:59:52,969 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 17:59:52,969 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,969 - Canary - INFO - Testing Login API
+2022-12-18 17:59:52,969 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,995 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 17:59:52,995 - Canary - INFO - tearDown
+2022-12-18 17:59:52,995 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 17:59:52,995 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:52,996 - Canary - INFO - Testing Login API
+2022-12-18 17:59:52,996 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:53,038 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 17:59:53,039 - Canary - INFO - tearDown
+2022-12-18 17:59:53,039 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 17:59:53,039 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:53,039 - Canary - INFO - Testing Login API
+2022-12-18 17:59:53,039 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 17:59:53,097 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:59:53,098 - Canary - INFO - tearDown
+2022-12-18 17:59:53,098 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 17:59:53,098 - Canary - INFO - ----------------------------------------------------------------------
+2022-12-18 18:00:43,902 - Canary - INFO - Testing Login API
+2022-12-18 18:00:43,903 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,904 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:00:43,905 - Canary - INFO - tearDown
+2022-12-18 18:00:43,905 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:00:43,905 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,905 - Canary - INFO - Testing Login API
+2022-12-18 18:00:43,905 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,905 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:00:43,906 - Canary - INFO - tearDown
+2022-12-18 18:00:43,906 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:00:43,906 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,906 - Canary - INFO - Testing Login API
+2022-12-18 18:00:43,906 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,906 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:00:43,906 - Canary - INFO - tearDown
+2022-12-18 18:00:43,906 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:00:43,906 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,906 - Canary - INFO - Testing Login API
+2022-12-18 18:00:43,906 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,907 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:00:43,907 - Canary - INFO - tearDown
+2022-12-18 18:00:43,907 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:00:43,907 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,907 - Canary - INFO - Testing Login API
+2022-12-18 18:00:43,907 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,908 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:00:43,908 - Canary - INFO - tearDown
+2022-12-18 18:00:43,908 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:00:43,908 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,908 - Canary - INFO - Testing Login API
+2022-12-18 18:00:43,908 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,928 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 18:00:43,929 - Canary - INFO - tearDown
+2022-12-18 18:00:43,929 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:00:43,929 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,929 - Canary - INFO - Testing Login API
+2022-12-18 18:00:43,929 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,973 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 18:00:43,974 - Canary - INFO - tearDown
+2022-12-18 18:00:43,974 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:00:43,974 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:43,974 - Canary - INFO - Testing Login API
+2022-12-18 18:00:43,974 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:00:44,036 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 18:00:44,036 - Canary - INFO - tearDown
+2022-12-18 18:00:44,036 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:00:44,036 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,097 - Canary - INFO - Testing Login API
+2022-12-18 18:23:58,097 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,101 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:23:58,101 - Canary - INFO - tearDown
+2022-12-18 18:23:58,101 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:23:58,101 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,101 - Canary - INFO - Testing Login API
+2022-12-18 18:23:58,101 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,102 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:23:58,102 - Canary - INFO - tearDown
+2022-12-18 18:23:58,102 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:23:58,102 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,102 - Canary - INFO - Testing Login API
+2022-12-18 18:23:58,102 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,103 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:23:58,103 - Canary - INFO - tearDown
+2022-12-18 18:23:58,103 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:23:58,103 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,103 - Canary - INFO - Testing Login API
+2022-12-18 18:23:58,103 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,104 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:23:58,104 - Canary - INFO - tearDown
+2022-12-18 18:23:58,104 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:23:58,104 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,105 - Canary - INFO - Testing Login API
+2022-12-18 18:23:58,105 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,105 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:23:58,105 - Canary - INFO - tearDown
+2022-12-18 18:23:58,105 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:23:58,105 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,105 - Canary - INFO - Testing Login API
+2022-12-18 18:23:58,105 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,129 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 18:23:58,129 - Canary - INFO - tearDown
+2022-12-18 18:23:58,129 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:23:58,129 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,129 - Canary - INFO - Testing Login API
+2022-12-18 18:23:58,129 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,175 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 18:23:58,176 - Canary - INFO - tearDown
+2022-12-18 18:23:58,176 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:23:58,176 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,176 - Canary - INFO - Testing Login API
+2022-12-18 18:23:58,176 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,236 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 18:23:58,237 - Canary - INFO - tearDown
+2022-12-18 18:23:58,237 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:23:58,237 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:23:58,237 - Canary - INFO - Testing Reg API
+2022-12-18 18:23:58,237 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,622 - Canary - INFO - Testing Login API
+2022-12-18 18:56:10,623 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,624 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:56:10,625 - Canary - INFO - tearDown
+2022-12-18 18:56:10,625 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:56:10,625 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,625 - Canary - INFO - Testing Login API
+2022-12-18 18:56:10,625 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,625 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:56:10,626 - Canary - INFO - tearDown
+2022-12-18 18:56:10,626 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:56:10,626 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,626 - Canary - INFO - Testing Login API
+2022-12-18 18:56:10,626 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,626 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:56:10,626 - Canary - INFO - tearDown
+2022-12-18 18:56:10,627 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:56:10,627 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,627 - Canary - INFO - Testing Login API
+2022-12-18 18:56:10,627 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,627 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:56:10,627 - Canary - INFO - tearDown
+2022-12-18 18:56:10,627 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:56:10,628 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,628 - Canary - INFO - Testing Login API
+2022-12-18 18:56:10,628 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,628 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:56:10,629 - Canary - INFO - tearDown
+2022-12-18 18:56:10,629 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:56:10,629 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,629 - Canary - INFO - Testing Login API
+2022-12-18 18:56:10,629 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,657 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 18:56:10,657 - Canary - INFO - tearDown
+2022-12-18 18:56:10,657 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:56:10,657 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,657 - Canary - INFO - Testing Login API
+2022-12-18 18:56:10,657 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,728 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 18:56:10,728 - Canary - INFO - tearDown
+2022-12-18 18:56:10,728 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:56:10,728 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,728 - Canary - INFO - Testing Login API
+2022-12-18 18:56:10,728 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,770 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 18:56:10,771 - Canary - INFO - tearDown
+2022-12-18 18:56:10,771 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:56:10,771 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,771 - Canary - INFO - Testing Reg API
+2022-12-18 18:56:10,771 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,775 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 18:56:10,776 - Canary - INFO - Testing Reg API
+2022-12-18 18:56:10,776 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:56:10,776 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 18:58:14,603 - Canary - INFO - Testing Login API
+2022-12-18 18:58:14,604 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,608 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:58:14,609 - Canary - INFO - tearDown
+2022-12-18 18:58:14,609 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:58:14,609 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,609 - Canary - INFO - Testing Login API
+2022-12-18 18:58:14,609 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,609 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:58:14,610 - Canary - INFO - tearDown
+2022-12-18 18:58:14,610 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:58:14,610 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,610 - Canary - INFO - Testing Login API
+2022-12-18 18:58:14,610 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,610 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:58:14,611 - Canary - INFO - tearDown
+2022-12-18 18:58:14,611 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:58:14,611 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,611 - Canary - INFO - Testing Login API
+2022-12-18 18:58:14,611 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,612 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:58:14,612 - Canary - INFO - tearDown
+2022-12-18 18:58:14,612 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:58:14,612 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,612 - Canary - INFO - Testing Login API
+2022-12-18 18:58:14,612 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,612 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 18:58:14,613 - Canary - INFO - tearDown
+2022-12-18 18:58:14,613 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:58:14,613 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,613 - Canary - INFO - Testing Login API
+2022-12-18 18:58:14,613 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,633 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 18:58:14,633 - Canary - INFO - tearDown
+2022-12-18 18:58:14,633 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:58:14,633 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,633 - Canary - INFO - Testing Login API
+2022-12-18 18:58:14,633 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,698 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 18:58:14,699 - Canary - INFO - tearDown
+2022-12-18 18:58:14,699 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:58:14,699 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,699 - Canary - INFO - Testing Login API
+2022-12-18 18:58:14,699 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,741 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 18:58:14,742 - Canary - INFO - tearDown
+2022-12-18 18:58:14,742 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 18:58:14,742 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,742 - Canary - INFO - Testing Reg API
+2022-12-18 18:58:14,742 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,746 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 18:58:14,747 - Canary - INFO - Testing Reg API
+2022-12-18 18:58:14,747 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 18:58:14,748 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:01:20,576 - Canary - INFO - Testing Login API
+2022-12-18 19:01:20,576 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,578 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:01:20,579 - Canary - INFO - tearDown
+2022-12-18 19:01:20,579 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:01:20,579 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,579 - Canary - INFO - Testing Login API
+2022-12-18 19:01:20,579 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,579 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:01:20,579 - Canary - INFO - tearDown
+2022-12-18 19:01:20,579 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:01:20,579 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,579 - Canary - INFO - Testing Login API
+2022-12-18 19:01:20,580 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,580 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:01:20,580 - Canary - INFO - tearDown
+2022-12-18 19:01:20,580 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:01:20,580 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,580 - Canary - INFO - Testing Login API
+2022-12-18 19:01:20,580 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,581 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:01:20,581 - Canary - INFO - tearDown
+2022-12-18 19:01:20,581 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:01:20,581 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,581 - Canary - INFO - Testing Login API
+2022-12-18 19:01:20,581 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,581 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:01:20,582 - Canary - INFO - tearDown
+2022-12-18 19:01:20,582 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:01:20,582 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,582 - Canary - INFO - Testing Login API
+2022-12-18 19:01:20,582 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,602 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:01:20,603 - Canary - INFO - tearDown
+2022-12-18 19:01:20,603 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:01:20,603 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,603 - Canary - INFO - Testing Login API
+2022-12-18 19:01:20,603 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,667 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:01:20,668 - Canary - INFO - tearDown
+2022-12-18 19:01:20,668 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:01:20,668 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,668 - Canary - INFO - Testing Login API
+2022-12-18 19:01:20,668 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,711 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:01:20,711 - Canary - INFO - tearDown
+2022-12-18 19:01:20,711 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:01:20,711 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,711 - Canary - INFO - Testing Reg API
+2022-12-18 19:01:20,711 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,762 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671361280 created successfully.
+2022-12-18 19:01:20,762 - Canary - INFO - Testing Reg API
+2022-12-18 19:01:20,762 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:01:20,763 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:03:57,616 - Canary - INFO - Testing Login API
+2022-12-18 19:03:57,616 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,618 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:03:57,618 - Canary - INFO - tearDown
+2022-12-18 19:03:57,618 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:03:57,618 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,618 - Canary - INFO - Testing Login API
+2022-12-18 19:03:57,618 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,619 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:03:57,619 - Canary - INFO - tearDown
+2022-12-18 19:03:57,619 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:03:57,619 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,619 - Canary - INFO - Testing Login API
+2022-12-18 19:03:57,619 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,620 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:03:57,620 - Canary - INFO - tearDown
+2022-12-18 19:03:57,620 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:03:57,620 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,620 - Canary - INFO - Testing Login API
+2022-12-18 19:03:57,620 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,620 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:03:57,621 - Canary - INFO - tearDown
+2022-12-18 19:03:57,621 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:03:57,621 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,621 - Canary - INFO - Testing Login API
+2022-12-18 19:03:57,621 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,621 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:03:57,621 - Canary - INFO - tearDown
+2022-12-18 19:03:57,622 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:03:57,622 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,622 - Canary - INFO - Testing Login API
+2022-12-18 19:03:57,622 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,647 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:03:57,648 - Canary - INFO - tearDown
+2022-12-18 19:03:57,648 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:03:57,648 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,648 - Canary - INFO - Testing Login API
+2022-12-18 19:03:57,648 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,709 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:03:57,710 - Canary - INFO - tearDown
+2022-12-18 19:03:57,710 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:03:57,710 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,710 - Canary - INFO - Testing Login API
+2022-12-18 19:03:57,710 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,751 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:03:57,752 - Canary - INFO - tearDown
+2022-12-18 19:03:57,752 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:03:57,752 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,752 - Canary - INFO - Testing Reg API
+2022-12-18 19:03:57,752 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,753 - Canary - INFO - Testing Reg API
+2022-12-18 19:03:57,753 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,754 - Canary - INFO - Testing Reg API
+2022-12-18 19:03:57,754 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,755 - Canary - INFO - Testing Reg API
+2022-12-18 19:03:57,755 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,755 - Canary - INFO - Testing Reg API
+2022-12-18 19:03:57,755 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,805 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671361437 created successfully.
+2022-12-18 19:03:57,806 - Canary - INFO - Testing Reg API
+2022-12-18 19:03:57,806 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,807 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:03:57,807 - Canary - INFO - Testing Reg API
+2022-12-18 19:03:57,807 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:03:57,808 - Canary - INFO - Testing Reg API
+2022-12-18 19:03:57,808 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,505 - Canary - INFO - Testing Login API
+2022-12-18 19:07:32,506 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,507 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:32,508 - Canary - INFO - tearDown
+2022-12-18 19:07:32,508 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:32,508 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,508 - Canary - INFO - Testing Login API
+2022-12-18 19:07:32,508 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,509 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:32,509 - Canary - INFO - tearDown
+2022-12-18 19:07:32,509 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:32,509 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,509 - Canary - INFO - Testing Login API
+2022-12-18 19:07:32,509 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,510 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:32,510 - Canary - INFO - tearDown
+2022-12-18 19:07:32,510 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:32,510 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,510 - Canary - INFO - Testing Login API
+2022-12-18 19:07:32,510 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,511 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:32,511 - Canary - INFO - tearDown
+2022-12-18 19:07:32,511 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:32,511 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,511 - Canary - INFO - Testing Login API
+2022-12-18 19:07:32,511 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,512 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:32,512 - Canary - INFO - tearDown
+2022-12-18 19:07:32,512 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:32,512 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,512 - Canary - INFO - Testing Login API
+2022-12-18 19:07:32,512 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,537 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:07:32,538 - Canary - INFO - tearDown
+2022-12-18 19:07:32,538 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:32,538 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,538 - Canary - INFO - Testing Login API
+2022-12-18 19:07:32,538 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,601 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:07:32,601 - Canary - INFO - tearDown
+2022-12-18 19:07:32,601 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:32,601 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,601 - Canary - INFO - Testing Login API
+2022-12-18 19:07:32,601 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,644 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:07:32,645 - Canary - INFO - tearDown
+2022-12-18 19:07:32,645 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:32,645 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,645 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:32,645 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,646 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:32,646 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,646 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:32,646 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,647 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:32,647 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,648 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:32,648 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,698 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671361652 created successfully.
+2022-12-18 19:07:32,698 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:32,698 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,699 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:07:32,699 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:32,699 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:32,700 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:32,700 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,309 - Canary - INFO - Testing Login API
+2022-12-18 19:07:54,310 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,311 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:54,312 - Canary - INFO - tearDown
+2022-12-18 19:07:54,312 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:54,312 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,312 - Canary - INFO - Testing Login API
+2022-12-18 19:07:54,312 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,312 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:54,313 - Canary - INFO - tearDown
+2022-12-18 19:07:54,313 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:54,313 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,313 - Canary - INFO - Testing Login API
+2022-12-18 19:07:54,313 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,313 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:54,313 - Canary - INFO - tearDown
+2022-12-18 19:07:54,313 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:54,313 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,313 - Canary - INFO - Testing Login API
+2022-12-18 19:07:54,313 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,314 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:54,314 - Canary - INFO - tearDown
+2022-12-18 19:07:54,314 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:54,314 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,314 - Canary - INFO - Testing Login API
+2022-12-18 19:07:54,314 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,315 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:07:54,315 - Canary - INFO - tearDown
+2022-12-18 19:07:54,315 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:54,315 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,315 - Canary - INFO - Testing Login API
+2022-12-18 19:07:54,315 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,333 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:07:54,333 - Canary - INFO - tearDown
+2022-12-18 19:07:54,334 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:54,334 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,334 - Canary - INFO - Testing Login API
+2022-12-18 19:07:54,334 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,395 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:07:54,396 - Canary - INFO - tearDown
+2022-12-18 19:07:54,396 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:54,396 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,396 - Canary - INFO - Testing Login API
+2022-12-18 19:07:54,396 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,439 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:07:54,439 - Canary - INFO - tearDown
+2022-12-18 19:07:54,439 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:07:54,439 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,440 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:54,440 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,441 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:54,441 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,441 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:54,441 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,442 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:54,442 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,443 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:54,443 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,495 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671361674 created successfully.
+2022-12-18 19:07:54,495 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:54,495 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,496 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:07:54,496 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:54,496 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:07:54,497 - Canary - INFO - Testing Reg API
+2022-12-18 19:07:54,497 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,146 - Canary - INFO - Testing Login API
+2022-12-18 19:09:39,147 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,148 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:09:39,149 - Canary - INFO - tearDown
+2022-12-18 19:09:39,149 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:09:39,149 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,149 - Canary - INFO - Testing Login API
+2022-12-18 19:09:39,149 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,149 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:09:39,150 - Canary - INFO - tearDown
+2022-12-18 19:09:39,150 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:09:39,150 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,150 - Canary - INFO - Testing Login API
+2022-12-18 19:09:39,150 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,150 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:09:39,150 - Canary - INFO - tearDown
+2022-12-18 19:09:39,150 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:09:39,150 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,150 - Canary - INFO - Testing Login API
+2022-12-18 19:09:39,150 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,151 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:09:39,151 - Canary - INFO - tearDown
+2022-12-18 19:09:39,151 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:09:39,151 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,151 - Canary - INFO - Testing Login API
+2022-12-18 19:09:39,151 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,152 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:09:39,152 - Canary - INFO - tearDown
+2022-12-18 19:09:39,152 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:09:39,152 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,152 - Canary - INFO - Testing Login API
+2022-12-18 19:09:39,152 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,171 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:09:39,172 - Canary - INFO - tearDown
+2022-12-18 19:09:39,172 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:09:39,172 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,172 - Canary - INFO - Testing Login API
+2022-12-18 19:09:39,172 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,235 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:09:39,236 - Canary - INFO - tearDown
+2022-12-18 19:09:39,236 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:09:39,236 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,236 - Canary - INFO - Testing Login API
+2022-12-18 19:09:39,236 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,279 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:09:39,279 - Canary - INFO - tearDown
+2022-12-18 19:09:39,280 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:09:39,280 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,280 - Canary - INFO - Testing Reg API
+2022-12-18 19:09:39,280 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,284 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:09:39,284 - Canary - INFO - Testing Reg API
+2022-12-18 19:09:39,284 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,285 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:09:39,285 - Canary - INFO - Testing Reg API
+2022-12-18 19:09:39,285 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,286 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:09:39,286 - Canary - INFO - Testing Reg API
+2022-12-18 19:09:39,286 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,286 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:09:39,287 - Canary - INFO - Testing Reg API
+2022-12-18 19:09:39,287 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,332 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671361779 created successfully.
+2022-12-18 19:09:39,333 - Canary - INFO - Testing Reg API
+2022-12-18 19:09:39,333 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,333 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:09:39,333 - Canary - INFO - Testing Reg API
+2022-12-18 19:09:39,333 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:09:39,334 - Canary - INFO - Testing Reg API
+2022-12-18 19:09:39,334 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,332 - Canary - INFO - Testing Login API
+2022-12-18 19:10:14,332 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,334 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:10:14,334 - Canary - INFO - tearDown
+2022-12-18 19:10:14,334 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:10:14,334 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,334 - Canary - INFO - Testing Login API
+2022-12-18 19:10:14,334 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,335 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:10:14,335 - Canary - INFO - tearDown
+2022-12-18 19:10:14,335 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:10:14,335 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,335 - Canary - INFO - Testing Login API
+2022-12-18 19:10:14,335 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,336 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:10:14,336 - Canary - INFO - tearDown
+2022-12-18 19:10:14,336 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:10:14,336 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,336 - Canary - INFO - Testing Login API
+2022-12-18 19:10:14,336 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,337 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:10:14,337 - Canary - INFO - tearDown
+2022-12-18 19:10:14,337 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:10:14,337 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,337 - Canary - INFO - Testing Login API
+2022-12-18 19:10:14,337 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,338 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:10:14,338 - Canary - INFO - tearDown
+2022-12-18 19:10:14,338 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:10:14,338 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,338 - Canary - INFO - Testing Login API
+2022-12-18 19:10:14,338 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,356 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:10:14,357 - Canary - INFO - tearDown
+2022-12-18 19:10:14,357 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:10:14,357 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,357 - Canary - INFO - Testing Login API
+2022-12-18 19:10:14,357 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,419 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:10:14,420 - Canary - INFO - tearDown
+2022-12-18 19:10:14,420 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:10:14,420 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,420 - Canary - INFO - Testing Login API
+2022-12-18 19:10:14,420 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,462 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:10:14,463 - Canary - INFO - tearDown
+2022-12-18 19:10:14,463 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:10:14,463 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,463 - Canary - INFO - Testing Reg API
+2022-12-18 19:10:14,463 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,467 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:10:14,468 - Canary - INFO - Testing Reg API
+2022-12-18 19:10:14,468 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,468 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:10:14,469 - Canary - INFO - Testing Reg API
+2022-12-18 19:10:14,469 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,469 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:10:14,469 - Canary - INFO - Testing Reg API
+2022-12-18 19:10:14,469 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,470 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:10:14,470 - Canary - INFO - Testing Reg API
+2022-12-18 19:10:14,470 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,516 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671361814 created successfully.
+2022-12-18 19:10:14,516 - Canary - INFO - Testing Reg API
+2022-12-18 19:10:14,516 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,517 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:10:14,517 - Canary - INFO - Testing Reg API
+2022-12-18 19:10:14,517 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:10:14,518 - Canary - INFO - Testing Reg API
+2022-12-18 19:10:14,518 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,274 - Canary - INFO - Testing Login API
+2022-12-18 19:11:13,275 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,276 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:11:13,277 - Canary - INFO - tearDown
+2022-12-18 19:11:13,277 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:11:13,277 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,277 - Canary - INFO - Testing Login API
+2022-12-18 19:11:13,277 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,278 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:11:13,278 - Canary - INFO - tearDown
+2022-12-18 19:11:13,278 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:11:13,278 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,278 - Canary - INFO - Testing Login API
+2022-12-18 19:11:13,278 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,278 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:11:13,279 - Canary - INFO - tearDown
+2022-12-18 19:11:13,279 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:11:13,279 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,279 - Canary - INFO - Testing Login API
+2022-12-18 19:11:13,279 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,279 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:11:13,279 - Canary - INFO - tearDown
+2022-12-18 19:11:13,279 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:11:13,279 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,279 - Canary - INFO - Testing Login API
+2022-12-18 19:11:13,279 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,280 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:11:13,280 - Canary - INFO - tearDown
+2022-12-18 19:11:13,280 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:11:13,280 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,280 - Canary - INFO - Testing Login API
+2022-12-18 19:11:13,280 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,300 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:11:13,300 - Canary - INFO - tearDown
+2022-12-18 19:11:13,300 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:11:13,300 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,300 - Canary - INFO - Testing Login API
+2022-12-18 19:11:13,301 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,363 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:11:13,364 - Canary - INFO - tearDown
+2022-12-18 19:11:13,364 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:11:13,364 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,364 - Canary - INFO - Testing Login API
+2022-12-18 19:11:13,364 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,406 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:11:13,407 - Canary - INFO - tearDown
+2022-12-18 19:11:13,407 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:11:13,407 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,407 - Canary - INFO - Testing Reg API
+2022-12-18 19:11:13,407 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,411 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:11:13,412 - Canary - INFO - Testing Reg API
+2022-12-18 19:11:13,412 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,412 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:11:13,412 - Canary - INFO - Testing Reg API
+2022-12-18 19:11:13,412 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,413 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:11:13,413 - Canary - INFO - Testing Reg API
+2022-12-18 19:11:13,414 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,414 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:11:13,415 - Canary - INFO - Testing Reg API
+2022-12-18 19:11:13,415 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,459 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671361873 created successfully.
+2022-12-18 19:11:13,460 - Canary - INFO - Testing Reg API
+2022-12-18 19:11:13,460 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,460 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:11:13,461 - Canary - INFO - Testing Reg API
+2022-12-18 19:11:13,461 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:11:13,461 - Canary - INFO - Testing Reg API
+2022-12-18 19:11:13,461 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,021 - Canary - INFO - Testing Login API
+2022-12-18 19:25:44,021 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,022 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:25:44,023 - Canary - INFO - tearDown
+2022-12-18 19:25:44,023 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:25:44,023 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,023 - Canary - INFO - Testing Login API
+2022-12-18 19:25:44,023 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,024 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:25:44,024 - Canary - INFO - tearDown
+2022-12-18 19:25:44,024 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:25:44,024 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,024 - Canary - INFO - Testing Login API
+2022-12-18 19:25:44,024 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,024 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:25:44,025 - Canary - INFO - tearDown
+2022-12-18 19:25:44,025 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:25:44,025 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,025 - Canary - INFO - Testing Login API
+2022-12-18 19:25:44,025 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,025 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:25:44,026 - Canary - INFO - tearDown
+2022-12-18 19:25:44,026 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:25:44,026 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,026 - Canary - INFO - Testing Login API
+2022-12-18 19:25:44,026 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,026 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:25:44,026 - Canary - INFO - tearDown
+2022-12-18 19:25:44,026 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:25:44,026 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,027 - Canary - INFO - Testing Login API
+2022-12-18 19:25:44,027 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,045 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:25:44,046 - Canary - INFO - tearDown
+2022-12-18 19:25:44,046 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:25:44,046 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,046 - Canary - INFO - Testing Login API
+2022-12-18 19:25:44,046 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,114 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:25:44,114 - Canary - INFO - tearDown
+2022-12-18 19:25:44,114 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:25:44,114 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,114 - Canary - INFO - Testing Login API
+2022-12-18 19:25:44,115 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,162 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:25:44,163 - Canary - INFO - tearDown
+2022-12-18 19:25:44,163 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:25:44,163 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,163 - Canary - INFO - Testing Reg API
+2022-12-18 19:25:44,163 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,166 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:25:44,167 - Canary - INFO - Testing Reg API
+2022-12-18 19:25:44,167 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,167 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:25:44,168 - Canary - INFO - Testing Reg API
+2022-12-18 19:25:44,168 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,169 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:25:44,169 - Canary - INFO - Testing Reg API
+2022-12-18 19:25:44,169 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,171 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:25:44,171 - Canary - INFO - Testing Reg API
+2022-12-18 19:25:44,171 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,220 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671362744 created successfully.
+2022-12-18 19:25:44,221 - Canary - INFO - Testing Reg API
+2022-12-18 19:25:44,221 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,221 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:25:44,222 - Canary - INFO - Testing Reg API
+2022-12-18 19:25:44,222 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:25:44,222 - Canary - INFO - Testing Reg API
+2022-12-18 19:25:44,223 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,628 - Canary - INFO - Testing Login API
+2022-12-18 19:26:26,628 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,630 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:26:26,630 - Canary - INFO - tearDown
+2022-12-18 19:26:26,630 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:26:26,630 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,630 - Canary - INFO - Testing Login API
+2022-12-18 19:26:26,630 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,631 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:26:26,631 - Canary - INFO - tearDown
+2022-12-18 19:26:26,631 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:26:26,631 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,631 - Canary - INFO - Testing Login API
+2022-12-18 19:26:26,631 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,632 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:26:26,632 - Canary - INFO - tearDown
+2022-12-18 19:26:26,632 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:26:26,632 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,632 - Canary - INFO - Testing Login API
+2022-12-18 19:26:26,632 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,632 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:26:26,632 - Canary - INFO - tearDown
+2022-12-18 19:26:26,632 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:26:26,633 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,633 - Canary - INFO - Testing Login API
+2022-12-18 19:26:26,633 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,633 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:26:26,633 - Canary - INFO - tearDown
+2022-12-18 19:26:26,633 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:26:26,633 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,633 - Canary - INFO - Testing Login API
+2022-12-18 19:26:26,633 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,651 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:26:26,651 - Canary - INFO - tearDown
+2022-12-18 19:26:26,651 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:26:26,652 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,652 - Canary - INFO - Testing Login API
+2022-12-18 19:26:26,652 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,711 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:26:26,712 - Canary - INFO - tearDown
+2022-12-18 19:26:26,712 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:26:26,712 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,712 - Canary - INFO - Testing Login API
+2022-12-18 19:26:26,712 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,753 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:26:26,754 - Canary - INFO - tearDown
+2022-12-18 19:26:26,754 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:26:26,754 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,754 - Canary - INFO - Testing Reg API
+2022-12-18 19:26:26,754 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,758 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:26:26,759 - Canary - INFO - Testing Reg API
+2022-12-18 19:26:26,759 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,759 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:26:26,760 - Canary - INFO - Testing Reg API
+2022-12-18 19:26:26,760 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,760 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:26:26,760 - Canary - INFO - Testing Reg API
+2022-12-18 19:26:26,760 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,761 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:26:26,761 - Canary - INFO - Testing Reg API
+2022-12-18 19:26:26,761 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,804 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671362786 created successfully.
+2022-12-18 19:26:26,804 - Canary - INFO - Testing Reg API
+2022-12-18 19:26:26,804 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,805 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:26:26,805 - Canary - INFO - Testing Reg API
+2022-12-18 19:26:26,805 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,806 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:26:26,806 - Canary - INFO - Testing Reg API
+2022-12-18 19:26:26,806 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:26:26,807 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:21,086 - Canary - INFO - Testing Login API
+2022-12-18 19:27:21,087 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,089 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:21,089 - Canary - INFO - tearDown
+2022-12-18 19:27:21,089 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:21,089 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,089 - Canary - INFO - Testing Login API
+2022-12-18 19:27:21,089 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,090 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:21,091 - Canary - INFO - tearDown
+2022-12-18 19:27:21,091 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:21,091 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,091 - Canary - INFO - Testing Login API
+2022-12-18 19:27:21,091 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,091 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:21,091 - Canary - INFO - tearDown
+2022-12-18 19:27:21,091 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:21,092 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,092 - Canary - INFO - Testing Login API
+2022-12-18 19:27:21,092 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,092 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:21,092 - Canary - INFO - tearDown
+2022-12-18 19:27:21,092 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:21,092 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,092 - Canary - INFO - Testing Login API
+2022-12-18 19:27:21,092 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,093 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:21,093 - Canary - INFO - tearDown
+2022-12-18 19:27:21,093 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:21,093 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,093 - Canary - INFO - Testing Login API
+2022-12-18 19:27:21,093 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,112 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:27:21,112 - Canary - INFO - tearDown
+2022-12-18 19:27:21,112 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:21,112 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,113 - Canary - INFO - Testing Login API
+2022-12-18 19:27:21,113 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,201 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:27:21,201 - Canary - INFO - tearDown
+2022-12-18 19:27:21,201 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:21,201 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,202 - Canary - INFO - Testing Login API
+2022-12-18 19:27:21,202 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,249 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:27:21,250 - Canary - INFO - tearDown
+2022-12-18 19:27:21,250 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:21,250 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,250 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:21,250 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,253 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:21,254 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:21,254 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,255 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:21,255 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:21,255 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,256 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:21,256 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:21,256 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,256 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:21,257 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:21,257 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,301 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671362841 created successfully.
+2022-12-18 19:27:21,302 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:21,302 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,302 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:21,303 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:21,303 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,303 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:21,303 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:21,303 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:21,304 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:26,638 - Canary - INFO - Testing Login API
+2022-12-18 19:27:26,639 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,640 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:26,641 - Canary - INFO - tearDown
+2022-12-18 19:27:26,641 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:26,641 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,641 - Canary - INFO - Testing Login API
+2022-12-18 19:27:26,641 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,641 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:26,642 - Canary - INFO - tearDown
+2022-12-18 19:27:26,642 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:26,642 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,642 - Canary - INFO - Testing Login API
+2022-12-18 19:27:26,642 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,642 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:26,642 - Canary - INFO - tearDown
+2022-12-18 19:27:26,642 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:26,642 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,643 - Canary - INFO - Testing Login API
+2022-12-18 19:27:26,643 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,643 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:26,643 - Canary - INFO - tearDown
+2022-12-18 19:27:26,643 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:26,643 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,643 - Canary - INFO - Testing Login API
+2022-12-18 19:27:26,643 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,644 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:27:26,644 - Canary - INFO - tearDown
+2022-12-18 19:27:26,644 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:26,644 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,644 - Canary - INFO - Testing Login API
+2022-12-18 19:27:26,644 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,663 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:27:26,664 - Canary - INFO - tearDown
+2022-12-18 19:27:26,664 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:26,664 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,664 - Canary - INFO - Testing Login API
+2022-12-18 19:27:26,664 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,725 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:27:26,726 - Canary - INFO - tearDown
+2022-12-18 19:27:26,726 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:26,726 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,726 - Canary - INFO - Testing Login API
+2022-12-18 19:27:26,726 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,768 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:27:26,769 - Canary - INFO - tearDown
+2022-12-18 19:27:26,769 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:27:26,769 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,769 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:26,769 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,772 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:26,773 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:26,773 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,774 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:26,774 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:26,774 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,774 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:26,775 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:26,775 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,775 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:26,775 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:26,775 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,820 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671362846 created successfully.
+2022-12-18 19:27:26,820 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:26,820 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,821 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:26,821 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:26,821 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,822 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:27:26,822 - Canary - INFO - Testing Reg API
+2022-12-18 19:27:26,822 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:27:26,823 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:28:56,406 - Canary - INFO - Testing Login API
+2022-12-18 19:28:56,406 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,408 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:28:56,408 - Canary - INFO - tearDown
+2022-12-18 19:28:56,408 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:28:56,409 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,409 - Canary - INFO - Testing Login API
+2022-12-18 19:28:56,409 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,409 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:28:56,409 - Canary - INFO - tearDown
+2022-12-18 19:28:56,409 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:28:56,410 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,410 - Canary - INFO - Testing Login API
+2022-12-18 19:28:56,410 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,410 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:28:56,410 - Canary - INFO - tearDown
+2022-12-18 19:28:56,410 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:28:56,410 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,410 - Canary - INFO - Testing Login API
+2022-12-18 19:28:56,410 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,411 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:28:56,411 - Canary - INFO - tearDown
+2022-12-18 19:28:56,411 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:28:56,411 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,411 - Canary - INFO - Testing Login API
+2022-12-18 19:28:56,411 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,411 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:28:56,412 - Canary - INFO - tearDown
+2022-12-18 19:28:56,412 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:28:56,412 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,412 - Canary - INFO - Testing Login API
+2022-12-18 19:28:56,412 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,430 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:28:56,431 - Canary - INFO - tearDown
+2022-12-18 19:28:56,431 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:28:56,431 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,431 - Canary - INFO - Testing Login API
+2022-12-18 19:28:56,431 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,489 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:28:56,490 - Canary - INFO - tearDown
+2022-12-18 19:28:56,490 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:28:56,490 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,490 - Canary - INFO - Testing Login API
+2022-12-18 19:28:56,490 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,532 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:28:56,532 - Canary - INFO - tearDown
+2022-12-18 19:28:56,533 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:28:56,533 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,533 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,533 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,533 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:28:56,534 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,534 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,537 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:28:56,538 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,538 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,538 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:28:56,539 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,539 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,539 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:28:56,540 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,540 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,540 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:28:56,540 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,540 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,584 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671362936 created successfully.
+2022-12-18 19:28:56,585 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,585 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,585 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:28:56,586 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,586 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,586 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:28:56,586 - Canary - INFO - Testing Reg API
+2022-12-18 19:28:56,586 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:28:56,587 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,653 - Canary - INFO - Testing Login API
+2022-12-18 19:29:50,653 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,655 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:29:50,655 - Canary - INFO - tearDown
+2022-12-18 19:29:50,656 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:29:50,656 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,656 - Canary - INFO - Testing Login API
+2022-12-18 19:29:50,656 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,656 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:29:50,657 - Canary - INFO - tearDown
+2022-12-18 19:29:50,657 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:29:50,657 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,657 - Canary - INFO - Testing Login API
+2022-12-18 19:29:50,657 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,657 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:29:50,657 - Canary - INFO - tearDown
+2022-12-18 19:29:50,657 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:29:50,658 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,658 - Canary - INFO - Testing Login API
+2022-12-18 19:29:50,658 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,658 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:29:50,658 - Canary - INFO - tearDown
+2022-12-18 19:29:50,658 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:29:50,658 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,658 - Canary - INFO - Testing Login API
+2022-12-18 19:29:50,658 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,659 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 19:29:50,659 - Canary - INFO - tearDown
+2022-12-18 19:29:50,659 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:29:50,659 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,659 - Canary - INFO - Testing Login API
+2022-12-18 19:29:50,659 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,678 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-User does not exist.
+2022-12-18 19:29:50,679 - Canary - INFO - tearDown
+2022-12-18 19:29:50,679 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:29:50,679 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,679 - Canary - INFO - Testing Login API
+2022-12-18 19:29:50,679 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,740 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-test signed in successfully.
+2022-12-18 19:29:50,741 - Canary - INFO - tearDown
+2022-12-18 19:29:50,741 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:29:50,741 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,741 - Canary - INFO - Testing Login API
+2022-12-18 19:29:50,741 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,782 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 19:29:50,783 - Canary - INFO - tearDown
+2022-12-18 19:29:50,783 - Canary - INFO - LoginApiTestsClass passed
+2022-12-18 19:29:50,783 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,783 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,783 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,784 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,784 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,784 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,784 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,785 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,785 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,788 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,788 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,788 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,789 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,790 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,790 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,790 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,791 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,791 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,791 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,791 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,792 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,834 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-username1671362990 created successfully.
+2022-12-18 19:29:50,835 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,835 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,835 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,835 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,835 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,836 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.
+2022-12-18 19:29:50,836 - Canary - INFO - Testing Reg API
+2022-12-18 19:29:50,836 - Canary - INFO - ------------------------------------------------------------------
+2022-12-18 19:29:50,837 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-400[Message]-Invalid form data entered when reg.

@@ -101,3 +101,466 @@
 2022-12-18 06:57:56,512 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
 2022-12-18 06:57:56,512 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
 2022-12-18 06:57:56,513 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:18:06,748 - Canary - INFO - [IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}
+2022-12-18 07:18:10,028 - Canary - INFO - [IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}
+2022-12-18 07:18:10,041 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:18:10,058 - Canary - INFO - [IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}
+2022-12-18 07:18:10,059 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:18:10,061 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 07:18:10,063 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:18:31,651 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:18:31,654 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:18:31,668 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 07:18:31,668 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:18:31,671 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:18:31,677 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:20:09,730 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:20:09,739 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,743 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,745 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,745 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,747 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,748 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,748 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,752 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,754 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,755 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,758 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,759 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:09,760 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:20:10,566 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:20:10,573 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/article-[Status]-200[Message]-Article found.
+2022-12-18 07:20:10,579 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/comment-[Status]-200[Message]-Comments found.
+2022-12-18 07:20:10,581 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtag-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:20:15,959 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/like-[Status]-404[Message]-zzhzzh have already liked the article with id 1
+2022-12-18 07:21:08,811 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:08,820 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,822 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,823 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,824 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,825 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,826 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,827 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,828 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,829 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,831 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,832 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,833 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:08,834 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:09,563 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:10,142 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:10,643 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:10,653 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:10,655 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:21:10,660 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 07:21:10,665 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:21:10,669 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:21:11,119 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:11,454 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:11,824 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:11,828 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,831 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,833 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,834 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,837 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,839 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,839 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,840 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,841 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,843 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,844 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,844 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:11,845 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:48,247 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:48,249 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/article-[Status]-200[Message]-Article found.
+2022-12-18 07:21:48,250 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/comment-[Status]-200[Message]-Comments found.
+2022-12-18 07:21:48,254 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtag-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:21:55,071 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:21:55,074 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,075 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,077 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,077 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,078 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,079 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,080 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,080 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,081 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,082 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,083 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,083 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:21:55,084 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:20,098 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:28:20,101 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:20,112 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:28:20,114 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:20,119 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 07:28:20,124 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:28:22,496 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:28:26,663 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:27,112 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:27,123 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,126 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,127 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,128 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,129 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,130 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,132 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,133 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,135 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,136 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,137 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,138 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:27,139 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:28,105 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:28,124 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/article-[Status]-200[Message]-Article found.
+2022-12-18 07:28:28,125 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/comment-[Status]-200[Message]-Comments found.
+2022-12-18 07:28:28,128 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtag-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:28:29,778 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:29,782 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,783 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,785 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,786 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,788 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,789 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,790 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,790 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,791 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,792 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,793 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,793 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:29,794 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:30,291 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:31,188 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:31,193 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/tag/follower-[Status]-200[Message]-get tag follower successfully 
+2022-12-18 07:28:31,195 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtaginfo-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:28:31,196 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:31,197 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:33,457 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/user/followtag-[Status]-404[Message]-user already follow the tag 
+2022-12-18 07:28:34,898 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:34,906 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,908 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,909 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,911 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,912 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,913 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,914 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,915 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,917 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,919 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,920 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,921 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:34,922 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:36,511 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:38,561 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:38,571 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtaginfo-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:28:38,574 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/tag/follower-[Status]-200[Message]-get tag follower successfully 
+2022-12-18 07:28:38,578 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:38,579 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:38,580 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:40,103 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/user/followtag-[Status]-404[Message]-user already follow the tag 
+2022-12-18 07:28:41,762 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:42,894 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/tag/follower-[Status]-200[Message]-get tag follower successfully 
+2022-12-18 07:28:42,897 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:42,903 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtaginfo-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:28:42,909 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:42,910 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:42,911 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:42,912 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:42,914 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:44,195 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/user/followtag-[Status]-200[Message]-zzhzzhuser follow tag successfully 
+2022-12-18 07:28:48,521 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/tag/follower-[Status]-200[Message]-get tag follower successfully 
+2022-12-18 07:28:48,523 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtaginfo-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:28:48,524 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:48,527 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:48,528 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:48,528 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:48,529 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:48,530 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:52,984 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:52,993 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:52,995 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:52,996 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:52,996 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:52,997 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:52,998 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:52,999 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:52,999 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:53,000 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:53,001 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:53,002 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:53,002 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:53,003 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:53,833 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/comment-[Status]-200[Message]-Comments found.
+2022-12-18 07:28:53,834 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/article-[Status]-200[Message]-Article found.
+2022-12-18 07:28:53,837 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtag-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:28:53,838 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:57,222 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:57,233 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,235 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,237 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,238 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,238 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,239 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,240 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,240 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,241 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,242 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,243 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,243 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:57,244 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:28:58,434 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:28:58,450 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/article-[Status]-200[Message]-Article found.
+2022-12-18 07:28:58,451 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/comment-[Status]-404[Message]-Comments not found.
+2022-12-18 07:28:58,454 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtag-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:29:01,573 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/like-[Status]-200[Message]-zzhzzh liked the article with id 8
+2022-12-18 07:29:12,397 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:29:12,410 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,412 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,413 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,414 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,415 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,416 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,416 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,418 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,419 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,420 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,421 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,422 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:12,422 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:13,687 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:29:14,528 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:29:14,532 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtaginfo-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:29:14,536 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/tag/follower-[Status]-200[Message]-get tag follower successfully 
+2022-12-18 07:29:14,540 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:14,541 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist/tag-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:15,395 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:29:15,399 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/article-[Status]-200[Message]-Article found.
+2022-12-18 07:29:15,408 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/comment-[Status]-200[Message]-Comments found.
+2022-12-18 07:29:15,417 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/findtag-[Status]-200[Message]-successfully get the tags 
+2022-12-18 07:29:16,390 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:29:16,398 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,400 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,401 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,402 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,402 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,403 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,404 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,404 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,405 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,406 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,406 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,407 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:29:16,408 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:16,416 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:16,935 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:17,573 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:17,581 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:35:17,590 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:17,601 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 07:35:17,603 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:35:17,610 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:35:27,815 - Canary - INFO - [IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}
+2022-12-18 07:35:47,231 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/upload/avatar-[Status]-200[Message]-User avatar uploaded successfully, user name is  zzhzzh
+2022-12-18 07:35:49,048 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:35:49,054 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:35:49,056 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:49,060 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 07:35:49,064 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:49,065 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:35:55,785 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:56,944 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:56,954 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,955 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,956 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,957 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,958 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,958 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,959 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,960 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,961 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,961 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,962 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,963 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:56,963 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:58,005 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:58,024 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:58,026 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:35:58,034 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:35:58,034 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 07:35:58,039 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:35:58,872 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:59,133 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:59,465 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:35:59,473 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,475 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,478 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,479 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,480 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,481 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,482 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,482 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,484 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,485 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,486 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,487 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:35:59,488 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:02,754 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:36:02,764 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:36:02,767 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 07:36:02,773 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 07:36:02,776 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 07:36:02,776 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:36:09,591 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,592 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 07:36:09,594 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,599 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,600 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,602 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,603 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,604 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,606 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,607 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,608 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,609 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,610 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 07:36:09,611 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:02:55,822 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:02:56,165 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:02:56,875 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:02:56,881 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 16:02:56,887 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:02:56,892 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 16:02:56,895 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 16:02:56,899 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 16:03:08,041 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 16:03:08,375 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 16:36:09,693 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:36:09,697 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,700 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,702 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,703 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,704 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,705 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,706 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,708 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,709 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,710 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,711 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,712 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:36:09,712 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,004 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:57:22,013 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,016 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,017 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,018 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,019 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,020 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,021 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,022 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,024 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,026 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,027 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,028 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:22,029 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:24,330 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:57:25,032 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:57:25,841 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:57:25,859 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 16:57:25,868 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:57:25,874 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 16:57:25,876 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 16:57:25,882 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 16:57:27,342 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 16:57:27,348 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,349 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,350 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,351 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,351 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,352 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,353 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,354 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,356 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,358 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,360 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,361 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 16:57:27,362 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,499 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 17:08:54,501 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,503 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,504 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,505 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,505 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,506 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,507 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,507 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,508 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,509 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,509 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,510 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:54,511 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:08:55,629 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 17:08:55,641 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 17:08:55,651 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 17:08:55,662 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 17:08:55,664 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 17:08:55,668 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 17:10:15,492 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:10:45,367 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-zzhzzh  entered a wrong password.
+2022-12-18 17:11:17,704 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:11:41,836 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:12:15,531 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:14:16,462 - Canary - WARNING - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-400[Message]-Invalid form data entered when login.
+2022-12-18 17:46:20,817 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-test created successfully.
+2022-12-18 17:47:15,921 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/signin-[Status]-200[Message]-zzhzzh signed in successfully.
+2022-12-18 17:47:15,978 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 17:47:15,983 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,984 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,986 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,986 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,987 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,988 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,989 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,990 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,991 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,992 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,993 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,993 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:15,994 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,911 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 17:47:16,915 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,917 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,918 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,919 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,920 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,921 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,921 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,922 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,923 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,924 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,925 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,926 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:16,926 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:47:17,918 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 17:47:17,920 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 17:47:17,929 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-zzhzzh-User found.
+2022-12-18 17:47:17,933 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-zzhzzh-successfully get the articles list
+2022-12-18 17:47:17,934 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/find/avatar-[Status]-200[Message]-User avatar found successfully, user name is  zzhzzh
+2022-12-18 17:47:17,938 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-zzhzzh-successfully get the user info stats
+2022-12-18 17:49:11,474 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-POST-[Path]-/api/register-[Status]-201[Message]-tests created successfully.
+2022-12-18 17:49:12,788 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,790 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,792 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,793 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,793 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,795 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,796 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,797 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,798 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,799 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,800 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,801 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:12,802 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/articleslist-[Status]-200[Message]-successfully get the articles list
+2022-12-18 17:49:21,439 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/stats-[status]-200-[message]-tests-successfully get the user info stats
+2022-12-18 17:49:21,440 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-tests-User found.
+2022-12-18 17:49:21,440 - Canary - INFO - [ip-addr]-127.0.0.1-[method]-GET-[path]-/api/user/activity-[status]-200-[message]-tests-successfully get the articles list
+2022-12-18 17:49:21,447 - Canary - INFO - [IP-Addr]-127.0.0.1-[Method]-GET-[Path]-/api/user-[Status]-200[Message]-tests-User found.

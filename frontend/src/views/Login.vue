@@ -14,10 +14,10 @@
                                 <el-form :label-position="labelPosition" label-width="100px" :model="loginData"
                                     style="max-width: 360px">
                                     <el-form-item label="username">
-                                        <el-input placeholder="Enter your username" v-model="loginData.username" />
+                                        <el-input placeholder="length should bewteen 3-20 chars" v-model="loginData.username" />
                                     </el-form-item>
                                     <el-form-item label="password">
-                                        <el-input show-password type="password" placeholder="Enter your password"
+                                        <el-input show-password type="password" placeholder="length should bewteen 6-20 chars"
                                             v-model="loginData.password" />
                                     </el-form-item>
                                     <el-form-item style="display:inline-block">
@@ -70,13 +70,19 @@ const submitForm = () => {
         ElMessage.error("Please fill in all the fields")
         return
     }
-    // ensure the username and password is valid string length less than 20
-    if (loginData.username.length > 20 || loginData.password.length > 20) {
-        // reset the loginData
+
+    // 确保用户名长度在6-20之间
+    if (loginData.username.length < 3 || loginData.username.length > 20) {
         loginData.username = ''
         loginData.password = ''
-        ElMessage.error("Username or password is too long")
-        ElMessage.info("The filed are reset for you")
+        ElMessage.error("Username should be between 6 and 20 characters")
+        return
+    }
+    // 确保密码长度在6-20之间
+    if(loginData.password.length < 6 || loginData.password.length > 20){
+        loginData.username = ''
+        loginData.password = ''
+        ElMessage.error("Password should be between 6 and 20 characters")
         return
     }
     console.log(loginData)

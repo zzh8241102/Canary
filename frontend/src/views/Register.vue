@@ -65,19 +65,36 @@ const submitForm = () => {
         ElMessage.error("Please fill in all the fields")
         return
     }
-    // ensure the username and password is valid string length less than 20
-    if(regData.username.length > 20 || regData.password.length > 20 || regData.username.length < 2 || regData.password.length < 2){
-        // reset the loginData
+    //  保证usernmae的长度是在3-20之间
+    if(regData.username.length < 3 || regData.username.length > 20){
         regData.username = ''
         regData.password = ''
         regData.email = ''
-        ElMessage.error("The length of Username or password is invaild")
-        ElMessage.info("The filed are reset for you")
+        ElMessage.error("The length of username should be between 3 and 20")
+        return
+    }
+    // 保证password的长度是在6-20之间
+    if(regData.password.length < 6 || regData.password.length > 20){
+        regData.username = ''
+        regData.password = ''
+        regData.email = ''
+        ElMessage.error("The length of password should be between 6 and 20")
+        return
+    }
+    
+    // 如果不符合email的格式（用regex判断）
+    if(!regData.email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
+        regData.username = ''
+        regData.password = ''
+        regData.email = ''
+        ElMessage.error("The email is invaild,notice your email format")
         return
     }
     register(regData)
     .then(res => { 
         if(res.data.success == "true"){
+            localStorage.setItem('access_token', res.data.token.access_token)
+            localStorage.setItem('refresh_token', res.data.token.refresh_token)
             ElMessage.success("Register successfully")
             sessionStorage.setItem('user_name', res.data.session)
             router.push({path: '/'})

@@ -44,7 +44,7 @@ class UploadAvatarApi(Resource):
         user.save()
         # 返回url
         self.response_obj['data']['avatar'] = url_stored
-        logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}').format(request.remote_addr,request.method,request.path,200,"User avatar uploaded successfully, user name is ",user_name)
+        logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}'.format(request.remote_addr,request.method,request.path,200,"User avatar uploaded successfully, user name is ",user_name))
         return make_response(jsonify(self.response_obj), 200)
         
 
@@ -79,7 +79,7 @@ class FindAvatarApi(Resource):
         response.headers['Content-Type'] = 'image/jpg'
         response.headers['Content-Type'] = 'image/png'
         
-        logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}').format(request.remote_addr,request.method,request.path,200,"User avatar found successfully, user name is ",user_name)
+        logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{} {}'.format(request.remote_addr,request.method,request.path,200,"User avatar found successfully, user name is ",user_name))
 
         return make_response(response, 200)
 

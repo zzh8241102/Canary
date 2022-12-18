@@ -328,3 +328,4 @@ class UserUnfollowTagApi(Resource):
                     request.remote_addr, request.method, request.path, 200, data['user_name'], 'unfollow tag successfully'))
                 return make_response(jsonify(self.response_obj), 200)
 
+ 
