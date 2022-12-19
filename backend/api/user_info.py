@@ -1,7 +1,7 @@
 # /api/user?user=username
 # ////////////////////////////////////////////////////////////////////////
 from flask_restful import Resource, reqparse
-from models import Article, Tags_Mid, Tags, Comments, Likes, User
+from models import Article, Tags_Mid, Tags, Comments, Likes, User,UserTags
 from flask import request, make_response, jsonify
 from controller.user_info_controller import fetch_user_info
 from controller.like_controller import fetch_article_like_num, fetch_article_comment_num
@@ -305,9 +305,14 @@ class DeleteAccountApi(Resource):
         data = delete_user_parser.parse_args()
         if(User.find_by_username(data['username'])):
             # return the user info
+            # 删除userTag 表中的user
+            userTag = UserTags.query.filter_by(user_id=User.getUserIdByName(data['username'])).first()
+            if userTag:
+                userTag.delete()
             user = User.query.filter_by(user_name=data['username']).first()
             # delete the user
-            user.delete(user.user_name)
+            user.delete()
+
 
             logger.info(
                 "[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}-{}".format(

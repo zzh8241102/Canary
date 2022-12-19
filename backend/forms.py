@@ -44,3 +44,8 @@ class PostArticleForm(wtforms.Form):
 class AddNewTagForm(wtforms.Form):
     tag_name = wtforms.StringField(validators=[length(min=2, max=30, message='the length of the tag name should be between 2 and 30')])
     tag_description = wtforms.StringField(validators=[])
+
+class PostAvatarForm(wtforms.Form):
+    username = wtforms.StringField(validators=[length(min=3, max=20, message='the length of the user name should be between 3 and 20')])
+    # file form
+    avatar = wtforms.FileField(validators=[InputRequired(message='the avatar should be a file')])

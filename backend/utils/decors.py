@@ -13,20 +13,20 @@ def login_required(func):
     def wrapper(self, *args, **kwargs):
         token_str = request.headers.get('Authorization')
         if token_str is None:
-            return make_response(jsonify({'msg': 'login in requried'}), 401)
+            return make_response(jsonify({'msg': 'login in is requried'}), 402)
         if token_str:
             try:
                 res = jwt.decode(token_str, SECRET_KEY)
                 data = res['data']
                 user = User.query.filter_by(user_name=data).first()
                 if user is None:
-                    return make_response(jsonify({'msg': 'login in requried'}), 401)
+                    return make_response(jsonify({'msg': 'login in is requried'}), 402)
                 else:
                     return func(self, *args, **kwargs)
             except JoseError:
-                return make_response(jsonify({'msg': 'login in requried'}), 401)
+                return make_response(jsonify({'msg': 'login in is requried'}), 402)
         else:
-            return make_response(jsonify({'msg': 'login in requried'}), 401)
+            return make_response(jsonify({'msg': 'login in is requried'}), 402)
     return wrapper
 
 

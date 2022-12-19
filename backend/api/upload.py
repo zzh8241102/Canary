@@ -30,15 +30,13 @@ class UploadAvatarApi(Resource):
         request.form = request.form.to_dict()
         user_name = request.form.get('username')
         filename = file.filename
-        # filename 加上不重复的时间戳
         s= str(time.time())
         s = s.replace('.','')
         filename = s + filename
-        # 转换file storage 为图片
         file.save(os.getcwd()+'/upload/avatar/'+filename)
         url_stored = os.getcwd()+'/upload/avatar/'+filename
-        # 存到User model里的 avatar_url
-        # 找到对应user_name的user
+        
+        # find the user
         user = User.query.filter_by(user_name=user_name).first()
         user.user_avatar = url_stored
         user.save()

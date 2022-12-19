@@ -40,11 +40,10 @@ class User(db.Model):
             db.session.rollback()
             db.session.flush()
 
-    @classmethod
-    def delete(cls, user_name):
-        user = cls.query.filter_by(user_name=user_name).first()
-        db.session.delete(user)
+    def delete(self):
+        db.session.delete(self)
         db.session.commit()
+        
     @classmethod
     def find_by_username(cls, username):
         return cls.query.filter_by(user_name = username).first()

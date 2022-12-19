@@ -32,7 +32,6 @@ class ArticleLikeManageApi(Resource):
                 request.remote_addr,request.method,request.path,404,data['user_name'],"have already liked the article with id",data['article_id']
             ))
             return make_response(jsonify(self.response_obj), 404)
-            return make_response(jsonify(self.response_obj), 404)
         else:
             # store the like info into like table
             like = Likes()

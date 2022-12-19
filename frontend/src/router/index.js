@@ -65,12 +65,11 @@ const router = createRouter({
   ]
 })
 
-// vue3 路由有时候不跳转，解决方案
+
 const originalPush = router.push
 router.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
 }
-
 
 
 

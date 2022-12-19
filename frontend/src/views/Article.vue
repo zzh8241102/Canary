@@ -14,9 +14,8 @@
         </div>
         <div class="main-area flex">
             <div class="content-area flex3 flex column mg-r8">
-                <!-- block b 能够撑开父级别元素 -->
+                
                 <div class="article-block-b white-bg black-border flex column">
-                    <!-- article content here -->
                     <div class="article-title">
                         <h2 class="font-setter">{{ article.title }}</h2>
                         <hr>
