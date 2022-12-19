@@ -221,6 +221,7 @@ const changePassWordSub = () => {
     dialogPasswordVisible.value = false
     changePassword(passwordGroup).then((res) => {
         console.log(res)
+        ElMessage.success('Change your password successfully')
         
     }).catch((err) => {
         console.log(err.response.data.message)

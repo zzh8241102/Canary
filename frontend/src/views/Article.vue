@@ -186,6 +186,22 @@ currComment_content.commentor = getUserByLocalOrSession()
 
 
 const submitComment = () => {
+    if (currComment_content.content.length > 5000) {
+        ElMessage({
+            message: 'Comment content should be less than 5000 chars',
+            type: 'error'
+        });
+        return
+    }
+    // 确保comment content不为空
+    if (currComment_content.content.length == 0) {
+        ElMessage({
+            message: 'Comment content should not be empty',
+            type: 'error'
+        });
+        return
+    }
+
     postComment(currComment_content).then(res => {
         currComment_content.content = ''
         window.location.reload()

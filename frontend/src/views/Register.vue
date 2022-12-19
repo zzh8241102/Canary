@@ -14,13 +14,13 @@
                                 <el-form :label-position="labelPosition" label-width="100px" :model="regData"
                                     style="max-width: 360px">
                                     <el-form-item label="username" >
-                                        <el-input placeholder="Please input your username" v-model="regData.username" />
+                                        <el-input placeholder="username length between 3-20" v-model="regData.username" />
                                     </el-form-item>
                                     <el-form-item label="password">
-                                        <el-input show-password type="password" placeholder="Please input password" v-model="regData.password" />
+                                        <el-input show-password type="password" placeholder="password length between 6-20" v-model="regData.password" />
                                     </el-form-item>
                                     <el-form-item label="email">
-                                        <el-input v-model="regData.email" placeholder="Please input your email" />
+                                        <el-input v-model="regData.email" placeholder="Input your email with correct format" />
                                     </el-form-item>
                                     <el-form-item >
                                         <el-button type="primary" @click="submitForm()" class="inline-block">Register</el-button>
@@ -65,7 +65,7 @@ const submitForm = () => {
         ElMessage.error("Please fill in all the fields")
         return
     }
-    //  保证usernmae的长度是在3-20之间
+
     if(regData.username.length < 3 || regData.username.length > 20){
         regData.username = ''
         regData.password = ''
@@ -73,7 +73,7 @@ const submitForm = () => {
         ElMessage.error("The length of username should be between 3 and 20")
         return
     }
-    // 保证password的长度是在6-20之间
+
     if(regData.password.length < 6 || regData.password.length > 20){
         regData.username = ''
         regData.password = ''
@@ -82,7 +82,6 @@ const submitForm = () => {
         return
     }
     
-    // 如果不符合email的格式（用regex判断）
     if(!regData.email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
         regData.username = ''
         regData.password = ''

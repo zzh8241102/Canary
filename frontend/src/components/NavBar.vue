@@ -147,6 +147,11 @@ const searchContent = reactive({
 });
 
 const subSearchContent = () => {
+  // ensure the input is less than 200 words
+  if(searchText.value.length > 200){
+    Elmessage('Search content should be less than 200 words')
+    return
+  }
   searchCon(searchContent).then(res => {
     console.log(res.data)
     searchResList = res.data.article

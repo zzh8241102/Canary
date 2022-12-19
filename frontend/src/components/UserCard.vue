@@ -114,19 +114,19 @@
         <h6>Change your email</h6>
       </span>
 
-      <el-input v-model="userInfo.email" placeholder="Please input" />
+      <el-input v-model="userInfo.email" placeholder="Please input,Cannot be empty " />
       <br>
       <span class="font-setter">
         <h6>Change your phone number</h6>
       </span>
 
-      <el-input v-model="userInfo.phoneNumber" placeholder="Please input" />
+      <el-input v-model="userInfo.phoneNumber" placeholder="Please input,Cannot be empty" />
       <br>
       <span class="font-setter">
         <h6>Change your location</h6>
       </span>
 
-      <el-input v-model="userInfo.location" placeholder="Please input" />
+      <el-input v-model="userInfo.location" placeholder="Please input,Cannot be empty" />
       <hr>
     </div>
 
@@ -267,6 +267,12 @@ getUserInfo(data).then((res) => {
 
 const submitForm = () => {
   dialogVisible.value = false
+  // phone and location should be both filled
+  console.log(userInfo)
+  if (userInfo.phoneNumber == null || userInfo.location == null) {
+    ElMessage.error('Phone number or location can not be empty!')
+    return false
+  }
   changeUserInfo(userInfo).then((res) => {
     ElMessage.success('Change successfully!')
     console.log(res)

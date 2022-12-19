@@ -37,7 +37,7 @@ class UserRegistrationApi(Resource):
             'token':
             {
                 'access_token': '',
-                                'refresh_token': '',
+                'refresh_token': '',
             }
         }
 
@@ -65,7 +65,7 @@ class UserRegistrationApi(Resource):
                 request.remote_addr, request.method, request.path, 400, 'Invalid form data entered when reg.'))
             return make_response(jsonify(self.response_obj), 401)
         if User.find_by_username(data['username']):
-            self.response_obj['message'] = 'Invalid form data.'
+            self.response_obj['message'] = 'The username already exists.'
             self.response_obj['success'] = "false"
 
             logger.warning('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(

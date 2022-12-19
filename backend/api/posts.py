@@ -4,6 +4,8 @@ from numpy import array
 from models import Article, User, Tags, Tags_Mid, Comments
 from utils.decors import login_required
 from extension import logger
+
+from werkzeug.datastructures import ImmutableMultiDict
 # api for posting the article and comment
 # /api/post
 # /api/comment
@@ -23,7 +25,7 @@ article_parser.add_argument(
 
 # //////////////////////////////////////////////////////////////////////
 
-
+from forms import PostArticleForm
 class PostApi(Resource):
     def __init__(self) -> None:
         self.response_obj = {
@@ -38,6 +40,15 @@ class PostApi(Resource):
     @login_required
     def post(self):
         data = article_parser.parse_args()
+        form = PostArticleForm(ImmutableMultiDict(data))
+        print(form)
+        print("yuhengw")
+        print(data)
+        if(form.validate() == False):
+            print(form.errors)
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "Invalid input."
+            return make_response(jsonify(self.response_obj), 400)
         #  store the article info into db
         # check whether the user is valid
         if(User.find_by_username(data['author'])):
@@ -91,7 +102,7 @@ Comment_parser.add_argument('commentor', type=str,
 
 # //////////////////////////////////////////////////////////////////////
 
-
+from forms import PostCommentForm
 class PostCommentApi(Resource):
     def __init__(self) -> None:
         self.response_obj = {
@@ -103,6 +114,14 @@ class PostCommentApi(Resource):
     @login_required
     def post(self):
         data = Comment_parser.parse_args()
+        form = PostCommentForm(ImmutableMultiDict(data))
+        if not form.validate():
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "Invalid input."
+            logger.warning('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}'.format(
+                request.remote_addr, request.method, request.path, 400, "Invalid input when posting comment."))
+            return make_response(jsonify(self.response_obj), 400)
+
         if(User.find_by_username(data['commentor'])):
             comment = Comments()
             comment.comment_article = data['article_id']
@@ -110,6 +129,7 @@ class PostCommentApi(Resource):
             comment.comment_author = data['commentor']
             comment.save()
             self.response_obj['message'] = "Comment posted."
+            
             logger.info('[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-id:{} {}'.format(
                 request.remote_addr, request.method, request.path, 200, comment.comment_id, "->Comment posted."))
             return make_response(jsonify(self.response_obj), 200)

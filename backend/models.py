@@ -36,8 +36,14 @@ class User(db.Model):
     def password_verfication(self, password):
         return custom_app_context.verify(password, self.user_password)
     def save(self):
-        db.session.add(self)
-        db.session.commit()
+        # rollback the db if invalid input
+        try:
+            db.session.add(self)
+            db.session.commit()
+        except:
+            db.session.rollback()
+            db.session.flush()
+            
     @classmethod
     def delete(cls, user_name):
         user = cls.query.filter_by(user_name=user_name).first()

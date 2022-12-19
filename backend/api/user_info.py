@@ -6,7 +6,7 @@ from flask import request, make_response, jsonify
 from controller.user_info_controller import fetch_user_info
 from controller.like_controller import fetch_article_like_num, fetch_article_comment_num
 from controller.tag_controller import find_article_by_tag_name, find_article_tags
-from forms import UserBasicInfoForm
+from forms import UserBasicInfoForm,PostCommentForm
 from werkzeug.datastructures import ImmutableMultiDict
 from werkzeug.security import check_password_hash, generate_password_hash
 from extension import logger
@@ -118,7 +118,16 @@ class ChangeUserInfoAPi(Resource):
         form = UserBasicInfoForm(ImmutableMultiDict(data))
         if not form.validate():
             self.response_obj['success'] = "false"
-            self.response_obj['message'] = "Invalid input."
+            try:
+                self.response_obj['message'] = form.errors['username'][0]
+            except:
+                try:
+                    self.response_obj['message'] = form.errors['email'][0]
+                except:
+                    try:
+                        self.response_obj['message'] = form.errors['phoneNumber'][0]
+                    except:
+                        self.response_obj['message'] = form.errors['location'][0]
 
             logger.warning(
                 "[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}-{}".format(
@@ -178,6 +187,7 @@ class ChangeUserInfoAPi(Resource):
 
 
 # ///////////////////////// change password //////////////////////////
+from forms import ChangePasswordForm
 change_password_user_parser = reqparse.RequestParser()
 change_password_user_parser.add_argument(
     'username', type=str, required=True, help='username is required')
@@ -198,7 +208,33 @@ class ChangePasswordAPi(Resource):
 
     @login_required
     def post(self):
+        
         data = change_password_user_parser.parse_args()
+        form = ChangePasswordForm(ImmutableMultiDict(data))
+        if not form.validate():
+            self.response_obj['success'] = "false"
+            try:
+                self.response_obj['message'] = form.errors['username'][0]
+            except:
+                try:
+                    self.response_obj['message'] = form.errors['oldPassword'][0]
+                except:
+                    try:
+                        self.response_obj['message'] = form.errors['newPassword'][0]
+                    except:
+                        self.response_obj['message'] = 'invalid input'
+
+            logger.warning(
+                "[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}-{}".format(
+                    request.remote_addr,
+                    request.method,
+                    request.path,
+                    400,
+                    data['username'],
+                    "Invalid input."
+                )
+            )
+            return make_response(jsonify(self.response_obj), 400)
         if(User.find_by_username(data['username'])):
             # return the user info
 
