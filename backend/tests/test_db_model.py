@@ -1,14 +1,24 @@
-from numpy import unicode_
-from extension import db
 from datetime import datetime
+from numpy import delete
 from passlib.apps import custom_app_context 
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 
-# ////// why bind the auth to Users model? ///////
 
-# https://www.cnblogs.com/vovlie/p/4182814.html
+# ////////////////////////////////////////////////////////////////////////////////////////
+# ////// config ///////
+# ////////////////////////////////////////////////////////////////////////////////////////
 
-# ///////////////////// end /////////////////////
+app  = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testdb.sqlite3'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = False
+app.config["SECRET_KEY"] = "SECRTEEKY"
+
+db = SQLAlchemy(app)
+
 class User(db.Model):
     __tablename__ = 'User'
     # user id as primary key
@@ -40,11 +50,8 @@ class User(db.Model):
         except:
             db.session.rollback()
             db.session.flush()
-
-    @classmethod
-    def delete(cls, user_name):
-        user = cls.query.filter_by(user_name=user_name).first()
-        db.session.delete(user)
+    def delete(self):
+        db.session.delete(self)
         db.session.commit()
     @classmethod
     def find_by_username(cls, username):
@@ -76,10 +83,19 @@ class Article(db.Model):
     @classmethod
     def find_by_article_id(cls, article_id):
         return cls.query.filter_by(article_id = article_id).first()
-
+    @classmethod
+    def find_by_article_title(cls, article_title):
+        return cls.query.filter_by(article_title = article_title).first()
+    
     def save(self):
+        
         db.session.add(self)
         db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
 #////////////////////////// jurstification //////////////////////////#
 
 # why not use the more simple db.Table in many to many relation #
@@ -109,8 +125,16 @@ class Comments(db.Model):
     article = db.relationship('Article', backref=db.backref('Comments'))
 
     def save(self):
-        db.session.add(self)
+        try:
+            db.session.add(self)
+            db.session.commit()
+        except:
+            db.session.rollback()
+            db.session.flush()
+    def delete(self):
+        db.session.delete(self)
         db.session.commit()
+
 
 
 
@@ -127,6 +151,9 @@ class Tags(db.Model):
     # tag article, which is a foreign key, link to article table article_id
     def save(self):
         db.session.add(self)
+        db.session.commit()
+    def delete(self):
+        db.session.delete(self)
         db.session.commit()
     @classmethod
     def getTagIdbyName(cls, tag_name):
@@ -153,7 +180,9 @@ class Tags_Mid(db.Model):
     def save(self):
         db.session.add(self)
         db.session.commit()
-
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
 # many to many relation
 # An article can be liked by many users
 # A user can like many articles
