@@ -41,9 +41,6 @@ class PostApi(Resource):
     def post(self):
         data = article_parser.parse_args()
         form = PostArticleForm(ImmutableMultiDict(data))
-        print(form)
-        print("yuhengw")
-        print(data)
         if(form.validate() == False):
             print(form.errors)
             self.response_obj['success'] = "false"

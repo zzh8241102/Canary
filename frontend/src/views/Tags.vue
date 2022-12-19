@@ -72,8 +72,33 @@ import { ElMessage } from 'element-plus'
 /////////////////////////////////////////////////
 let dialogVisible = ref(false)
 
+const newTagPair = reactive({
+    tag_name: '',
+    tag_description: ''
+})
+
 const subTagAdded = () => {
     dialogVisible.value = false
+    // ensure the tag name is not empty
+    if (newTagPair.tag_name === '') {
+        ElMessage.error('Tag name cannot be empty.')
+        return
+    }
+    // ensure the tag description is not empty
+    if (newTagPair.tag_description === '') {
+        ElMessage.error('Tag description cannot be empty.')
+        return
+    }
+    // ensure the tag name is within 2-30 characters
+    if (newTagPair.tag_name.length < 2 || newTagPair.tag_name.length > 30) {
+        ElMessage.error('Tag name should be within 3-20 characters.')
+        return
+    }
+    // ensure the tag description is within 3-100 characters
+    if (newTagPair.tag_description.length < 3 || newTagPair.tag_description.length > 2000) {
+        ElMessage.error('Tag description should be within 3-1000 characters.')
+        return
+    }
     addNewTag(newTagPair).then(res => {
         console.log(res)
         // refresh the page
@@ -83,10 +108,7 @@ const subTagAdded = () => {
         console.log(err)
     })
 }
-const newTagPair = reactive({
-    tag_name: '',
-    tag_description: ''
-})
+
 
 
 </script>

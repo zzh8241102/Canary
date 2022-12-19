@@ -7,6 +7,7 @@ from models import Tags, User, Article, UserTags
 from controller.tag_controller import find_article_by_tag_name, find_article_tags
 from utils.decors import login_required
 from extension import logger
+from werkzeug.datastructures import ImmutableMultiDict
 # ///////////////////////////////////////////////////////////////
 tag_user_api_parser = reqparse.RequestParser()
 tag_user_api_parser.add_argument(
@@ -64,13 +65,13 @@ class AllTagsApi(Resource):
 
         return make_response(jsonify(self.response_obj_sample), 200)
 
-
+from forms import AddNewTagForm
 # ////////////////////////// add new tag //////////////////////////
 new_tag_parser = reqparse.RequestParser()
 new_tag_parser.add_argument(
-    'tag_name', type=str, required=True, help='username is required')
+    'tag_name', type=str, required=True, help='tag_name is required')
 new_tag_parser.add_argument(
-    'tag_description', type=str, required=True, help='username is required')
+    'tag_description', type=str, required=True, help='tag_des is required')
 # ///////////////////////// add new tag //////////////////////////
 
 
@@ -85,8 +86,33 @@ class AddNewTagApi(Resource):
     @login_required
     def post(self):
         data = new_tag_parser.parse_args()
+        print(data)
+        forms = AddNewTagForm(ImmutableMultiDict([data]))
+        if not forms.validate():
+            print(forms.errors)
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "invalid input"
+            self.response_obj['code'] = 400
+            return make_response(jsonify(self.response_obj), 400)
         # check if the tag already exist
         # add the tag to the database
+        if len(data['tag_name']) < 3 or len(data['tag_name']) > 20:
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "invalid input for tag name"
+            self.response_obj['code'] = 400
+            return make_response(jsonify(self.response_obj), 400)
+        if data['tag_description'] == '' or data['tag_description'] == None:
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "invalid input for tag description"
+            self.response_obj['code'] = 400
+            return make_response(jsonify(self.response_obj), 400)
+        # ensure the tag_description is within 3-2000 characters
+        if len(data['tag_description']) < 3 or len(data['tag_description']) > 2000:
+            self.response_obj['success'] = "false"
+            self.response_obj['message'] = "invalid input for tag description"
+            self.response_obj['code'] = 400
+            return make_response(jsonify(self.response_obj), 400)
+
         if(data['tag_name'] not in [tag.tag_name for tag in Tags.query.all()]):
             new_tag = Tags(tag_name=data['tag_name'],
                            tag_description=data['tag_description'])

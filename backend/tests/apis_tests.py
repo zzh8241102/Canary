@@ -3,6 +3,7 @@
 
 import sys
 import os
+from urllib import response
 
 
 # ////////////////////////////////////////////////////////////////////////
@@ -19,7 +20,6 @@ import unittest
 
 
 
-# 时间戳
 
 # ///////////////////////////////////////////////////////////////////////
 # ////////////////////////////////////////////////////////////////////////
@@ -1059,7 +1059,167 @@ class PostNewCommentTest(unittest.TestCase):
         self.assertEqual(res['success'], 'false')
         self.assertEqual(
             res['message'], 'Invalid input.')
-    
+class AddNewTagApiTest(unittest.TestCase):
+    def setUp(self):
+        self.client = app.test_client()
+        # login to the username test and password 123456 to get the token
+        response = self.client.post(
+            '/api/signin',
+            data=json.dumps({
+                'username':
+                'test',
+                'password':
+                '123456'
+            }), content_type='application/json'
+        )
+        self.username = 'test'
+        res = json.loads(response.data)
+        
+
+        self.access_token = res['token']['access_token']
+
+        self.headers = {
+            'Authorization': self.access_token,
+        }
+            
+    def test_add_new_tag(self):
+        rand_back = str(uuid.uuid4())[:10]
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                    'foo_bar'+rand_back,
+                'tag_description':
+                    'this is a test tag for unit test ',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'true')
+        self.assertEqual(res['message'], 'successfully add the tag')
+    def test_add_existing_tag(self):
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                    'foo_bar',
+                'tag_description':
+                    'this is a test tag for unit test ',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'false')
+        self.assertEqual(res['message'], 'tag already exist')
+    def test_add_new_tag_with_wrong_name_length(self):
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                '',
+                'tag_description':
+                'this is a test tag for unit test ',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'false')
+        self.assertEqual(res['message'], 'invalid input for tag name')
+
+    def test_add_new_tag_with_wrong_name_length_2(self):
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                '1',
+                'tag_description':
+                'this is a test tag for unit test ',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'false')
+        self.assertEqual(res['message'], 'invalid input for tag name')
+    def test_add_new_tag_with_wrong_name_length_3(self):
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                '12',
+                'tag_description':
+                'this is a test tag for unit test ',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'false')
+        self.assertEqual(res['message'], 'invalid input for tag name')
+
+    def test_add_new_tag_wrong_description(self):
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                'foo_bar',
+                'tag_description':
+                '',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'false')
+        self.assertEqual(res['message'], 'invalid input for tag description')
+    def test_add_new_tag_wrong_description_2(self):
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                'foo_bar',
+                'tag_description':
+                '1',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'false')
+        self.assertEqual(res['message'], 'invalid input for tag description')
+    def test_add_new_tag_wrong_description_3(self):
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                'foo_bar',
+                'tag_description':
+                '12',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'false')
+        self.assertEqual(res['message'], 'invalid input for tag description')
+    def test_add_new_tag_wrong_description_4(self):
+        response = self.client.post(
+            '/api/addtag',
+            data=json.dumps({
+                'tag_name':
+                'foo_bar',
+                'tag_description':
+                'x',
+            }),
+            content_type='application/json',
+            headers=self.headers
+        )
+        res = json.loads(response.data)
+        self.assertEqual(res['success'], 'false')
+        self.assertEqual(res['message'], 'invalid input for tag description')
 
 if __name__ == '__main__':
 

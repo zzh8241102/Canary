@@ -1,7 +1,3 @@
-# contains all the models and their fields
-from enum import unique
-from numpy import delete
-from sqlalchemy import Column
 from extension import db
 from datetime import datetime
 from passlib.apps import custom_app_context 
@@ -43,7 +39,7 @@ class User(db.Model):
         except:
             db.session.rollback()
             db.session.flush()
-            
+
     @classmethod
     def delete(cls, user_name):
         user = cls.query.filter_by(user_name=user_name).first()
