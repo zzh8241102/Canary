@@ -101,7 +101,6 @@ const submitForm = () => {
                     sessionStorage.setItem('user_name', res.data.session)
                     localStorage.setItem('user_name', res.data.session)
                 }
-                console.log(res.data.token.access_token)
                 router.push({ path: "/" })
             }
         }).catch(err => {

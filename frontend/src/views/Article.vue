@@ -316,6 +316,7 @@ onMounted(() => {
 .tag-manage-bottom {
     position: relative;
     left: 36%;
+
 }
 
 .tag-banner {

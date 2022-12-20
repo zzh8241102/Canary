@@ -8,7 +8,7 @@
             </div>
             <div class="big-post">
                 <router-link to="/post">
-                    <el-button color="#626aef" size="large" style="margin-bottom:5px" st>
+                    <el-button color="#626aef" size="large" style="margin-bottom:5px;background-color: #545DF2;" st>
                         Ask a question
                     </el-button>
                 </router-link>
@@ -24,7 +24,7 @@
                         <h5 class="font-setter tag-banner">You Tags</h5>
                     </div>
                     <div class="tag-manage-bottom" style="display:inline-block">
-                        <el-button color="#626aef" size="small" @click="manageUserTag">
+                        <el-button color="#626aef" size="small" @click="manageUserTag" style="background-color: #545DF2;">
                             manage
                         </el-button>
                     </div>

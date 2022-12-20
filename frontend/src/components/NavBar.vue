@@ -23,7 +23,7 @@
         <router-link to="/tags" class="item -link margin-bottom">Tags</router-link>
 
         <router-link to="/post" class="item -link">
-          <el-button color="#626aef" style="margin-bottom:5px">Post</el-button>
+          <el-button color="#626aef" style="margin-bottom:5px;background-color: #545DF2;">Post</el-button>
         </router-link>
         
 

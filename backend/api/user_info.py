@@ -304,15 +304,12 @@ class DeleteAccountApi(Resource):
     def post(self):
         data = delete_user_parser.parse_args()
         if(User.find_by_username(data['username'])):
-            # return the user info
-            # 删除userTag 表中的user
             userTag = UserTags.query.filter_by(user_id=User.getUserIdByName(data['username'])).first()
             if userTag:
                 userTag.delete()
             user = User.query.filter_by(user_name=data['username']).first()
             # delete the user
             user.delete()
-
 
             logger.info(
                 "[IP-Addr]-{}-[Method]-{}-[Path]-{}-[Status]-{}[Message]-{}-{}".format(
