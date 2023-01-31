@@ -6,7 +6,7 @@ from models import User
 from forms import RegisterForm, LoginForm
 # from controller.auth_controller import auth_controller
 from werkzeug.datastructures import ImmutableMultiDict
-# hash 密码加密
+
 from werkzeug.security import check_password_hash, generate_password_hash
 from controller.auth_controller import generate_token
 from utils.decors import login_required
