@@ -1,13 +1,13 @@
 # Canary Q&A Platform *for* Miracle Factory <img width="41" alt="Screenshot 2024-01-04 at 16 30 37" src="https://github.com/zzh8241102/Canary/assets/80749465/b34d814c-2cb6-45b8-a5a8-e0f1364ba303">
 
-<div align="center">
-  <img width="777" alt="image" src="https://github.com/zzh8241102/Canary/assets/80749465/f536b170-9f59-4542-a1e5-03325b18366c">
 
-</div>
 
-#### A MiracleFactory Initiative for Open Collaboration and Knowledge Sharing
+#### A MiracleFactory Initiative for Open Collaboration and Knowledge Sharing & Retrieval
 
 > Canary is a community-centric Q&A platform crafted for enthusiasts of the open-source world. It offers a well-crafted and user-friendly interface for users to engage, share expertise, and form connections around technology topics. Embrace the joy of learning and sharing in a space where curiosity meets discovery.
+<div align="center">
+  <img width="777" alt="image" src="https://github.com/zzh8241102/Canary/assets/80749465/f536b170-9f59-4542-a1e5-03325b18366c">
+</div>
 
 #### Core of Canary
 
