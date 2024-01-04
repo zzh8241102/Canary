@@ -1,4 +1,4 @@
-# Canary Q&A Platform, For Miracle Factory & AI Engineers<img width="41" alt="Screenshot 2024-01-04 at 16 30 37" src="https://github.com/zzh8241102/Canary/assets/80749465/b34d814c-2cb6-45b8-a5a8-e0f1364ba303">
+# Canary Q&A Platform, For Miracle Factory <img width="41" alt="Screenshot 2024-01-04 at 16 30 37" src="https://github.com/zzh8241102/Canary/assets/80749465/b34d814c-2cb6-45b8-a5a8-e0f1364ba303">
 
 <div align="center">
   <img width="777" alt="image" src="https://github.com/zzh8241102/Canary/assets/80749465/f536b170-9f59-4542-a1e5-03325b18366c">
